@@ -54,10 +54,10 @@ comment:
     - waline
     # - giscus
   tips:
-    - 如果您有任何关于博客内容的相关讨论，欢迎前往 <a href="https://github.com/hqw567/yunyoujun.github.io/discussions" target="_blank">GitHub Discussions</a> 与我交流。
+    - 如果您有任何关于博客内容的相关讨论，欢迎前往 <a href="https://github.com/hqw567/hqw567.github.io/discussions/" target="_blank">GitHub Discussions</a> 与我交流。
 
 waline:
-  enable: true
+  enable: false
   serverURL: https://waline.yunyoujun.cn
   visitor: true
   comment: true
@@ -92,7 +92,7 @@ giscus:
   theme: light
 
 footer:
-  since: 2019
+  since: 2022
   icon:
     url: https://github.com/hqw567
     title: Herway的GitHub
@@ -140,7 +140,7 @@ google_adsense:
 
 post_edit:
   enable: true
-  url: https://github.com/YunYouJun/yunyoujun.github.io/tree/hexo/source/
+  url: https://github.com/hqw567/hqw567.github.io/tree/hexo/source/
 
 albums:
   enable: true
