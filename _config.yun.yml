@@ -1,7 +1,7 @@
 mode: auto
 
 avatar:
-  url: /images/avatar.jpg
+  url: https://q1.qlogo.cn/g?b=qq&nk=79099400&s=640
   status:
     enable: true
     emoji: 😭
@@ -25,7 +25,7 @@ reward:
       icon: icon-wechat-pay-line
 banner:
   enable: true
-  title:  Herway的小站
+  title:  思米米
   border: true
   cloud:
     enable: true
@@ -98,7 +98,7 @@ footer:
     title: Herway的GitHub
   beian:
     enable: true
-    icp: 湘ICP备17038157号
+    icp: 湘ICP备2022002172号
   support:
     enable: false
     title: 又拍云
