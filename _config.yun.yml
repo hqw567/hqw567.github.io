@@ -12,15 +12,15 @@ reward:
   comment: 我很可爱，请给我钱
   methods:
     - name: 支付宝
-      path: https://cdn.jsdelivr.net/gh/YunYouJun/cdn/img/donate/alipay-qrcode.jpg
+      path: https://gitee.com/hqw567/images/raw/master/9f8945fcb184e0bd9f3b24985863d663.jpg
       color: "#00A3EE"
       icon: icon-alipay-line
     - name: QQ 支付
-      path: https://cdn.jsdelivr.net/gh/YunYouJun/cdn/img/donate/qqpay-qrcode.png
+      path: https://gitee.com/hqw567/images/raw/master/a469a0b5385c2b2520243ae9db87e35e.png
       color: "#12B7F5"
       icon: icon-qq-line
     - name: 微信支付
-      path: https://cdn.jsdelivr.net/gh/YunYouJun/cdn/img/donate/wechatpay-qrcode.jpg
+      path: https://gitee.com/hqw567/images/raw/master/4a55f193d7675f4b7e34a37d6b97a54f.png
       color: "#2DC100"
       icon: icon-wechat-pay-line
 banner:
@@ -40,7 +40,22 @@ notice:
 
 head:
   css:
-    fonts: https://fonts.googleapis.com/css2?family=Noto+Serif+SC:wght@900&display=swap
+   # fonts: https://fonts.googleapis.com/css2?family=Noto+Serif+SC:wght@900&display=swap
+
+bg_image:
+  enable: false
+  # url: https://bing.biturl.top/?resolution=1920&format=image&index=0&mkt=zh-CN
+  # dark:
+  # blur: 2px # 设置背景模糊程度
+  opacity: 0.8
+
+trianglify:
+  enable: true
+  cellSize: 75
+  width: 800
+  height: 600
+  palette: '["YlGnBu", "GnBu", "Purples", "Blues","YlOrRd"]'
+  opacity: 0.5
 
 fireworks:
   enable: true
@@ -57,8 +72,8 @@ comment:
     - 如果您有任何关于博客内容的相关讨论，欢迎前往 <a href="https://github.com/hqw567/hqw567.github.io/discussions/" target="_blank">GitHub Discussions</a> 与我交流。
 
 waline:
-  enable: false
-  serverURL: https://waline.yunyoujun.cn
+  enable: true
+  serverURL: https://waline.simimi.cn
   visitor: true
   comment: true
   emoji:
@@ -80,22 +95,15 @@ disqusjs:
   shortname: yunyoujun
   apikey: ouoGQCaamOKdJgyZU5DKcpFnRIg3SNzvk0nwygPtlcTRJuE68c8igvrZGW4wAJoN
 
-# https://github.com/laymonage/giscus
-giscus:
-  enable: false
-  repo: YunYouJun/yunyoujun.github.io
-  repo-id:
-  category-id:
-  mapping: pathname
-  reactions-enabled: 1
-  emit-metadata: 0
-  theme: light
 
 footer:
   since: 2022
   icon:
+    name: icon-github-line
     url: https://github.com/hqw567
-    title: Herway的GitHub
+    animated: true
+    color: "#0078E7"
+    title: 思米米的GitHub
   beian:
     enable: true
     icp: 湘ICP备2022002172号
@@ -106,7 +114,7 @@ footer:
     logo: https://cdn.jsdelivr.net/gh/YunYouJun/cdn/img/logo/upyun-logo.png
     prefix: 本网站由
     suffix: 提供 CDN 加速
-  custom_text:
+  custom_text: 本网站资源来自互联网，如有侵权，请联系删除
   powered:
     enable: false
   live_time:
@@ -114,13 +122,18 @@ footer:
     prefix: 本博客已萌萌哒地运行
     suffix: (●'◡'●)
     start_time: "2022-01-01T00:00:00"
+
 mourn:
   enable: true
   days:
     - "4-4"
   # - "2-3"
 engine_search:
-  enable: false
+  enable: true
+  href: "https://www.google.com/search?q=site:"
+  # href: "https://www.baidu.com/s?wd=site:"
+  # href: "https://www.bing.com/search?q=site:"
+  domain: simimi.cn
 
 # If you want to use it, you need config algolia appID in _config.yml!!!
 # https://github.com/oncletom/hexo-algolia
@@ -129,48 +142,47 @@ engine_search:
   # ...
 codeblock:
   copy_btn: true
+  light:
+  dark:
 
 google_analytics:
-  enable: false
-  id: G-1LL0D86CY9
+  enable: true
+  id: G-4KNE7DCHW1
 
 google_adsense:
-  enable: false
-  client: ca-pub-2245427233262012
+  enable: true
+  client: ca-pub-8809383571319105
 
 post_edit:
   enable: true
   url: https://github.com/hqw567/hqw567.github.io/tree/hexo/source/
 
 albums:
-  enable: true
+  enable: false
 
 girls:
   enable: false
 
 tags:
-  动画: crimson
-  漫画: orange
-  Parcel: "#21374b"
-  学习: saddlebrown
-  MAD: crimson
-  教程: royalblue
-  笔记: dimgray
-  分享: "#0078e7"
-  随笔: mediumpurple
-  Blender: "#d04d2d"
-  Linux: "#2577b1"
-  中传: "#ccb44b"
-  部落: "#DD306A"
-  科幻: midnightblue
-  蚂蚁森林: "#54a892"
+  Vue: "#4fc08d"
+  Hexo: "#0E834D"
+  CSS: "#5298d1"
+  Node.js: "#026E00"
+  Git: "#F14E32"
+  React: "#61dafb"
+  Python: "#3776ab"
+  PHP: "#8892BF"
+  VS Code: "#0066B8"
+  JavaScript: "#F4DF4F"
+  TypeScript: "#317AC6"
+  Laravel: "#F4645F"
 
 categories:
-  云游的小视频: "#FB7299"
+  思米米的小笔记: "#FB7299"
 
 pages:
-  - name: Herway
-    url: /
+  - name: 我的小伙伴们
+    url: /links
     icon: icon-genderless-line
     color: dodgerblue
 
@@ -204,6 +216,8 @@ google_tagmanager:
 
 wordcount:
   enable: true
+  count: true
+  time: true
 
 say:
   api: https://el-bot-api.vercel.app/api/words/young
@@ -271,3 +285,30 @@ social:
     link: https://travellings.link
     icon: icon-train-line
     color: black
+
+aplayer:
+  global: false
+  meting: true
+  # https://github.com/metowolf/MetingJS/tree/v1.2#option
+  widget:
+    enable: false
+    autoplay: false
+    # theme: "#2980b9"
+    loop: all
+    order: list
+    preload: auto
+    volume: 0.7
+    mutex: true
+    lrcType: 0
+    listFolded: false
+    listMaxHeight: 340px
+    audio:
+      - name: 星宿计时
+        artist: 杉田朗/洛天依
+        url: https://cdn.jsdelivr.net/gh/YunYouJun/cdn/audio/star-timer.mp3
+        cover: https://cdn.jsdelivr.net/gh/YunYouJun/cdn/img/bg/stars-timing-0.jpg
+    meting:
+      enable: true
+      id: 308168565
+      server: netease
+      type: playlist

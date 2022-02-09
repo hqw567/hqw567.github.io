@@ -21,7 +21,8 @@ timezone: Asia/Shanghai
 
 # URL
 ## Set your site url here. For example, if you use GitHub Page, set url as 'https://username.github.io/project'
-url: http://www.simimi.cn
+url: https://www.simimi.cn
+root: /
 permalink: :title/
 permalink_defaults:
 pretty_urls:
@@ -52,14 +53,14 @@ post_asset_folder: false
 relative_link: false
 future: true
 highlight:
-  enable: true
+  enable: false
   line_number: true
   auto_detect: false
   tab_replace: ''
   wrap: true
   hljs: false
 prismjs:
-  enable: false
+  enable: true
   preprocess: true
   line_number: true
   tab_replace: ''
@@ -114,3 +115,10 @@ deploy:
   type: git
   repo: https://github.com/hqw567/hqw567.github.io.git,master #https://bitbucket.org/JohnSmith/johnsmith.bitbucket.io
   message:
+
+
+aplayer:
+  cdn: https://cdn.jsdelivr.net/npm/aplayer@latest/dist/APlayer.min.js
+  style_cdn: https://cdn.jsdelivr.net/npm/aplayer@latest/dist/APlayer.min.css
+  meting: true
+  meting_cdn: https://cdn.jsdelivr.net/npm/meting@1/dist/Meting.min.js
