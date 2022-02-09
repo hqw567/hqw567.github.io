@@ -120,7 +120,7 @@ theme: yun
 deploy:
   type: git
   repo: https://github.com/hqw567/hqw567.github.io.git,master #https://bitbucket.org/JohnSmith/johnsmith.bitbucket.io
-  message:
+  message: ":bento: Site updated: {{ now('YYYY-MM-DD HH:mm:ss') }}"
 
 
 aplayer:
