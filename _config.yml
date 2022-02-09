@@ -37,7 +37,13 @@ archive_dir: archives
 category_dir: categories
 code_dir: downloads/code
 i18n_dir: :lang
-skip_render:
+skip_render: README.md
+
+  # 为什么需要设置这一步呢？
+  # 因为你执行hexo g命令时，hexo会默认将source文件里的所有md文件渲染为html文件放到public中，
+  # 同时README.md会被渲染为README.html文件放到public文件里
+  # 加上这段设置，就是告诉hexo的解析器，你在渲染source文件里的md文件时，跳过README.md文件
+
 
 # Writing
 new_post_name: :title.md # File name of new posts
