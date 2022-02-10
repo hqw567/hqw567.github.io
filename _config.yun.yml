@@ -1,7 +1,9 @@
 mode: auto
 
 colors:
-  primary: "#6200ee"
+  #primary: "#6200ee"
+  #primary: "#DC143C"
+  
   # bg: "#F5F5F5"
   selection_bg: "#8e71c1" # 选取文字时的背景色
   # 标签云中标签的起始色和结束色
