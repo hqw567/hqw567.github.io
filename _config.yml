@@ -128,3 +128,14 @@ aplayer:
   style_cdn: https://cdn.jsdelivr.net/npm/aplayer@latest/dist/APlayer.min.css
   meting: true
   meting_cdn: https://cdn.jsdelivr.net/npm/meting@1/dist/Meting.min.js
+  asset_inject: false
+
+# 谷歌、百度站点地图生成
+Plugins:
+- hexo-generator-baidu-sitemap
+- hexo-generator-sitemap
+
+baidusitemap:
+    path: baidusitemap.xml
+sitemap:
+    path: sitemap.xml

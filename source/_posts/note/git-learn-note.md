@@ -1,5 +1,6 @@
 ---
 title: Git 学习笔记
+sticky: 100
 tags:
   - 学习
   - 笔记
