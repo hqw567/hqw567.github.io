@@ -1,27 +1,42 @@
 mode: auto
 
+colors:
+  primary: "#6200ee"
+  # bg: "#F5F5F5"
+  selection_bg: "#8e71c1" # 选取文字时的背景色
+  # 标签云中标签的起始色和结束色
+  # tag_start_color:
+  # tag_end_color:
+
 avatar:
   url: https://q1.qlogo.cn/g?b=qq&nk=79099400&s=640
+  opacity: 1
+  mickey_mouse: true
   status:
     enable: true
-    emoji: 😭
-    message: 不想上班.
+    emoji: 😊
+    message: 永远相信美好的事情即将发生.
+sidebar:
+  bg_image: https://cdn.jsdelivr.net/gh/YunYouJun/cdn/img/bg/stars-timing-1.jpg
+  bg_position: bottom 3rem center
+  tagcloud:
+    enable: true
+    amount: 20
 
 reward:
   enable: true
   comment: 我很可爱，请给我钱
   methods:
     - name: 支付宝
-      path: https://gitee.com/hqw567/images/raw/master/9f8945fcb184e0bd9f3b24985863d663.jpg
+      path: https://s4.ax1x.com/2022/02/09/HJAFuq.jpg
       color: "#00A3EE"
       icon: icon-alipay-line
     - name: QQ 支付
-      path: https://gitee.com/hqw567/images/raw/master/a469a0b5385c2b2520243ae9db87e35e.png
+      path: https://s4.ax1x.com/2022/02/09/HJACgs.png
       color: "#12B7F5"
       icon: icon-qq-line
     - name: 微信支付
-      path: https://gitee.com/hqw567/images/raw/master/4a55f193d7675f4b7e34a37d6b97a54f.png
-      color: "#2DC100"
+      path: https://s4.ax1x.com/2022/02/09/HJAPvn.png
       icon: icon-wechat-pay-line
 banner:
   enable: true
@@ -41,6 +56,10 @@ notice:
 head:
   css:
    # fonts: https://fonts.googleapis.com/css2?family=Noto+Serif+SC:wght@900&display=swap
+   js:
+    base:
+    async:
+    defer:
 
 bg_image:
   enable: false
@@ -95,6 +114,11 @@ disqusjs:
   shortname: yunyoujun
   apikey: ouoGQCaamOKdJgyZU5DKcpFnRIg3SNzvk0nwygPtlcTRJuE68c8igvrZGW4wAJoN
 
+creative_commons:
+  license: by-nc-sa
+  post: true
+  language: deed.zh
+  clipboard: false
 
 footer:
   since: 2022
@@ -114,14 +138,18 @@ footer:
     logo: https://cdn.jsdelivr.net/gh/YunYouJun/cdn/img/logo/upyun-logo.png
     prefix: 本网站由
     suffix: 提供 CDN 加速
-  custom_text: 本网站资源来自互联网，如有侵权，请联系删除
   powered:
     enable: false
   live_time:
     enable: true
-    prefix: 本博客已萌萌哒地运行
+    prefix: 本博客部分资源来自互联网，如有侵权，请联系删除<br>本博客已萌萌哒地运行
     suffix: (●'◡'●)
     start_time: "2022-01-01T00:00:00"
+  custom_text:
+
+wordcloud:
+  enable: false
+  height: 350
 
 mourn:
   enable: true
@@ -133,7 +161,7 @@ engine_search:
   href: "https://www.google.com/search?q=site:"
   # href: "https://www.baidu.com/s?wd=site:"
   # href: "https://www.bing.com/search?q=site:"
-  domain: simimi.cn
+  domain: www.simimi.cn
 
 # If you want to use it, you need config algolia appID in _config.yml!!!
 # https://github.com/oncletom/hexo-algolia
@@ -224,6 +252,9 @@ say:
   hitokoto:
     enable: false
 
+lazyload:
+  enable: true
+  
 social:
   #- name: RSS
     # set rss in your root config
@@ -292,8 +323,10 @@ aplayer:
   # https://github.com/metowolf/MetingJS/tree/v1.2#option
   widget:
     enable: false
-    autoplay: false
-    # theme: "#2980b9"
+    autoplay: true
+    theme: "#2980b9"
+    fixed: true
+    mimi: false
     loop: all
     order: list
     preload: auto
@@ -312,3 +345,15 @@ aplayer:
       id: 308168565
       server: netease
       type: playlist
+
+pjax:
+  enable: false
+
+busuanzi:
+  enable: true
+  site_uv: true
+  site_uv_icon: icon-user-line
+  site_pv: true
+  site_pv_icon: icon-eye-line
+  page_pv: false
+  page_pv_icon: icon-eye-line
