@@ -18,7 +18,6 @@ jobs:
 
       - name: Install Dependencies
         run: npx pnpm i --store=node_modules/.pnpm-store
-     
       - run: npx pnpm run build
 
       - name: Deploy
