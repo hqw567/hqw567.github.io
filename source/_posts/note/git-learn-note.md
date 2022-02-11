@@ -1,6 +1,6 @@
 ---
 title: Git 学习笔记
-sticky: 100
+sticky: 
 tags:
   - 学习
   - 笔记
@@ -8,7 +8,7 @@ tags:
 categories:
   - 思米米的小笔记
 date: 2022-01-11 16:46:13
-updated: 2022-02-09 16:46:13
+updated: 2022-02-10 16:46:13
 ---
 记录 Git 的一些常用指令与问题解决方案。
 
@@ -16,6 +16,7 @@ updated: 2022-02-09 16:46:13
 
 - [git-tips](https://github.com/git-tips/tips)
 - [Git 的奇技淫巧](https://github.com/521xueweihan/git-tips)
+<!-- more -->
 
 ## 常用指令
 

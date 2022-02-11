@@ -3,7 +3,7 @@
 ## Source: https://github.com/hexojs/hexo/
 
 # Site
-title: 思米米
+title: 思米米(SIMIMI)
 subtitle: All at sea.
 description: 希望能成为一个有趣的人
 keywords:
@@ -38,11 +38,6 @@ category_dir: categories
 code_dir: downloads/code
 i18n_dir: :lang
 skip_render: README.md
-
-  # 为什么需要设置这一步呢？
-  # 因为你执行hexo g命令时，hexo会默认将source文件里的所有md文件渲染为html文件放到public中，
-  # 同时README.md会被渲染为README.html文件放到public文件里
-  # 加上这段设置，就是告诉hexo的解析器，你在渲染source文件里的md文件时，跳过README.md文件
 
 
 # Writing
@@ -119,7 +114,7 @@ theme: yun
 ## Docs: https://hexo.io/docs/one-command-deployment
 deploy:
   type: git
-  repo: https://github.com/hqw567/hqw567.github.io.git,master #https://bitbucket.org/JohnSmith/johnsmith.bitbucket.io
+  repo: https://github.com/hqw567/hqw567.github.io.git,master
   message: ":bento: Site updated: {{ now('YYYY-MM-DD HH:mm:ss') }}"
 
 

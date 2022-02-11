@@ -2,8 +2,6 @@ mode: auto
 
 colors:
   #primary: "#6200ee"
-  #primary: "#DC143C"
-  
   # bg: "#F5F5F5"
   selection_bg: "#8e71c1" # 选取文字时的背景色
   # 标签云中标签的起始色和结束色
@@ -19,7 +17,7 @@ avatar:
     emoji: 😊
     message: 永远相信美好的事情即将发生.
 sidebar:
-  bg_image: https://cdn.jsdelivr.net/gh/YunYouJun/cdn/img/bg/stars-timing-1.jpg
+  bg_image: /images/sidebar/sidebar.png
   bg_position: bottom 3rem center
   tagcloud:
     enable: true
@@ -56,13 +54,7 @@ notice:
   enable: false
   content: Welcome Home.
 
-head:
-  css:
-   # fonts: https://fonts.googleapis.com/css2?family=Noto+Serif+SC:wght@900&display=swap
-   js:
-    base:
-    async:
-    defer:
+favicon: /favicon.ico
 
 bg_image:
   enable: false
@@ -106,16 +98,6 @@ waline:
     placeholder: 填写邮箱，可以收到回复通知哦～
   requiredMeta: ["nick"]
 
-github_issues:
-  enable: false
-
-github_discussions:
-  enable: false
-
-disqusjs:
-  enable: false
-  shortname: yunyoujun
-  apikey: ouoGQCaamOKdJgyZU5DKcpFnRIg3SNzvk0nwygPtlcTRJuE68c8igvrZGW4wAJoN
 
 creative_commons:
   license: by-nc-sa
@@ -158,12 +140,12 @@ mourn:
   enable: true
   days:
     - "4-4"
-  # - "2-3"
+
 engine_search:
   enable: true
-  href: "https://www.google.com/search?q=site:"
+  href: "https://www.bing.com/search?q=site:"
+  # href: "https://www.google.com/search?q=site:"
   # href: "https://www.baidu.com/s?wd=site:"
-  # href: "https://www.bing.com/search?q=site:"
   domain: www.simimi.cn
 
 # If you want to use it, you need config algolia appID in _config.yml!!!
@@ -191,8 +173,6 @@ post_edit:
 albums:
   enable: false
 
-girls:
-  enable: false
 
 tags:
   Vue: "#4fc08d"
@@ -207,6 +187,7 @@ tags:
   JavaScript: "#F4DF4F"
   TypeScript: "#317AC6"
   Laravel: "#F4645F"
+  前端: "#e300a8"
 
 categories:
   思米米的小笔记: "#FB7299"
@@ -257,7 +238,7 @@ say:
 
 lazyload:
   enable: true
-  
+
 social:
   - name: RSS
     # set rss in your root config
@@ -266,7 +247,6 @@ social:
     icon: icon-rss-line
     color: orange
   - name: QQ
-    # https://isux.tencent.com/wp-content/uploads/2016/05/20160512101222609.pdf
     link: https://wpa.qq.com/msgrd?v=3&uin=79099400&site=qq&menu=yes
     icon: icon-qq-line
     color: "#12B7F5"
@@ -274,14 +254,6 @@ social:
     link: https://github.com/hqw567
     icon: icon-github-line
     color: "#6e5494"
-  # - name: 微博
-  #   link: https://weibo.com/jizhideyunyoujun
-  #   icon: icon-weibo-line
-  #   color: "#E6162D"
-  # - name: 豆瓣
-  #   link: https://www.douban.com/people/yunyoujun/
-  #   icon: icon-douban-line
-  #   color: "#007722"
   - name: 网易云音乐
     link: https://music.163.com/#/user/home?id=616215227
     icon: icon-netease-cloud-music-line
@@ -294,23 +266,6 @@ social:
     link: https://space.bilibili.com/477836218
     icon: icon-bilibili-line
     color: "#FF8EB3"
-  # - name: 微信公众号
-  #   link: https://cdn.jsdelivr.net/gh/YunYouJun/cdn/img/about/white-qrcode-and-search.jpg
-  #   icon: icon-wechat-2-line
-  #   color: "#1AAD19"
-  # - name: Twitter
-  #   link: https://twitter.com/YunYouJun
-  #   icon: icon-twitter-line
-  #   color: "#1da1f2"
-  # - name: Telegram
-  #   link: https://t.me/yunyoujun_group
-  #   icon: icon-telegram-line
-  #   color: "#0088CC"
-  # - name: Telegram Channel
-  #   link: https://t.me/elpsycn
-  #   # icon: icon-telegram-fill
-  #   icon: icon-telegram-line
-  #   color: "#0088CC"
   - name: E-Mail
     link: mailto:hqw6@qq.com
     icon: icon-mail-line
@@ -319,35 +274,6 @@ social:
     link: https://travellings.link
     icon: icon-train-line
     color: black
-
-aplayer:
-  global: true
-  meting: true
-  # https://github.com/metowolf/MetingJS/tree/v1.2#option
-  widget:
-    enable: true
-    autoplay: true
-    theme: "#2980b9"
-    # fixed: true
-    # mimi: false
-    loop: all
-    order: list
-    preload: auto
-    volume: 0.7
-    mutex: true
-    lrcType: 0
-    listFolded: false
-    listMaxHeight: 340px
-    audio:
-      - name: 星宿计时
-        artist: 杉田朗/洛天依
-        url: https://cdn.jsdelivr.net/gh/YunYouJun/cdn/audio/star-timer.mp3
-        cover: https://cdn.jsdelivr.net/gh/YunYouJun/cdn/img/bg/stars-timing-0.jpg
-    meting:
-      enable: true
-      id: 308168565
-      server: netease
-      type: playlist
 
 pjax:
   enable: false

@@ -12,7 +12,7 @@ categories:
 
 CSS 的奇妙 Bug
 
-<!-- more -->
+
 
 <!-- for codepen -->
 <script async src="https://static.codepen.io/assets/embed/ei.js"></script>
@@ -28,7 +28,7 @@ DEMO: [Margin Collapse](https://codepen.io/YunYouJun/pen/WqXGpo)
   Margin Collapse</a> by YunYouJun (<a href="https://codepen.io/YunYouJun">@YunYouJun</a>)
   on <a href="https://codepen.io">CodePen</a>.</span>
 </p>
-
+<!-- more -->
 #### 父子间
 
 添加 `overflow: hidden;`
