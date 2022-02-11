@@ -45,7 +45,7 @@ updated: 2022-02-11 21:22:39
 
 这时，如果我们点击按钮周围的区域，我们仍然可以触发按钮的点击事件。
 
-![](https://segmentfault.com/img/bVcXIP6)
+![](https://image-static.segmentfault.com/288/681/2886819424-61fbdc0573521)
 
 事例地址：
 
@@ -55,11 +55,11 @@ updated: 2022-02-11 21:22:39
 
 当页面被`#`链接滚动时，默认效果是这样的。
 
-![](https://segmentfault.com/img/bVcXIP8)
+![](https://image-static.segmentfault.com/195/723/1957235309-61fbdc5eb3871)
 
 这种突然的跳跃会让人感到不舒服。为了解决这个问题，我们可以使用这个CSS样式：`sroll-behavior: smooth`。
 
-![](https://segmentfault.com/img/bVcXIP9)
+![](https://image-static.segmentfault.com/220/773/22077344-61fbdc8dc63c4)
 
 事例地址：[https://codepen.io/bytefishme...](https://codepen.io/bytefishmedium/pen/NWwWoKL)
 
@@ -67,7 +67,7 @@ updated: 2022-02-11 21:22:39
 
 我们的网页经常需要提供一些内容供用户选择，如电话号码、地址、标题等。而这些文字应该是一个整体，我们希望当用户点击部分文字时，剩余的文字会被自动选择。
 
-![](https://segmentfault.com/img/bVcXIQb)
+![](https://image-static.segmentfault.com/331/165/3311656029-61fbdd15ab86f)
 
 要实现这种效果非常简单，只需使用这个CSS样式：`user-select: all` 。用户选择的CSS属性控制用户是否可以选择文本。如果它的值是 `all`，意味着一个元素的所有内容都将被原子化地选择。
 
@@ -95,7 +95,7 @@ updated: 2022-02-11 21:22:39
 
 例如：
 
-![](https://segmentfault.com/img/bVcXIQs)
+![](https://image-static.segmentfault.com/428/062/4280629731-61fbe2543890a)
 
 事例地址：[https://codepen.io/bytefishme...](https://codepen.io/bytefishmedium/pen/bGYGzRz)
 
@@ -126,13 +126,13 @@ updated: 2022-02-11 21:22:39
 ```
 
 
-![imagepng](https://segmentfault.com/img/bVcXIQA "image.png")
+![imagepng](https://image-static.segmentfault.com/106/600/1066002620-61fbe36d40ba7_fix732 "image.png")
 
 这个容器有一个固定的宽度和高度，包裹着名字和介绍。
 
 但如果有些用户的简介太长，就会导致文本溢出容器，使页面看起来很糟糕。
 
-![imagepng](https://segmentfault.com/img/bVcXIQF "image.png")
+![imagepng](https://image-static.segmentfault.com/199/774/199774605-61fbe3b0dd288_fix732 "image.png")
 
 在这一点上，我们可以将溢出的文本折叠起来。做到这一点就像添加三行CSS样式一样简单。
 
@@ -144,7 +144,7 @@ text-overflow: ellipsis;
 
 `white-space: nowrap`; 可以使文本不被包起来。然后我们使用`overflow: hidden`来隐藏溢出的文本。最后，我们使用 `text-overflow: ellipsis` 在文本的末尾添加一个圆点，向用户表明有一些隐藏的文本。
 
-![imagepng](https://segmentfault.com/img/bVcXIQZ "image.png")
+![imagepng](https://image-static.segmentfault.com/178/308/1783085763-61fbe60313844_fix732 "image.png")
 
 事例地址：[https://codepen.io/bytefishme...](https://codepen.io/bytefishmedium/pen/VwrwgdQ)
 
@@ -167,7 +167,7 @@ text-overflow: ellipsis;
 ```
 而网页看起来是这样的。
 
-![imagepng](https://segmentfault.com/img/bVcXIQ2 "image.png")
+![imagepng](https://image-static.segmentfault.com/399/107/3991076816-61fbe68c431c3_fix732 "image.png")
 
 图片的排列与我们所期望的一样。
 
@@ -181,7 +181,7 @@ https://miro.medium.com/max/1400/0*zQaS0awtSTOO-JYa.jpg
 
 你会发现，页面突然变得杂乱无章。
 
-![imagepng](https://segmentfault.com/img/bVcXIQ6 "image.png")
+![imagepng](https://image-static.segmentfault.com/397/338/3973388868-61fbe70e24d23_fix732 "image.png")
 
 为了防止这个问题，使我们的页面更加健壮，我们可以设置图片的宽度和高度。这样，我们就不必担心后端返回的图片的大小。
 
@@ -192,7 +192,7 @@ img {
 }
 ```
 
-![imagepng](https://segmentfault.com/img/bVcXIQ7 "image.png")
+![imagepng](https://image-static.segmentfault.com/404/840/40484028-61fbe73e78a46_fix732 "image.png")
 
 但上述写法有一个缺点：如果图像本身的长宽比与我们设定的长宽比不一致，图像将被压缩或拉伸。
 
@@ -210,7 +210,7 @@ img {
 
 如果该值是 `cover`，那么被替换的内容的大小将保持其长宽比，同时填充元素的整个内容框。如果对象的长宽比与它的盒子的长宽比不一致，那么该对象将被剪掉以适配。
 
-![imagepng](https://segmentfault.com/img/bVcXIQ8 "image.png")
+![imagepng](https://image-static.segmentfault.com/331/293/3312932221-61fbe7d740923_fix732 "image.png")
 
 ## 无图片
 
@@ -232,7 +232,7 @@ img {
 https://cdn-images-1.medium.com/max/1600/1*we8wfyztsdo12e2Cww6oVA.jpeg
 ```
 
-![imagepng](https://segmentfault.com/img/bVcXIRc "image.png")
+![imagepng](https://image-static.segmentfault.com/134/892/1348923011-61fbe961d4fc6_fix732 "image.png")
 
 下面是 css 代码
 
@@ -256,7 +256,7 @@ img.error::before {
 
 这样，当 `img` 元素中的图片链接无法加载图片时，我们的404图片将被使用。
 
-![imagepng](https://segmentfault.com/img/bVcXIRd "image.png")
+![imagepng](https://image-static.segmentfault.com/197/721/1977218622-61fbe994ae109_fix732 "image.png")
 
 这里还有一点需要优化。在这种情况下，如果原始图片没有被正确加载，用户就不知道这个图片应该是什么。为了方便用户理解，我们可以将 `img` 元素的 `alt` 属性显示在页面上。
 
@@ -284,7 +284,7 @@ img.error::after {
 <img src="https://miro.medium.com/xxx.jpg" alt='Log of Medium' >
 ```
 
-![imagepng](https://segmentfault.com/img/bVcXIRp "image.png")
+![imagepng](https://image-static.segmentfault.com/216/338/2163385386-61fbea7449318_fix732 "image.png")
 
 事例地址：[https://codepen.io/bytefishme...](https://codepen.io/bytefishmedium/pen/vYWYMxG)
 
@@ -302,13 +302,13 @@ WCAG AA规范指出，所有重要的内容需要有4.5:1以上的色彩对比�
 
 事例：
 
-![imagepng](https://segmentfault.com/img/bVcXIRt "image.png")
+![imagepng](https://image-static.segmentfault.com/112/429/1124293679-61fbebae6c544_fix732 "image.png")
 
 我们也可以使用Chrome DevTool来检查一个元素的颜色对比。然后我们可以发现，Medium的网页也在实践这一原则。
 
-![imagepng](https://segmentfault.com/img/bVcXIRw "image.png")
+![imagepng](https://image-static.segmentfault.com/148/694/148694987-61fbebf592bc0_fix732 "image.png")
 
-![imagepng](https://segmentfault.com/img/bVcXIRx "image.png")
+![imagepng](https://image-static.segmentfault.com/800/839/800839036-61fbebffaaefa_fix732 "image.png")
 
 ## 总结
 俗话说得好，细节决定成败。如果你的项目有很多可以改善用户体验的细节，你就可以让用户感到舒服，你就有更高的成功概率。
