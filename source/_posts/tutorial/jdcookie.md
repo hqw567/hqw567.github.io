@@ -18,7 +18,7 @@ updated:
 
 - 可注册登陆或游客上传，推荐注册登陆后上传Cookie，方便自行管理，查看京东收入情况,更新添加Cookie等
 
-### QQ群：769194788 [点此入群](点击链接加入群聊【京东交流群】：https://jq.qq.com/?_wv=1027&k=mpP6nr1U)
+### QQ群：769194788 [点此入群](https://jq.qq.com/?_wv=1027&k=mpP6nr1U)
 
 - 请务必进群
 
@@ -63,6 +63,6 @@ updated:
 
 - 可注册登陆或游客上传，推荐注册登陆后上传Cookie，方便自行管理，查看京东收入情况,更新添加Cookie等
 
-### QQ群：769194788 [点此入群](%E7%82%B9%E5%87%BB%E9%93%BE%E6%8E%A5%E5%8A%A0%E5%85%A5%E7%BE%A4%E8%81%8A%E3%80%90%E4%BA%AC%E4%B8%9C%E4%BA%A4%E6%B5%81%E7%BE%A4%E3%80%91%EF%BC%9Ahttps://jq.qq.com/?_wv=1027&k=mpP6nr1U)
+### QQ群：769194788 [点此入群](https://jq.qq.com/?_wv=1027&k=mpP6nr1U)
 
 - 请务必进群
