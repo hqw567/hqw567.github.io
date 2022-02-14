@@ -144,7 +144,7 @@ updated: 2022-02-10 12:56:23
 
 - css层叠样式表
 
-- clear 清楚
+- clear 清除
 
 - cursor 鼠标指针
 
