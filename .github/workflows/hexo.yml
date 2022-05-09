@@ -1,25 +1,25 @@
 name: HEXO CI
- 
+
 on:
   push:
     branches:
-    - hexo
- 
+      - hexo
+
 jobs:
   build:
     runs-on: ubuntu-latest
     strategy:
       matrix:
         node-version: [14.x]
- 
+
     steps:
       - uses: actions/checkout@v1
- 
+
       - name: Use Node.js ${{ matrix.node-version }}
         uses: actions/setup-node@v1
         with:
           node-version: ${{ matrix.node-version }}
- 
+
       - name: Configuration environment
         env:
           HEXO_DEPLOY_PRI: ${{secrets.HEXO_DEPLOY_PRI}}

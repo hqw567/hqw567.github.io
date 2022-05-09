@@ -1,4 +1,4 @@
-# [思米米](https://g.simimi.cn) Hexo 站点源文件
+# [思米米](https://simimi.cn) Hexo 站点源文件
 
 ## Commit Lint
 

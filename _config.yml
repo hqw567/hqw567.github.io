@@ -113,7 +113,7 @@ theme: yun
 ## Docs: https://hexo.io/docs/one-command-deployment
 deploy:
   type: git
-  repo: https://github.com/hqw567/hqw567.github.io.git,master
+  repo: git@github.com:hqw567/hqw567.github.io.git,master
   message: ":bento: Site updated: {{ now('YYYY-MM-DD HH:mm:ss') }}"
 
 # https://github.com/MoePlayer/hexo-tag-aplayer
@@ -129,7 +129,7 @@ aplayer:
 Plugins:
   - hexo-generator-baidu-sitemap
   - hexo-generator-sitemap
-  - hexo-algoliasearch
+  - hexo algolia
 baidusitemap:
   path: baidusitemap.xml
 sitemap:
@@ -142,7 +142,7 @@ algolia:
   indexName: 'simimi'
 
 # https://github.com/chenzhutian/hexo-all-minifier
-all_minifier: true
+all_minifier: false
 html_minifier:
   enable: false
   ignore_error: false
