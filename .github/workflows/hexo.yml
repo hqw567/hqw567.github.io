@@ -21,6 +21,7 @@ jobs:
       - name: Configuration environment
         env:
           HEXO_DEPLOY_PRI: ${{secrets.HEXO_DEPLOY_PRI}}
+          HEXO_ALGOLIA_INDEXING_KEY: ${{ secrets.HEXO_ALGOLIA_INDEXING_KEY }}
         run: |
           mkdir -p ~/.ssh/
           echo "$HEXO_DEPLOY_PRI" > ~/.ssh/id_rsa
@@ -34,4 +35,4 @@ jobs:
           npm i
       - name: Deploy hexo
         run: |
-          hexo clean && hexo generate && hexo deploy
+        hexo algolia &&  hexo clean &&  hexo generate && hexo deploy
