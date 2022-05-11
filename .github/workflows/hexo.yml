@@ -1,10 +1,8 @@
 name: HEXO CI
-
 on:
   push:
     branches:
       - hexo
-
 jobs:
   build:
     runs-on: ubuntu-latest
