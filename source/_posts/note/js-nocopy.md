@@ -6,7 +6,7 @@ tags:
 categories:
   - 思米米的小笔记
 date: 2022-04-03 13:56:38
-updated:
+updated: 2022-04-03 13:56:38
 ---
 
 找到 html 文件的`</head>`标签,在`</head>`前面加如下代码就行了！

@@ -5,7 +5,7 @@ tags:
 categories:
   - 思米米的小笔记
 date: 2022-04-23 17:01:18
-updated:
+updated: 2022-04-23 17:01:18
 ---
 
 ## 一、简介
@@ -41,9 +41,9 @@ updated:
 复制时，先选中文本，然后调用`document.execCommand('copy')`，选中的文本就会进入剪贴板。
 
 > ```javascript
-> const inputElement = document.querySelector('#input');
-> inputElement.select();
-> document.execCommand('copy');
+> const inputElement = document.querySelector('#input')
+> inputElement.select()
+> document.execCommand('copy')
 > ```
 
 上面示例中，脚本先选中输入框`inputElement`里面的文字（`inputElement.select()`），然后`document.execCommand('copy')`将其复制到剪贴板。
@@ -55,9 +55,9 @@ updated:
 粘贴时，调用`document.execCommand('paste')`，就会将剪贴板里面的内容，输出到当前的焦点元素中。
 
 > ```javascript
-> const pasteText = document.querySelector('#output');
-> pasteText.focus();
-> document.execCommand('paste');
+> const pasteText = document.querySelector('#output')
+> pasteText.focus()
+> document.execCommand('paste')
 > ```
 
 （3）缺点
@@ -79,7 +79,7 @@ Clipboard API 是下一代的剪贴板操作方法，比传统的`document.execC
 `navigator.clipboard`属性返回 Clipboard 对象，所有操作都通过这个对象进行。
 
 > ```javascript
-> const clipboardObj = navigator.clipboard;
+> const clipboardObj = navigator.clipboard
 > ```
 
 如果`navigator.clipboard`属性返回`undefined`，就说明当前浏览器不支持这个 API。
@@ -95,19 +95,19 @@ Clipboard API 是下一代的剪贴板操作方法，比传统的`document.execC
 另外，需要注意的是，脚本读取的总是当前页面的剪贴板。这带来的一个问题是，如果把相关的代码粘贴到开发者工具中直接运行，可能会报错，因为这时的当前页面是开发者工具的窗口，而不是网页页面。
 
 > ```javascript
-> (async () => {
->   const text = await navigator.clipboard.readText();
->   console.log(text);
-> })();
+> ;(async () => {
+> 	const text = await navigator.clipboard.readText()
+> 	console.log(text)
+> })()
 > ```
 
 如果你把上面的代码，粘贴到开发者工具里面运行，就会报错。因为代码运行的时候，开发者工具窗口是当前页，这个页面不存在 Clipboard API 依赖的 DOM 接口。一个解决方法就是，相关代码放到`setTimeout()`里面延迟运行，在调用函数之前快速点击浏览器的页面窗口，将其变成当前页。
 
 > ```javascript
 > setTimeout(async () => {
->   const text = await navigator.clipboard.readText();
->   console.log(text);
-> }, 2000);
+> 	const text = await navigator.clipboard.readText()
+> 	console.log(text)
+> }, 2000)
 > ```
 
 上面代码粘贴到开发者工具运行后，快速点击一下网页的页面窗口，使其变为当前页，这样就不会报错了。
@@ -121,13 +121,10 @@ Clipboard 对象提供了四个方法，用来读写剪贴板。它们都是异�
 `Clipboard.readText()`方法用于复制剪贴板里面的文本数据。
 
 > ```javascript
-> document.body.addEventListener(
->   'click',
->   async (e) => {
->     const text = await navigator.clipboard.readText();
->     console.log(text);
->   }
-> )
+> document.body.addEventListener('click', async e => {
+> 	const text = await navigator.clipboard.readText()
+> 	console.log(text)
+> })
 > ```
 
 上面示例中，用户点击页面后，就会输出剪贴板里面的文本。注意，浏览器这时会跳出一个对话框，询问用户是否同意脚本读取剪贴板。
@@ -136,12 +133,12 @@ Clipboard 对象提供了四个方法，用来读写剪贴板。它们都是异�
 
 > ```javascript
 > async function getClipboardContents() {
->   try {
->     const text = await navigator.clipboard.readText();
->     console.log('Pasted content: ', text);
->   } catch (err) {
->     console.error('Failed to read clipboard contents: ', err);
->   }
+> 	try {
+> 		const text = await navigator.clipboard.readText()
+> 		console.log('Pasted content: ', text)
+> 	} catch (err) {
+> 		console.error('Failed to read clipboard contents: ', err)
+> 	}
 > }
 > ```
 
@@ -153,17 +150,17 @@ Clipboard 对象提供了四个方法，用来读写剪贴板。它们都是异�
 
 > ```javascript
 > async function getClipboardContents() {
->   try {
->     const clipboardItems = await navigator.clipboard.read();
->     for (const clipboardItem of clipboardItems) {
->       for (const type of clipboardItem.types) {
->         const blob = await clipboardItem.getType(type);
->         console.log(URL.createObjectURL(blob));
->       }
->     }
->   } catch (err) {
->     console.error(err.name, err.message);
->   }
+> 	try {
+> 		const clipboardItems = await navigator.clipboard.read()
+> 		for (const clipboardItem of clipboardItems) {
+> 			for (const type of clipboardItem.types) {
+> 				const blob = await clipboardItem.getType(type)
+> 				console.log(URL.createObjectURL(blob))
+> 			}
+> 		}
+> 	} catch (err) {
+> 		console.error(err.name, err.message)
+> 	}
 > }
 > ```
 
@@ -178,12 +175,9 @@ ClipboardItem 对象表示一个单独的剪贴项，每个剪贴项都拥有`Cl
 `Clipboard.writeText()`方法用于将文本内容写入剪贴板。
 
 > ```javascript
-> document.body.addEventListener(
->   'click',
->   async (e) => {
->     await navigator.clipboard.writeText('Yo')
->   }
-> )
+> document.body.addEventListener('click', async e => {
+> 	await navigator.clipboard.writeText('Yo')
+> })
 > ```
 
 上面示例是用户在网页点击后，脚本向剪贴板写入文本数据。
@@ -192,12 +186,12 @@ ClipboardItem 对象表示一个单独的剪贴项，每个剪贴项都拥有`Cl
 
 > ```javascript
 > async function copyPageUrl() {
->   try {
->     await navigator.clipboard.writeText(location.href);
->     console.log('Page URL copied to clipboard');
->   } catch (err) {
->     console.error('Failed to copy: ', err);
->   }
+> 	try {
+> 		await navigator.clipboard.writeText(location.href)
+> 		console.log('Page URL copied to clipboard')
+> 	} catch (err) {
+> 		console.error('Failed to copy: ', err)
+> 	}
 > }
 > ```
 
@@ -209,17 +203,17 @@ ClipboardItem 对象表示一个单独的剪贴项，每个剪贴项都拥有`Cl
 
 > ```javascript
 > try {
->   const imgURL = 'https://dummyimage.com/300.png';
->   const data = await fetch(imgURL);
->   const blob = await data.blob();
->   await navigator.clipboard.write([
->     new ClipboardItem({
->       [blob.type]: blob
->     })
->   ]);
->   console.log('Image copied.');
+> 	const imgURL = 'https://dummyimage.com/300.png'
+> 	const data = await fetch(imgURL)
+> 	const blob = await data.blob()
+> 	await navigator.clipboard.write([
+> 		new ClipboardItem({
+> 			[blob.type]: blob,
+> 		}),
+> 	])
+> 	console.log('Image copied.')
 > } catch (err) {
->   console.error(err.name, err.message);
+> 	console.error(err.name, err.message)
 > }
 > ```
 
@@ -248,13 +242,16 @@ ClipboardItem 对象表示一个单独的剪贴项，每个剪贴项都拥有`Cl
 下面的示例是将用户放入剪贴板的文本，转为大写。
 
 > ```javascript
-> const source = document.querySelector('.source');
-> 
-> source.addEventListener('copy', (event) => {
->   const selection = document.getSelection();
->   event.clipboardData.setData('text/plain', selection.toString().toUpperCase());
->   event.preventDefault();
-> });
+> const source = document.querySelector('.source')
+>
+> source.addEventListener('copy', event => {
+> 	const selection = document.getSelection()
+> 	event.clipboardData.setData(
+> 		'text/plain',
+> 		selection.toString().toUpperCase()
+> 	)
+> 	event.preventDefault()
+> })
 > ```
 
 上面示例中，事件对象的`clipboardData`属性包含了剪贴板数据。它是一个对象，有以下属性和方法。
@@ -267,28 +264,28 @@ ClipboardItem 对象表示一个单独的剪贴项，每个剪贴项都拥有`Cl
 下面的示例是拦截用户的复制操作，将指定内容放入剪贴板。
 
 > ```javascript
-> const clipboardItems = [];
-> 
-> document.addEventListener('copy', async (e) => {
->   e.preventDefault();
->   try {
->     let clipboardItems = [];
->     for (const item of e.clipboardData.items) {
->       if (!item.type.startsWith('image/')) {
->         continue;
->       }
->       clipboardItems.push(
->         new ClipboardItem({
->           [item.type]: item,
->         })
->       );
->       await navigator.clipboard.write(clipboardItems);
->       console.log('Image copied.');
->     }
->   } catch (err) {
->     console.error(err.name, err.message);
->   }
-> });
+> const clipboardItems = []
+>
+> document.addEventListener('copy', async e => {
+> 	e.preventDefault()
+> 	try {
+> 		let clipboardItems = []
+> 		for (const item of e.clipboardData.items) {
+> 			if (!item.type.startsWith('image/')) {
+> 				continue
+> 			}
+> 			clipboardItems.push(
+> 				new ClipboardItem({
+> 					[item.type]: item,
+> 				})
+> 			)
+> 			await navigator.clipboard.write(clipboardItems)
+> 			console.log('Image copied.')
+> 		}
+> 	} catch (err) {
+> 		console.error(err.name, err.message)
+> 	}
+> })
 > ```
 
 上面示例中，先使用`e.preventDefault()`取消了剪贴板的默认操作，然后由脚本接管复制操作。
@@ -302,11 +299,11 @@ ClipboardItem 对象表示一个单独的剪贴项，每个剪贴项都拥有`Cl
 下面的示例是拦截粘贴操作，由脚本将剪贴板里面的数据取出来。
 
 > ```javascript
-> document.addEventListener('paste', async (e) => {
->   e.preventDefault();
->   const text = await navigator.clipboard.readText();
->   console.log('Pasted text: ', text);
-> });
+> document.addEventListener('paste', async e => {
+> 	e.preventDefault()
+> 	const text = await navigator.clipboard.readText()
+> 	console.log('Pasted text: ', text)
+> })
 > ```
 
 ## 七、参考链接

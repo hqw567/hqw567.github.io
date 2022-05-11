@@ -9,16 +9,16 @@ tags:
 categories:
   - 思米米的小安利
 date: 2022-04-23 17:29:15
-updated:
+updated: 2022-04-23 17:29:15
 ---
 
 # ECMAScript 6 简介
 
 1. [ ECMAScript 和 JavaScript 的关系](https://www.simimi.cn/es6/#docs/intro#ECMAScript 和 JavaScript 的关系)
-2.  [ES6 与 ECMAScript 2015 的关系](https://www.simimi.cn/es6/#docs/intro#ES6 与 ECMAScript 2015 的关系)
-3.  [语法提案的批准流程](https://www.simimi.cn/es6/#docs/intro#语法提案的批准流程)
-4.  [ECMAScript 的历史](https://www.simimi.cn/es6/#docs/intro#ECMAScript 的历史)
-5.  [Babel 转码器](https://www.simimi.cn/es6/#docs/intro#Babel 转码器)
+2. [ES6 与 ECMAScript 2015 的关系](https://www.simimi.cn/es6/#docs/intro#ES6 与 ECMAScript 2015 的关系)
+3. [语法提案的批准流程](https://www.simimi.cn/es6/#docs/intro#语法提案的批准流程)
+4. [ECMAScript 的历史](https://www.simimi.cn/es6/#docs/intro#ECMAScript 的历史)
+5. [Babel 转码器](https://www.simimi.cn/es6/#docs/intro#Babel 转码器)
 
 ECMAScript 6.0（以下简称 ES6）是 JavaScript 语言的下一代标准，已经在 2015 年 6 月正式发布了。它的目标，是使得 JavaScript 语言可以用来编写复杂的大型应用程序，成为企业级开发语言。
 

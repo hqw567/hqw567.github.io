@@ -5,7 +5,7 @@ tags:
 categories:
   - 思米米的小笔记
 date: 2022-04-23 17:10:58
-updated:
+updated: 2022-04-23 17:10:58
 ---
 
 ## 一、问题的由来
@@ -14,14 +14,14 @@ updated:
 
 > ```javascript
 > var obj = {
->   foo: function () {}
-> };
-> 
-> var foo = obj.foo;
-> 
+> 	foo: function () {},
+> }
+>
+> var foo = obj.foo
+>
 > // 写法一
 > obj.foo()
-> 
+>
 > // 写法二
 > foo()
 > ```
@@ -30,13 +30,15 @@ updated:
 
 > ```javascript
 > var obj = {
->   foo: function () { console.log(this.bar) },
->   bar: 1
-> };
-> 
-> var foo = obj.foo;
-> var bar = 2;
-> 
+> 	foo: function () {
+> 		console.log(this.bar)
+> 	},
+> 	bar: 1,
+> }
+>
+> var foo = obj.foo
+> var bar = 2
+>
 > obj.foo() // 1
 > foo() // 2
 > ```
@@ -54,7 +56,7 @@ updated:
 JavaScript 语言之所以有`this`的设计，跟内存里面的数据结构有关系。
 
 > ```javascript
-> var obj = { foo:  5 };
+> var obj = { foo: 5 }
 > ```
 
 上面的代码将一个对象赋值给变量`obj`。JavaScript 引擎会先在内存里面，生成一个对象`{ foo: 5 }`，然后把这个对象的内存地址赋值给变量`obj`。
@@ -85,7 +87,7 @@ JavaScript 语言之所以有`this`的设计，跟内存里面的数据结构有
 这样的结构是很清晰的，问题在于属性的值可能是一个函数。
 
 > ```javascript
-> var obj = { foo: function () {} };
+> var obj = { foo: function () {} }
 > ```
 
 这时，引擎会将函数单独保存在内存中，然后再将函数的地址赋值给`foo`属性的`value`属性。
@@ -104,12 +106,12 @@ JavaScript 语言之所以有`this`的设计，跟内存里面的数据结构有
 由于函数是一个单独的值，所以它可以在不同的环境（上下文）执行。
 
 > ```javascript
-> var f = function () {};
-> var obj = { f: f };
-> 
+> var f = function () {}
+> var obj = { f: f }
+>
 > // 单独执行
 > f()
-> 
+>
 > // obj 环境执行
 > obj.f()
 > ```
@@ -120,8 +122,8 @@ JavaScript 允许在函数体内部，引用当前环境的其他变量。
 
 > ```javascript
 > var f = function () {
->   console.log(x);
-> };
+> 	console.log(x)
+> }
 > ```
 
 上面代码中，函数体里面使用了变量`x`。该变量由运行环境提供。
@@ -130,7 +132,7 @@ JavaScript 允许在函数体内部，引用当前环境的其他变量。
 
 > ```javascript
 > var f = function () {
->   console.log(this.x);
+> 	console.log(this.x)
 > }
 > ```
 
@@ -138,18 +140,18 @@ JavaScript 允许在函数体内部，引用当前环境的其他变量。
 
 > ```javascript
 > var f = function () {
->   console.log(this.x);
+> 	console.log(this.x)
 > }
-> 
-> var x = 1;
+>
+> var x = 1
 > var obj = {
->   f: f,
->   x: 2,
-> };
-> 
+> 	f: f,
+> 	x: 2,
+> }
+>
 > // 单独执行
 > f() // 1
-> 
+>
 > // obj 环境执行
 > obj.f() // 2
 > ```
