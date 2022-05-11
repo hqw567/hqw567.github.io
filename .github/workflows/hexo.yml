@@ -33,6 +33,7 @@ jobs:
         run: |
           npm i -g hexo-cli
           npm i
+          hexo algolia
       - name: Deploy hexo
         run: |
-        hexo algolia &&  hexo clean &&  hexo generate && hexo deploy
+          hexo clean &&  hexo generate && hexo deploy

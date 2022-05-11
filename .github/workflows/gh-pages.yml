@@ -18,14 +18,12 @@ jobs:
 
       - name: Install Dependencies
         run: npm install
+        run: npm install algolia
         run: npx pnpm i --store=node_modules/.pnpm-store
       - name: algolia
         env:
           HEXO_ALGOLIA_INDEXING_KEY: ${{ secrets.HEXO_ALGOLIA_INDEXING_KEY }}
-        run: npm install algolia
-        run: npm run algolia
       - run: npx pnpm run build
-
       - name: Deploy
         uses: peaceiris/actions-gh-pages@v3
         with:
