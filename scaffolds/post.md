@@ -1,11 +1,9 @@
 ---
-title: { { title } }
-date: { { date } }
-updated: { { date } }
-tags:
-  - 标签
-categories:
-  - 思米米的小
+title: {{ title }}
+date: {{ date }}
+updated: {{ date }}
+tags: 标签
+categories: 思米米的小
 ---
 
 这里是简介....
