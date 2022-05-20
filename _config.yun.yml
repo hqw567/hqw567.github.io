@@ -65,11 +65,12 @@ bg_image:
 
 trianglify:
   enable: true
-  cellSize: 75
-  width: 1920
-  height: 1080
+  cellSize: 15
+  width: 1000
+  height: 800
   # palette: '["YlGnBu", "GnBu", "Purples", "Blues","YlOrRd"]'
   opacity: 0.5
+  colorFunction: trianglify.colorFunctions.shadows()
 
 fireworks:
   enable: true
