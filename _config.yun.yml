@@ -15,7 +15,7 @@ avatar:
   status:
     enable: true
     emoji: 😊
-    message: 做你该做的事，并接受它的事与愿违。
+    message: 山有木兮木有枝，心悦君兮君不知。
 sidebar:
   bg_image: /images/sidebar/sidebar.png
   bg_position: bottom 3rem center
@@ -66,9 +66,9 @@ bg_image:
 trianglify:
   enable: true
   cellSize: 75
-  width: 800
-  height: 600
-  palette: '["YlGnBu", "GnBu", "Purples", "Blues","YlOrRd"]'
+  width: 1920
+  height: 1080
+  # palette: '["YlGnBu", "GnBu", "Purples", "Blues","YlOrRd"]'
   opacity: 0.5
 
 fireworks:
@@ -91,9 +91,9 @@ waline:
   visitor: true
   comment: true
   emoji:
-    - https://cdn.jsdelivr.net/gh/walinejs/emojis@latest/bilibili/
-    - https://cdn.jsdelivr.net/gh/walinejs/emojis@latest/weibo/
-    - https://cdn.jsdelivr.net/gh/walinejs/emojis@latest/qq/
+    - https://fastly.jsdelivr.net/gh/walinejs/emojis@latest/bilibili/
+    - https://fastly.jsdelivr.net/gh/walinejs/emojis@latest/weibo/
+    - https://fastly.jsdelivr.net/gh/walinejs/emojis@latest/qq/
   locale:
     placeholder: 填写邮箱，可以收到回复通知哦～
   requiredMeta: ['nick']
@@ -119,7 +119,7 @@ footer:
     enable: true
     title: 又拍云
     link: https://www.upyun.com/?utm_source=lianmeng&utm_medium=referral
-    logo: https://cdn.jsdelivr.net/gh/YunYouJun/cdn/img/logo/upyun-logo.png
+    logo: https://fastly.jsdelivr.net/gh/YunYouJun/cdn/img/logo/upyun-logo.png
     prefix: 本网站由
     suffix: 提供 CDN 加速
   powered:
@@ -138,14 +138,14 @@ wordcloud:
 mourn:
   enable: true
   days:
-    - '4-4'
+    # - '4-4'
 
 engine_search:
   enable: false
-  href: 'https://www.bing.com/search?q=site:'
+  # href: 'https://www.bing.com/search?q=site:'
   # href: "https://www.google.com/search?q=site:"
   # href: "https://www.baidu.com/s?wd=site:"
-  domain: www.simimi.cn
+  domain: simimi.cn
 
 algolia_search:
   enable: true

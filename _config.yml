@@ -4,10 +4,12 @@
 
 # Site
 title: 思米米(SIMIMI)
-subtitle: All at sea.
-description: 做你该做的事，并接受它的事与愿违
+subtitle: 山有木兮木有枝，心悦君兮君不知。
+description: 山有木兮木有枝，心悦君兮君不知。
 keywords:
   - 思米米
+  - 前端
+  - 分享
   - simimi
   - Blog
   - Herway
@@ -118,10 +120,10 @@ deploy:
 
 # https://github.com/MoePlayer/hexo-tag-aplayer
 aplayer:
-  cdn: https://cdn.jsdelivr.net/npm/aplayer@latest/dist/APlayer.min.js
-  style_cdn: https://cdn.jsdelivr.net/npm/aplayer@latest/dist/APlayer.min.css
+  cdn: https://fastly.jsdelivr.net/npm/aplayer@latest/dist/APlayer.min.js
+  style_cdn: https://fastly.jsdelivr.net/npm/aplayer@latest/dist/APlayer.min.css
   meting: true
-  meting_cdn: https://cdn.jsdelivr.net/npm/meting@1/dist/Meting.min.js
+  meting_cdn: https://fastly.jsdelivr.net/npm/meting@1/dist/Meting.min.js
   asset_inject: false
 
 # 谷歌、百度站点地图生成
