@@ -70,7 +70,6 @@ trianglify:
   height: 800
   # palette: '["YlGnBu", "GnBu", "Purples", "Blues","YlOrRd"]'
   opacity: 0.5
-  colorFunction: trianglify.colorFunctions.shadows()
 
 fireworks:
   enable: true
