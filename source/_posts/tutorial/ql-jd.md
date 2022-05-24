@@ -185,13 +185,14 @@ updated: 2022-05-10 10:21:10
 ```
     screen -r //如果只有一个会话，可直接使用此命令恢复。
     screen -ls //查询所有会话列表
+    screen -ls |awk '/Socket/'|awk '{print $1}' //查询所有会话列表
     screen -r 会话 ID //进入指定会话
 ```
 
 - 如何杀死终端
-  `screen -d 会话 ID`
-
-  - 第二种方法
-    `Ctrl+a`，输入 `K`，输入 `Y` 确认杀死会话。其实，使用 `exit` 也可。
+  - 杀死前20个screen
+  `screen -ls|awk 'NR>=2&&NR<=6{print $1}'|awk '{print "screen -S "$1" -X quit"}'|sh`
+  - 杀死单个进程信息,session_id 自己根据screen -ls 查看
+  `screen -X -S session_id quit`
 
 确认是否成功杀掉会话可直接 `screen -ls`，看下列表中是否还有会话即可。
