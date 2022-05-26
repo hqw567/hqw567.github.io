@@ -31,33 +31,26 @@ updated: 2022-05-10 10:21:10
 打开 Shell 或宝塔终端复制贴贴以下安装
 
 ```
-    docker run -dit \
-    --name QL1 \
-    --hostname QL1 \
-    --restart always \
-    -p 5745:5700 \
-    -v $PWD/QL1/config:/ql/config \
-    -v $PWD/QL1/log:/ql/log \
-    -v $PWD/QL1/db:/ql/db \
-    -v $PWD/QL1/scripts:/ql/scripts \
-    -v $PWD/QL1/jbot:/ql/jbot \
-    whyour/qinglong:latest
+  docker run -dit \
+  -v $PWD/ql3:/ql/data \
+  -p 5746:5700 \
+  --name ql3 \
+  --hostname ql3 \
+  --restart unless-stopped \
+  whyour/qinglong:latest
 ```
 
-如需多容器修改`QL1`和`5745`即可 如
+如需多容器修改`QL2`和`5745`即可 如
 
 ```
-    docker run -dit \
-    --name QL2 \
-    --hostname QL2 \
-    --restart always \
-    -p 5746:5700 \
-    -v $PWD/QL2/config:/ql/config \
-    -v $PWD/QL2/log:/ql/log \
-    -v $PWD/QL2/db:/ql/db \
-    -v $PWD/QL2/scripts:/ql/scripts \
-    -v $PWD/QL2/jbot:/ql/jbot \
-    whyour/qinglong:latest
+  docker run -dit \
+  -v $PWD/ql2:/ql/data \
+  -p 5745:5700 \
+  --name ql2 \
+  --hostname ql2 \
+  --restart unless-stopped \
+  whyour/qinglong:latest
+
 ```
 
 安装成功后在
@@ -159,7 +152,7 @@ updated: 2022-05-10 10:21:10
 - 创建目录并进入
   `mkdir QLTools && cd QLTools`
 
-- [选择 Linux_X64_v1.xx.rar](https://github.com/nuanxinqing123/QLTools/releases) -下载压缩包上传到此目录并解压文件
+- [选择 Linux.xx.rar](https://github.com/nuanxinqing123/QLTools/releases) -下载压缩包上传到此目录并解压文件
 
 - 给予文件夹权限
   `chmod 755 QLPanelTools`
