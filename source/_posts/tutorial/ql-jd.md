@@ -32,10 +32,10 @@ updated: 2022-05-10 10:21:10
 
 ```
   docker run -dit \
-  -v $PWD/ql3:/ql/data \
-  -p 5746:5700 \
-  --name ql3 \
-  --hostname ql3 \
+  -v $PWD/ql1:/ql/data \
+  -p 5744:5700 \
+  --name ql1 \
+  --hostname ql1 \
   --restart unless-stopped \
   whyour/qinglong:latest
 ```
