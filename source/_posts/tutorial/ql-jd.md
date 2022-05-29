@@ -164,28 +164,15 @@ updated: 2022-05-10 10:21:10
 
 ### 程序台守护教程
 
-- 安装 screen
-  `yum -y install screen`
+- 打开宝塔软件商店 搜索Supervisor管理器
+- 安装 Supervisor管理器
 
-- 开启新的终端窗口
-  `screen`
+- 打开Supervisor管理器
+- 添加进程守护
+  - 名称: 随便填(如qltools)
+  - 启动用户: root
+  - 运行目录: 你上传QLTools-linux-amd64文件的文件夹完整路径(如/root/qltools) 
+  - 启动命令: 你的运行目录路径/你要运行的程序名称(如/root/qltools/QLTools-linux-amd64)
+  - 进程数量: 1
 
-  - 直接敲 screen 即可打开新的终端窗口。进入后运行需要运行的进程。
-  - 开启完成后，Catrl+a，然后输入 d，回车。即可暂时关闭窗口，但是后台继续运行。
 
-- 恢复终端窗口
-
-```
-    screen -r //如果只有一个会话，可直接使用此命令恢复。
-    screen -ls //查询所有会话列表
-    screen -ls |awk '/Socket/'|awk '{print $1}' //查询所有会话列表
-    screen -r 会话 ID //进入指定会话
-```
-
-- 如何杀死终端
-  - 杀死前20个screen
-  `screen -ls|awk 'NR>=2&&NR<=6{print $1}'|awk '{print "screen -S "$1" -X quit"}'|sh`
-  - 杀死单个进程信息,session_id 自己根据screen -ls 查看
-  `screen -X -S session_id quit`
-
-确认是否成功杀掉会话可直接 `screen -ls`，看下列表中是否还有会话即可。
