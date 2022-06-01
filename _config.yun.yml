@@ -200,6 +200,10 @@ pages:
     icon: icon-genderless-line
     color: dodgerblue
 
+head:
+  js:
+    async: https://fastly.jsdelivr.net/npm/ionicons/dist/ionicons.js
+
 menu:
   home:
     path: /
