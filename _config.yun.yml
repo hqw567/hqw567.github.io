@@ -178,16 +178,17 @@ albums:
 
 tags:
   Vue: '#4fc08d'
-  Markdown: '#0E834D'
+  Hexo: '#0E834D'
   CSS: '#5298d1'
-  Proxy: '#026E00'
+  Node.js: '#026E00'
   Git: '#F14E32'
-  分享: '#61dafb'
-  学习: '#3776ab'
-  教程: '#8892BF'
-  笔记: '#0066B8'
-  羊毛: '#F4DF4F'
-  HTML: '#317AC6'
+  React: '#61dafb'
+  Python: '#3776ab'
+  PHP: '#8892BF'
+  VS Code: '#0066B8'
+  JavaScript: '#F4DF4F'
+  TypeScript: '#317AC6'
+  Laravel: '#F4645F'
   前端: '#e300a8'
 
 categories:
