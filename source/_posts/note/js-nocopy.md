@@ -1,7 +1,7 @@
 ---
 title: 一行代码禁止页面复制、右键
 tags:
-  - js
+  - JavaScript
   - 前端
 categories:
   - 思米米的小笔记

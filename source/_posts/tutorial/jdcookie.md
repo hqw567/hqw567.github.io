@@ -2,8 +2,7 @@
 title: 使用Alook浏览器获取京东Cookie
 tags:
   - 教程
-  - 京东
-  - 薅羊毛
+  - 羊毛
 categories:
   - 思米米的小教程
 date: 2022-02-14 10:21:10

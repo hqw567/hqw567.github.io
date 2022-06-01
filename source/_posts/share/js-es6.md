@@ -1,11 +1,9 @@
 ---
-title: 【分享】Javascript ES6 入门教程
+title: 【分享】JavaScript ES6 入门教程
 type: link
 url: http://es6.simimi.cn/
 tags:
-  - Javascript
-  - 分享
-  - 教程
+  - JavaScript
 categories:
   - 思米米的小安利
 date: 2022-04-23 17:29:15

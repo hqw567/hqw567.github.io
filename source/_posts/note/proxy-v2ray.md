@@ -1,6 +1,6 @@
 ---
 title: 使用v2rayN代理Git、PowerShell、CMD的设置
-tags: v2ray
+tags: Proxy
 categories: 思米米的小笔记
 date: 2022-05-17 16:52:12
 updated: 2022-05-17 16:52:12

@@ -22,9 +22,9 @@ updated: 2022-04-23 17:01:18
 
 本文逐一介绍这三种方法。
 
-![img](https://www.wangbase.com/blogimg/asset/202101/bg2021012003.jpg)
-
 <!-- more -->
+
+![img](https://www.wangbase.com/blogimg/asset/202101/bg2021012003.jpg)
 
 ## 二、Document.execCommand() 方法
 

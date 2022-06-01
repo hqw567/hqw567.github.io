@@ -2,8 +2,7 @@
 title: 最新青龙面板薅羊毛教程【全过程】
 tags:
   - 教程
-  - 京东
-  - 薅羊毛
+  - 羊毛
 categories:
   - 思米米的小教程
 date: 2022-05-9 10:21:10
@@ -174,5 +173,4 @@ updated: 2022-05-10 10:21:10
   - 运行目录: 你上传QLTools-linux-amd64文件的文件夹完整路径(如/root/qltools) 
   - 启动命令: 你的运行目录路径/你要运行的程序名称(如/root/qltools/QLTools-linux-amd64)
   - 进程数量: 1
-
 
