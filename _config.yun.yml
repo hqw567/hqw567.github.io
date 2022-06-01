@@ -171,24 +171,23 @@ google_adsense:
 
 post_edit:
   enable: true
-  url: //github.com/hqw567/hqw567.github.io/tree/hexo/source/
+  url: https://github.com/hqw567/hqw567.github.io/tree/hexo/source/
 
 albums:
   enable: false
 
 tags:
   Vue: '#4fc08d'
-  Git: '#0E834D'
+  Markdown: '#0E834D'
   CSS: '#5298d1'
-  Markdown: '#026E00'
+  Proxy: '#026E00'
   Git: '#F14E32'
-  Proxy: '#61dafb'
-  分享: '#3776ab'
-  前端: '#8892BF'
-  教程: '#0066B8'
-  笔记: '#F4DF4F'
-  羊毛: '#317AC6'
-  HTML: '#F4645F'
+  分享: '#61dafb'
+  学习: '#3776ab'
+  教程: '#8892BF'
+  笔记: '#0066B8'
+  羊毛: '#F4DF4F'
+  HTML: '#317AC6'
   前端: '#e300a8'
 
 categories:
