@@ -1,7 +1,7 @@
 mode: auto
 
 colors:
-  #primary: "#6200ee"
+  primary: "#6200ee"
   # bg: "#F5F5F5"
   selection_bg: '#8e71c1' # 选取文字时的背景色
   # 标签云中标签的起始色和结束色
@@ -9,7 +9,7 @@ colors:
   # tag_end_color:
 
 avatar:
-  url: https://q1.qlogo.cn/g?b=qq&nk=79099400&s=640
+  url: //q1.qlogo.cn/g?b=qq&nk=79099400&s=640
   opacity: 1
   mickey_mouse: true
   status:
@@ -58,7 +58,7 @@ favicon: /favicon.ico
 
 bg_image:
   enable: false
-  # url: https://bing.biturl.top/?resolution=1920&format=image&index=0&mkt=zh-CN
+  # url: //bing.biturl.top/?resolution=1920&format=image&index=0&mkt=zh-CN
   # dark:
   # blur: 2px # 设置背景模糊程度
   opacity: 0.8
@@ -83,17 +83,17 @@ comment:
     - waline
     # - giscus
   tips:
-    - 如果您有任何关于博客内容的相关讨论，欢迎前往 <a href="https://github.com/hqw567/hqw567.github.io/discussions/" target="_blank">GitHub Discussions</a> 与我交流。
+    - 如果您有任何关于博客内容的相关讨论，欢迎前往 <a href="//github.com/hqw567/hqw567.github.io/discussions/" target="_blank">GitHub Discussions</a> 与我交流。
 
 waline:
   enable: true
-  serverURL: https://waline.simimi.cn
+  serverURL: //waline.simimi.cn
   visitor: true
   comment: true
   emoji:
-    - https://fastly.jsdelivr.net/gh/walinejs/emojis@latest/bilibili/
-    - https://fastly.jsdelivr.net/gh/walinejs/emojis@latest/weibo/
-    - https://fastly.jsdelivr.net/gh/walinejs/emojis@latest/qq/
+    - //fastly.jsdelivr.net/gh/walinejs/emojis@latest/bilibili/
+    - //fastly.jsdelivr.net/gh/walinejs/emojis@latest/weibo/
+    - //fastly.jsdelivr.net/gh/walinejs/emojis@latest/qq/
   locale:
     placeholder: 填写邮箱，可以收到回复通知哦～
   requiredMeta: ['nick']
@@ -108,7 +108,7 @@ footer:
   since: 2022
   icon:
     name: icon-github-line
-    url: https://github.com/hqw567
+    url: //github.com/hqw567
     animated: true
     color: '#0078E7'
     title: 思米米的GitHub
@@ -118,8 +118,8 @@ footer:
   support:
     enable: true
     title: 又拍云
-    link: https://www.upyun.com/?utm_source=lianmeng&utm_medium=referral
-    logo: https://fastly.jsdelivr.net/gh/YunYouJun/cdn/img/logo/upyun-logo.png
+    link: //www.upyun.com/?utm_source=lianmeng&utm_medium=referral
+    logo: //fastly.jsdelivr.net/gh/YunYouJun/cdn/img/logo/upyun-logo.png
     prefix: 本网站由
     suffix: 提供 CDN 加速
   powered:
@@ -142,9 +142,9 @@ mourn:
 
 engine_search:
   enable: false
-  # href: 'https://www.bing.com/search?q=site:'
-  # href: "https://www.google.com/search?q=site:"
-  # href: "https://www.baidu.com/s?wd=site:"
+  # href: '//www.bing.com/search?q=site:'
+  # href: "//www.google.com/search?q=site:"
+  # href: "//www.baidu.com/s?wd=site:"
   domain: simimi.cn
 
 algolia_search:
@@ -152,7 +152,7 @@ algolia_search:
   hits:
     per_page: 10 # the number of search results per page
 # If you want to use it, you need config algolia appID in _config.yml!!!
-# https://github.com/oncletom/hexo-algolia
+# //github.com/oncletom/hexo-algolia
 #algolia_search:
 #  enable: true
 # ...
@@ -171,24 +171,24 @@ google_adsense:
 
 post_edit:
   enable: true
-  url: https://github.com/hqw567/hqw567.github.io/tree/hexo/source/
+  url: //github.com/hqw567/hqw567.github.io/tree/hexo/source/
 
 albums:
   enable: false
 
 tags:
   Vue: '#4fc08d'
-  Hexo: '#0E834D'
+  Git: '#0E834D'
   CSS: '#5298d1'
-  Node.js: '#026E00'
+  Markdown: '#026E00'
   Git: '#F14E32'
-  React: '#61dafb'
-  Python: '#3776ab'
-  PHP: '#8892BF'
-  VS Code: '#0066B8'
-  JavaScript: '#F4DF4F'
-  TypeScript: '#317AC6'
-  Laravel: '#F4645F'
+  Proxy: '#61dafb'
+  分享: '#3776ab'
+  前端: '#8892BF'
+  教程: '#0066B8'
+  笔记: '#F4DF4F'
+  羊毛: '#317AC6'
+  HTML: '#F4645F'
   前端: '#e300a8'
 
 categories:
@@ -234,7 +234,7 @@ wordcount:
   time: true
 
 say:
-  api: https://el-bot-api.vercel.app/api/words/young
+  api: //el-bot-api.vercel.app/api/words/young
   hitokoto:
     enable: false
 
@@ -244,28 +244,28 @@ lazyload:
 social:
   - name: RSS
     # set rss in your root config
-    # https://github.com/hexojs/hexo-generator-feed
+    # //github.com/hexojs/hexo-generator-feed
     link: /atom.xml # config.feed.path
     icon: icon-rss-line
     color: orange
   - name: QQ
-    link: https://wpa.qq.com/msgrd?v=3&uin=79099400&site=qq&menu=yes
+    link: //wpa.qq.com/msgrd?v=3&uin=79099400&site=qq&menu=yes
     icon: icon-qq-line
     color: '#12B7F5'
   - name: GitHub
-    link: https://github.com/hqw567
+    link: //github.com/hqw567
     icon: icon-github-line
     color: '#6e5494'
   - name: 网易云音乐
-    link: https://music.163.com/#/user/home?id=616215227
+    link: //music.163.com/#/user/home?id=616215227
     icon: icon-netease-cloud-music-line
     color: '#C20C0C'
   - name: 知乎
-    link: https://www.zhihu.com/people/hqw567/
+    link: //www.zhihu.com/people/hqw567/
     icon: icon-zhihu-line
     color: '#0084FF'
   - name: 哔哩哔哩
-    link: https://space.bilibili.com/477836218
+    link: //space.bilibili.com/477836218
     icon: icon-bilibili-line
     color: '#FF8EB3'
   - name: E-Mail
@@ -273,7 +273,7 @@ social:
     icon: icon-mail-line
     color: '#4c000a'
   - name: Travelling
-    link: https://travellings.link
+    link: //travellings.link
     icon: icon-train-line
     color: black
 
