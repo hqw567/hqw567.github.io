@@ -1,0 +1,244 @@
+<!DOCTYPE html><html lang="zh-CN"><head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width, initial-scale=1.0"><meta name="theme-color" content="#f012bd"><meta name="author" content="Herway"><meta name="copyright" content="Herway"><meta name="generator" content="Hexo 6.2.0"><meta name="theme" content="hexo-theme-yun"><title>CSS规范 | 思米米(SIMIMI)</title><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Noto+Serif+SC:wght@900&amp;display=swap" media="print" onload="this.media='all'"><link rel="stylesheet" href="https://fastly.jsdelivr.net/npm/star-markdown-css@0.3.3/dist/yun/yun-markdown.min.css"><link rel="stylesheet" href="https://fastly.jsdelivr.net/npm/prism-theme-vars/base.css"><script src="https://fastly.jsdelivr.net/npm/@unocss/runtime/mini.global.js"></script><script src="https://fastly.jsdelivr.net/npm/scrollreveal/dist/scrollreveal.min.js" defer></script><script>function initScrollReveal() {
+  [".post-card",".markdown-body img"].forEach((target)=> {
+    ScrollReveal().reveal(target);
+  })
+}
+document.addEventListener("DOMContentLoaded", initScrollReveal);
+document.addEventListener("pjax:success", initScrollReveal);
+</script><link rel="icon" type="image/png" href="/favicon.ico"><link rel="mask-icon" href="/favicon.ico" color="#f012bd"><link rel="preload" href="/css/hexo-theme-yun.css" as="style"><link rel="prefetch" href="/js/sidebar.js" as="script"><link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin><link rel="preconnect" href="https://fastly.jsdelivr.net/npm/" crossorigin><script id="yun-config">
+    window.Yun = {}
+    window.CONFIG = {"hostname":"www.simimi.cn","root":"/","title":"思米米","version":"1.10.3","mode":"auto","copycode":true,"page":{"isPost":true},"i18n":{"placeholder":"搜索...","empty":"找不到您查询的内容: ${query}","hits":"找到 ${hits} 条结果","hits_time":"找到 ${hits} 条结果（用时 ${time} 毫秒）"},"anonymous_image":"https://cdn.yunyoujun.cn/img/avatar/none.jpg","say":{"api":"https://el-bot-api.vercel.app/api/words/young"},"algolia":{"appID":"2XQIT428NI","apiKey":"1ce0c553fc3637fb687b5a8112d9c567","indexName":"simimi","hits":{"per_page":10}},"waline":{"config":{"enable":true,"serverURL":"https://waline.simimi.cn","comment":true,"visitor":true,"emoji":["https://fastly.jsdelivr.net/gh/walinejs/emojis@latest/bilibili/","https://fastly.jsdelivr.net/gh/walinejs/emojis@latest/weibo/","https://fastly.jsdelivr.net/gh/walinejs/emojis@latest/qq/"],"locale":{"placeholder":"填写邮箱，可以收到回复通知哦～"},"requiredMeta":["nick"],"el":"#waline","lang":"zh-CN"},"cdn":"https://fastly.jsdelivr.net/npm/@waline/client@v2/dist/waline.js","dark":"html.dark"},"vendors":{"darken":"https://fastly.jsdelivr.net/npm/darken@1.5.0"}};
+  </script><link rel="stylesheet" href="/css/hexo-theme-yun.css"><script src="/js/hexo-theme-yun.js" type="module"></script><link rel="alternate" href="/atom.xml" title="思米米(SIMIMI)" type="application/atom+xml"><link rel="preconnect" href="https://www.google-analytics.com" crossorigin><script async src="https://www.googletagmanager.com/gtag/js?id=G-4KNE7DCHW1"></script><script>if (CONFIG.hostname === location.hostname) {
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-4KNE7DCHW1');
+}</script><script data-ad-client="ca-pub-8809383571319105" async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script><script>(function(){
+  var bp = document.createElement('script');
+  var curProtocol = window.location.protocol.split(':')[0];
+  if (curProtocol === 'https') {
+    bp.src = 'https://zz.bdstatic.com/linksubmit/push.js';
+  }
+  else {
+    bp.src = 'http://push.zhanzhang.baidu.com/push.js';
+  }
+  var s = document.getElementsByTagName("script")[0];
+  s.parentNode.insertBefore(bp, s);
+})();</script><meta name="description" content="CSS规范CSS书写顺序  位置属性(position, top, right, z-index, display, float等) 大小(width, height, padding, margin) 文字系列(font, line-height, letter-spacing, color- text-align等) 背景(background, border等) 其他(animation,">
+<meta property="og:type" content="article">
+<meta property="og:title" content="CSS规范">
+<meta property="og:url" content="https://www.simimi.cn/note/css-norm/index.html">
+<meta property="og:site_name" content="思米米(SIMIMI)">
+<meta property="og:description" content="CSS规范CSS书写顺序  位置属性(position, top, right, z-index, display, float等) 大小(width, height, padding, margin) 文字系列(font, line-height, letter-spacing, color- text-align等) 背景(background, border等) 其他(animation,">
+<meta property="og:locale" content="zh_CN">
+<meta property="article:published_time" content="2022-06-01T06:51:55.000Z">
+<meta property="article:modified_time" content="2022-06-01T06:51:55.000Z">
+<meta property="article:author" content="Herway">
+<meta property="article:tag" content="CSS">
+<meta name="twitter:card" content="summary"><script>(function() {
+  const prefersDark = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches
+  const setting = localStorage.getItem('darken-mode') || 'auto'
+  if (setting === 'dark' || (prefersDark && setting !== 'light'))
+    document.documentElement.classList.toggle('dark', true)
+})()</script></head><body><script src="https://code.iconify.design/2/2.1.1/iconify.min.js"></script><script>// Define global variable
+IconifyProviders = {
+  // Empty prefix: overwrite default API provider configuration
+  '': {
+    // Use custom API first, use Iconify public API as backup
+    resources: [
+        'https://api.iconify.design',
+    ],
+    // Wait for 1 second before switching API hosts
+    rotate: 1000,
+  },
+};</script><canvas id="trianglifyContainer"></canvas><script defer src="https://fastly.jsdelivr.net/npm/trianglify@4/dist/trianglify.bundle.js"></script><script>document.addEventListener("DOMContentLoaded", () => {
+  const pattern = trianglify({
+    width: 1000,
+    height: 800,
+    cellSize: 75,
+    palette: ["YlGnBu", "GnBu", "Purples", "Blues"],
+  });
+  const canvasOpts = {
+    applyCssScaling: false
+  }
+  document.body.appendChild(pattern.toCanvas(trianglifyContainer, canvasOpts));
+});</script><div class="container"><a class="sidebar-toggle hty-icon-button" id="menu-btn"><div class="hamburger hamburger--spin" type="button"><span class="hamburger-box"><span class="hamburger-inner"></span></span></div></a><div class="sidebar-toggle sidebar-overlay"></div><aside class="sidebar"><script src="/js/sidebar.js" type="module"></script><ul class="sidebar-nav"><li class="sidebar-nav-item sidebar-nav-toc hty-icon-button sidebar-nav-active" data-target="post-toc-wrap" title="文章目录"><span class="icon iconify" data-icon="ri:list-ordered"></span></li><li class="sidebar-nav-item sidebar-nav-overview hty-icon-button" data-target="site-overview-wrap" title="站点概览"><span class="icon iconify" data-icon="ri:passport-line"></span></li></ul><div class="sidebar-panel" id="site-overview-wrap"><div class="site-info mickey-mouse"><a class="site-author-avatar" href="/about/" title="Herway"><img width="96" loading="lazy" src="https://q1.qlogo.cn/g?b=qq&amp;nk=79099400&amp;s=640" alt="Herway"><span class="site-author-status" title="山有木兮木有枝，心悦君兮君不知。">😊</span></a><div class="site-author-name"><a href="/about/">Herway</a></div><a class="site-name" href="/about/site.html">思米米(SIMIMI)</a><sub class="site-subtitle">simimi.cn</sub><div class="site-description">山有木兮木有枝，心悦君兮君不知。</div></div><nav class="site-state"><a class="site-state-item hty-icon-button icon-home" href="/" title="首页"><span class="site-state-item-icon"><span class="icon iconify" data-icon="ri:home-4-line"></span></span></a><div class="site-state-item"><a href="/archives/" title="归档"><span class="site-state-item-icon"><span class="icon iconify" data-icon="ri:archive-line"></span></span><span class="site-state-item-count">21</span></a></div><div class="site-state-item"><a href="/categories/" title="分类"><span class="site-state-item-icon"><span class="icon iconify" data-icon="ri:folder-2-line"></span></span><span class="site-state-item-count">4</span></a></div><div class="site-state-item"><a href="/tags/" title="标签"><span class="site-state-item-icon"><span class="icon iconify" data-icon="ri:price-tag-3-line"></span></span><span class="site-state-item-count">11</span></a></div><a class="site-state-item hty-icon-button" href="/about/#comment" title="留言板"><span class="site-state-item-icon"><span class="icon iconify" data-icon="ri:clipboard-line"></span></span></a></nav><hr style="margin-bottom:0.5rem"><div class="links-of-author"><a class="links-of-author-item hty-icon-button" rel="noopener" href="/atom.xml" title="RSS" target="_blank" style="color:orange"><span class="icon iconify" data-icon="ri:rss-line"></span></a><a class="links-of-author-item hty-icon-button" rel="noopener" href="https://wpa.qq.com/msgrd?v=3&amp;uin=79099400&amp;site=qq&amp;menu=yes" title="QQ" target="_blank" style="color:#12B7F5"><span class="icon iconify" data-icon="ri:qq-line"></span></a><a class="links-of-author-item hty-icon-button" rel="noopener" href="https://github.com/hqw567" title="GitHub" target="_blank" style="color:#6e5494"><span class="icon iconify" data-icon="ri:github-line"></span></a><a class="links-of-author-item hty-icon-button" rel="noopener" href="https://music.163.com/#/user/home?id=616215227" title="网易云音乐" target="_blank" style="color:#C20C0C"><span class="icon iconify" data-icon="ri:netease-cloud-music-line"></span></a><a class="links-of-author-item hty-icon-button" rel="noopener" href="https://www.zhihu.com/people/hqw567/" title="知乎" target="_blank" style="color:#0084FF"><span class="icon iconify" data-icon="ri:zhihu-line"></span></a><a class="links-of-author-item hty-icon-button" rel="noopener" href="https://space.bilibili.com/477836218" title="哔哩哔哩" target="_blank" style="color:#FF8EB3"><span class="icon iconify" data-icon="ri:bilibili-line"></span></a><a class="links-of-author-item hty-icon-button" rel="noopener" href="mailto:hqw6@qq.com" title="E-Mail" target="_blank" style="color:#4c000a"><span class="icon iconify" data-icon="ri:mail-line"></span></a><a class="links-of-author-item hty-icon-button" rel="noopener" href="https://travellings.link" title="Travelling" target="_blank" style="color:var(--hty-text-color)"><span class="icon iconify" data-icon="ri:train-line"></span></a></div><hr style="margin:0.5rem 1rem"><div class="links"><a class="links-item hty-icon-button" href="/links" title="我的小伙伴们" style="color:dodgerblue"><span class="icon iconify" data-icon="ri:genderless-line"></span></a></div><br><a class="links-item hty-icon-button" id="toggle-mode-btn" href="javascript:;" title="Mode" style="color: #f1cb64"><span class="icon iconify" data-icon="ri:contrast-2-line"></span></a></div><div class="sidebar-panel sidebar-panel-active" id="post-toc-wrap"><div class="post-toc"><div class="post-toc-content"><ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#CSS%E8%A7%84%E8%8C%83"><span class="toc-number">1.</span> <span class="toc-text">CSS规范</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#CSS%E4%B9%A6%E5%86%99%E9%A1%BA%E5%BA%8F"><span class="toc-number">1.1.</span> <span class="toc-text">CSS书写顺序</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E4%B9%A6%E5%86%99%E8%A7%84%E8%8C%83"><span class="toc-number">1.2.</span> <span class="toc-text">书写规范</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#%E4%BD%BF%E7%94%A8CSS%E7%BC%A9%E5%86%99%E5%B1%9E%E6%80%A7"><span class="toc-number">1.2.1.</span> <span class="toc-text">使用CSS缩写属性</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E5%8E%BB%E6%8E%89%E5%B0%8F%E6%95%B0%E7%82%B9%E5%89%8D%E7%9A%84%E2%80%9C0%E2%80%9D"><span class="toc-number">1.2.2.</span> <span class="toc-text">去掉小数点前的“0”</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E7%AE%80%E5%86%99%E5%91%BD%E5%90%8D"><span class="toc-number">1.2.3.</span> <span class="toc-text">简写命名</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#16%E8%BF%9B%E5%88%B6%E9%A2%9C%E8%89%B2%E4%BB%A3%E7%A0%81%E7%BC%A9%E5%86%99"><span class="toc-number">1.2.4.</span> <span class="toc-text">16进制颜色代码缩写</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E8%BF%9E%E5%AD%97%E7%AC%A6CSS%E9%80%89%E6%8B%A9%E5%99%A8%E5%91%BD%E5%90%8D%E8%A7%84%E8%8C%83"><span class="toc-number">1.2.5.</span> <span class="toc-text">连字符CSS选择器命名规范</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E4%B8%8D%E8%A6%81%E9%9A%8F%E6%84%8F%E4%BD%BF%E7%94%A8id"><span class="toc-number">1.2.6.</span> <span class="toc-text">不要随意使用id</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E4%B8%BA%E9%80%89%E6%8B%A9%E5%99%A8%E6%B7%BB%E5%8A%A0%E7%8A%B6%E6%80%81%E5%89%8D%E7%BC%80"><span class="toc-number">1.2.7.</span> <span class="toc-text">为选择器添加状态前缀</span></a></li></ol></li></ol></li></ol></div></div></div><div class="tag-cloud"><div class="tag-cloud-tags"><a href="/tags/CSS/" style="font-size: 25.5px; color: #2680d4">CSS</a> <a href="/tags/Git/" style="font-size: 21px; color: #4d89c0">Git</a> <a href="/tags/JavaScript/" style="font-size: 30px; color: #0078e7">JavaScript</a> <a href="/tags/Markdown/" style="font-size: 12px; color: #999">Markdown</a> <a href="/tags/Proxy/" style="font-size: 12px; color: #999">Proxy</a> <a href="/tags/%E5%88%86%E4%BA%AB/" style="font-size: 16.5px; color: #7391ad">分享</a> <a href="/tags/%E5%89%8D%E7%AB%AF/" style="font-size: 25.5px; color: #2680d4">前端</a> <a href="/tags/%E5%AD%A6%E4%B9%A0/" style="font-size: 16.5px; color: #7391ad">学习</a> <a href="/tags/%E6%95%99%E7%A8%8B/" style="font-size: 21px; color: #4d89c0">教程</a> <a href="/tags/%E7%AC%94%E8%AE%B0/" style="font-size: 16.5px; color: #7391ad">笔记</a> <a href="/tags/%E7%BE%8A%E6%AF%9B/" style="font-size: 16.5px; color: #7391ad">羊毛</a></div></div></aside><main class="sidebar-translate" id="content"><div id="post"><article class="hty-card post-block" itemscope itemtype="https://schema.org/Article" style="--smc-primary:#f012bd;"><link itemprop="mainEntityOfPage" href="https://www.simimi.cn/note/css-norm/"><span hidden itemprop="author" itemscope itemtype="https://schema.org/Person"><meta itemprop="name" content="Herway"><meta itemprop="description"></span><span hidden itemprop="publisher" itemscope itemtype="https://schema.org/Organization"><meta itemprop="name" content="思米米(SIMIMI)"></span><header class="post-header"><h1 class="post-title" itemprop="name headline">CSS规范<a class="post-edit-link" href="https://github.com/hqw567/hqw567.github.io/tree/hexo/source/_posts/note/css-norm.md" target="_blank" title="编辑" rel="noopener"><span class="icon iconify" data-icon="ri:edit-line"></span></a></h1><div class="post-meta"><div class="post-time" style="display:block"><span class="post-meta-item-icon"><span class="icon iconify" data-icon="ri:calendar-line"></span></span> <time title="创建时间：2022-06-01 14:51:55" itemprop="dateCreated datePublished" datetime="2022-06-01T14:51:55+08:00">2022-06-01</time></div><span class="post-count"><span class="post-symbolcount"><span class="post-meta-item-icon" title="本文字数"><span class="icon iconify" data-icon="ri:file-word-line"></span></span> <span title="本文字数">555</span><span class="post-meta-divider">-</span><span class="post-meta-item-icon" title="阅读时长"><span class="icon iconify" data-icon="ri:timer-line"></span></span> <span title="阅读时长">2m</span></span></span><span class="leancloud_visitors" id="/note/css-norm/" data-flag-title="CSS规范"><span class="post-meta-divider">-</span><span class="post-meta-item-icon" title="阅读次数"><span class="icon iconify" data-icon="ri:eye-line"></span> <span class="leancloud-visitors-count"></span></span></span><span class="post-meta-divider">-</span><a href="#comment"><span class="post-meta-item-icon" title="评论数"><span class="icon iconify" data-icon="ri:chat-3-line"></span> <span class="waline-comment-count" id="/note/css-norm/"></span></span></a><div class="post-classify"><span class="post-category"> <span class="post-meta-item-icon" style="margin-right:3px;"><span class="icon iconify" data-icon="ri:folder-line"></span></span><span itemprop="about" itemscope itemtype="https://schema.org/Thing"><a class="category-item" href="/categories/%E6%80%9D%E7%B1%B3%E7%B1%B3%E7%9A%84%E5%B0%8F%E7%AC%94%E8%AE%B0/" style="--text-color:#FB7299" itemprop="url" rel="index"><span itemprop="text">思米米的小笔记</span></a></span></span><span class="post-tag"><span class="post-meta-divider">-</span><a class="tag-item" href="/tags/CSS/" style="--text-color:#5298d1"><span class="post-meta-item-icon"><span class="icon iconify" data-icon="ri:price-tag-3-line"></span></span><span class="tag-name">CSS</span></a></span></div></div></header><section class="post-body" itemprop="articleBody"><div class="post-content markdown-body"><h2 id="CSS规范"><a href="#CSS规范" class="headerlink" title="CSS规范"></a>CSS规范</h2><h3 id="CSS书写顺序"><a href="#CSS书写顺序" class="headerlink" title="CSS书写顺序"></a>CSS书写顺序</h3><blockquote>
+<ol>
+<li>位置属性(position, top, right, z-index, display, float等)</li>
+<li>大小(width, height, padding, margin)</li>
+<li>文字系列(font, line-height, letter-spacing, color- text-align等)</li>
+<li>背景(background, border等)</li>
+<li>其他(animation, transition等)</li>
+</ol>
+</blockquote>
+<pre class="line-numbers language-css" data-language="css"><code class="language-css"><span class="token selector">*** Bad ***
+.example</span> <span class="token punctuation">&#123;</span>
+    <span class="token property">color</span><span class="token punctuation">:</span> red<span class="token punctuation">;</span>
+    <span class="token property">z-index</span><span class="token punctuation">:</span> -1<span class="token punctuation">;</span>
+    <span class="token property">background-color</span><span class="token punctuation">:</span> #9e0<span class="token punctuation">;</span>
+    <span class="token property">display</span><span class="token punctuation">:</span> inline-block<span class="token punctuation">;</span>
+    <span class="token property">font-size</span><span class="token punctuation">:</span> 1.5em<span class="token punctuation">;</span>
+<span class="token punctuation">&#125;</span>
+
+<span class="token selector">*** Good ***
+.example</span> <span class="token punctuation">&#123;</span>
+    <span class="token property">z-index</span><span class="token punctuation">:</span> -1<span class="token punctuation">;</span>
+    <span class="token property">display</span><span class="token punctuation">:</span> inline-block<span class="token punctuation">;</span>
+    <span class="token property">font-size</span><span class="token punctuation">:</span> 1.5em<span class="token punctuation">;</span>
+    <span class="token property">background-color</span><span class="token punctuation">:</span> #9e0<span class="token punctuation">;</span>
+<span class="token punctuation">&#125;</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+<span id="more"></span>
+
+<h3 id="书写规范"><a href="#书写规范" class="headerlink" title="书写规范"></a>书写规范</h3><blockquote>
+<h4 id="使用CSS缩写属性"><a href="#使用CSS缩写属性" class="headerlink" title="使用CSS缩写属性"></a>使用CSS缩写属性</h4><p>CSS有些属性是可以缩写的，比如padding,margin,font等等，这样精简代码同时又能提高用户的阅读体验。</p>
+</blockquote>
+<pre class="line-numbers language-css" data-language="css"><code class="language-css"><span class="token selector">*** Bad ***
+.box</span> <span class="token punctuation">&#123;</span>
+	<span class="token property">border-top-style</span><span class="token punctuation">:</span> none<span class="token punctuation">;</span>
+    <span class="token property">font-family</span><span class="token punctuation">:</span> serif<span class="token punctuation">;</span>
+    <span class="token property">font-size</span><span class="token punctuation">:</span> 100%<span class="token punctuation">;</span>
+    <span class="token property">line-height</span><span class="token punctuation">:</span> 1.6<span class="token punctuation">;</span>
+    <span class="token property">padding-bottom</span><span class="token punctuation">:</span> 2em<span class="token punctuation">;</span>
+    <span class="token property">padding-left</span><span class="token punctuation">:</span> 1em<span class="token punctuation">;</span>
+    <span class="token property">padding-right</span><span class="token punctuation">:</span> 1em<span class="token punctuation">;</span>
+    <span class="token property">padding-top</span><span class="token punctuation">:</span> 0<span class="token punctuation">;</span>
+<span class="token punctuation">&#125;</span>
+<span class="token selector">*** Good ***
+.box</span> <span class="token punctuation">&#123;</span>
+    <span class="token property">border-top</span><span class="token punctuation">:</span> 0<span class="token punctuation">;</span>
+    <span class="token property">font</span><span class="token punctuation">:</span> 100%/1.6 serif<span class="token punctuation">;</span>
+    padding 0 1em 2em<span class="token punctuation">;</span>
+<span class="token punctuation">&#125;</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+<blockquote>
+<h4 id="去掉小数点前的“0”"><a href="#去掉小数点前的“0”" class="headerlink" title="去掉小数点前的“0”"></a>去掉小数点前的“0”</h4></blockquote>
+<pre class="line-numbers language-css" data-language="css"><code class="language-css">*** Bad ***  	<span class="token property">font-size</span><span class="token punctuation">:</span> 0.8em<span class="token punctuation">;</span>
+*** Good ***	<span class="token property">font-size</span><span class="token punctuation">:</span> .8em<span class="token punctuation">;</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre>
+
+<blockquote>
+<h4 id="简写命名"><a href="#简写命名" class="headerlink" title="简写命名"></a>简写命名</h4><p>很多用户都喜欢简写类名，但前提是要让人看懂你的命名才能简写哦！</p>
+</blockquote>
+<pre class="line-numbers language-css" data-language="css"><code class="language-css"><span class="token selector">*** Bad ***
+.navigation</span> <span class="token punctuation">&#123;</span>
+	<span class="token property">margin</span><span class="token punctuation">:</span> 0 0 1em 2em<span class="token punctuation">;</span>
+<span class="token punctuation">&#125;</span>
+<span class="token selector">.atr</span> <span class="token punctuation">&#123;</span>
+	<span class="token property">color</span><span class="token punctuation">:</span> #93c<span class="token punctuation">;</span>
+<span class="token punctuation">&#125;</span>
+<span class="token selector">*** Good ***
+#nav</span> <span class="token punctuation">&#123;</span>
+    <span class="token property">margin</span><span class="token punctuation">:</span> 0 0 1em 2em<span class="token punctuation">;</span>
+<span class="token punctuation">&#125;</span>
+<span class="token selector">.author</span> <span class="token punctuation">&#123;</span>
+    <span class="token property">color</span><span class="token punctuation">:</span> #93c<span class="token punctuation">;</span>
+<span class="token punctuation">&#125;</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+<blockquote>
+<h4 id="16进制颜色代码缩写"><a href="#16进制颜色代码缩写" class="headerlink" title="16进制颜色代码缩写"></a>16进制颜色代码缩写</h4><p>有些颜色代码是可以缩写的，我们就尽量缩写吧，提高用户体验为主。</p>
+</blockquote>
+<pre class="line-numbers language-css" data-language="css"><code class="language-css">*** Bad ***		<span class="token property">color</span><span class="token punctuation">:</span> #eebbcc<span class="token punctuation">;</span>
+*** Good ***	<span class="token property">color</span><span class="token punctuation">:</span> #ebc<span class="token punctuation">;</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre>
+
+<blockquote>
+<h4 id="连字符CSS选择器命名规范"><a href="#连字符CSS选择器命名规范" class="headerlink" title="连字符CSS选择器命名规范"></a>连字符CSS选择器命名规范</h4><ol>
+<li><p>长名称或词组可以使用中横线来为选择器命名。</p>
+</li>
+<li><p>不建议使用“_”下划线来命名CSS选择器，为什么呢？</p>
+</li>
+</ol>
+<ul>
+<li><p>输入的时候少按一个shift键；</p>
+</li>
+<li><p>浏览器兼容问题 （比如使用_tips的选择器命名，在IE6是无效的）</p>
+</li>
+<li><p>能良好区分JavaScript变量命名（JS变量命名是用“_”）</p>
+</li>
+</ul>
+</blockquote>
+<pre class="line-numbers language-css" data-language="css"><code class="language-css"><span class="token selector">*** Bad ***
+.maintitle</span> <span class="token punctuation">&#123;</span>
+	<span class="token property">color</span><span class="token punctuation">:</span> #e3c<span class="token punctuation">;</span>
+<span class="token punctuation">&#125;</span>
+<span class="token selector">.main_title</span> <span class="token punctuation">&#123;</span>
+	<span class="token property">color</span><span class="token punctuation">:</span> #e3c<span class="token punctuation">;</span>
+<span class="token punctuation">&#125;</span>
+<span class="token selector">*** Good ***
+.main-title</span><span class="token punctuation">&#123;</span>
+	<span class="token property">color</span><span class="token punctuation">:</span> #e3c<span class="token punctuation">;</span>
+<span class="token punctuation">&#125;</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+<blockquote>
+<h4 id="不要随意使用id"><a href="#不要随意使用id" class="headerlink" title="不要随意使用id"></a>不要随意使用id</h4><p>id在JS是唯一的，不能多次使用，而使用class类选择器却可以重复使用，另外id的优先级优先与class，所以id应该按需使用，而不能滥用。</p>
+</blockquote>
+<pre class="line-numbers language-css" data-language="css"><code class="language-css"><span class="token selector">*** Bad ***
+#info-title</span> <span class="token punctuation">&#123;</span>
+	<span class="token property">font-size</span><span class="token punctuation">:</span> 3em<span class="token punctuation">;</span>
+<span class="token punctuation">&#125;</span>
+<span class="token selector">*** Good ***
+.info-title</span> <span class="token punctuation">&#123;</span>
+	<span class="token property">font-size</span><span class="token punctuation">:</span> 3em<span class="token punctuation">;</span>
+<span class="token punctuation">&#125;</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+<blockquote>
+<h4 id="为选择器添加状态前缀"><a href="#为选择器添加状态前缀" class="headerlink" title="为选择器添加状态前缀"></a>为选择器添加状态前缀</h4><p>有时候可以给选择器添加一个表示状态的前缀，让语义更明了，比如下图是添加了“.is-”前缀。</p>
+</blockquote>
+<pre class="line-numbers language-css" data-language="css"><code class="language-css"><span class="token selector">*** Bad ***
+.error</span> <span class="token punctuation">&#123;</span>
+	<span class="token property">background-color</span><span class="token punctuation">:</span> red<span class="token punctuation">;</span>
+<span class="token punctuation">&#125;</span>
+<span class="token selector">*** Good ***
+.is-error</span> <span class="token punctuation">&#123;</span>
+	<span class="token property">background-color</span><span class="token punctuation">:</span> red<span class="token punctuation">;</span>
+<span class="token punctuation">&#125;</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+</div></section><div id="reward-container"><span class="hty-icon-button button-glow" id="reward-button" title="打赏" onclick="var qr = document.getElementById(&quot;qr&quot;); qr.style.display = (qr.style.display === &quot;none&quot;) ? &quot;block&quot; : &quot;none&quot;;"><span class="icon iconify" data-icon="ri:hand-coin-line"></span></span><div id="reward-comment">我很可爱，请给我钱</div><div id="qr" style="display:none;"><div style="display:inline-block"><a href="/images/pay/zfb.jpg"><img loading="lazy" src="/images/pay/zfb.jpg" alt="支付宝" title="支付宝"></a><div><span style="color:#226bf3"><span class="icon iconify" data-icon="ri:alipay-line"></span></span></div></div><div style="display:inline-block"><a href="/images/pay/qq.png"><img loading="lazy" src="/images/pay/qq.png" alt="QQ 支付" title="QQ 支付"></a><div><span style="color:#05b0ff"><span class="icon iconify" data-icon="ri:qq-line"></span></span></div></div><div style="display:inline-block"><a href="/images/pay/wx.png"><img loading="lazy" src="/images/pay/wx.png" alt="微信支付" title="微信支付"></a><div><span style="color:#07c160"><span class="icon iconify" data-icon="ri:wechat-pay-line"></span></span></div></div></div></div><ul class="post-copyright"><li class="post-copyright-author"><strong>本文作者：</strong>Herway</li><li class="post-copyright-link"><strong>本文链接：</strong><a href="https://www.simimi.cn/note/css-norm/" title="CSS规范">https://www.simimi.cn/note/css-norm/</a></li><li class="post-copyright-license"><strong>版权声明：</strong>本博客所有文章除特别声明外，均默认采用 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh" target="_blank" rel="noopener" title="CC BY-NC-SA 4.0 "><span class="icon iconify" data-icon="ri:creative-commons-line"></span><span class="icon iconify" data-icon="ri:creative-commons-by-line"></span><span class="icon iconify" data-icon="ri:creative-commons-nc-line"></span><span class="icon iconify" data-icon="ri:creative-commons-sa-line"></span></a> 许可协议。</li></ul></article><div class="post-nav"><div class="post-nav-item"><a class="post-nav-prev" href="/note/css-name/" rel="prev" title="CSS命名参考"><span class="icon iconify" data-icon="ri:arrow-left-s-line"></span><span class="post-nav-text">CSS命名参考</span></a></div><div class="post-nav-item"><a class="post-nav-next" href="/note/css-font/" rel="next" title="CSS设置字体"><span class="post-nav-text">CSS设置字体</span><span class="icon iconify" data-icon="ri:arrow-right-s-line"></span></a></div></div></div><div class="hty-card" id="comment"><div class="comment-tooltip text-center"><span>如果您有任何关于博客内容的相关讨论，欢迎前往 <a href="https://github.com/hqw567/hqw567.github.io/discussions/" target="_blank">GitHub Discussions</a> 与我交流。</span><br></div><div id="waline"></div><link rel="stylesheet" href="https://fastly.jsdelivr.net/npm/@waline/client@v2/dist/waline.css"><script>window.CONFIG.waline.config.path = "/note/css-norm/"</script><div class="js-Pjax"><script src="/js/comments/waline.js" type="module" defer></script></div></div></main><footer class="sidebar-translate" id="footer"><div class="beian"><a rel="noopener" href="https://beian.miit.gov.cn/" target="_blank">湘ICP备2022002172号</a></div><div class="copyright"><span>&copy; 2022 </span><a class="with-love" id="animate" target="_blank" rel="noopener" href="https://github.com/hqw567" title="思米米的GitHub"><span class="icon iconify" data-icon="ri:github-line"></span></a><span class="author"> Herway</span></div><div class="live-time"><span>本博客部分资源来自互联网，如有侵权，请联系删除<br>本博客已萌萌哒地运行</span><span id="display_live_time"></span><span class="moe-text">(●'◡'●)</span><script>function blog_live_time() {
+  setTimeout(blog_live_time, 1000);
+  const start = new Date('2022-01-01T00:00:00');
+  const now = new Date();
+  const timeDiff = (now.getTime() - start.getTime());
+  const msPerMinute = 60 * 1000;
+  const msPerHour = 60 * msPerMinute;
+  const msPerDay = 24 * msPerHour;
+  const passDay = Math.floor(timeDiff / msPerDay);
+  const passHour = Math.floor((timeDiff % msPerDay) / 60 / 60 / 1000);
+  const passMinute = Math.floor((timeDiff % msPerHour) / 60 / 1000);
+  const passSecond = Math.floor((timeDiff % msPerMinute) / 1000);
+  display_live_time.innerHTML = ` ${passDay} 天 ${passHour} 小时 ${passMinute} 分 ${passSecond} 秒`;
+}
+blog_live_time();
+</script></div><div id="busuanzi"><span id="busuanzi_container_site_uv" title="总访客量"><span><span class="icon iconify" data-icon="ri:user-line"></span></span><span id="busuanzi_value_site_uv"></span></span><span class="footer-separator">|</span><span id="busuanzi_container_site_pv" title="总访问量"><span><span class="icon iconify" data-icon="ri:eye-line"></span></span><span id="busuanzi_value_site_pv"></span></span><script async src="https://busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script></div><div class="footer-support"><span>本网站由</span><a class="footer-support-logo" href="https://www.upyun.com/?utm_source=lianmeng&amp;utm_medium=hqw567" target="blank" title="又拍云"><img height="30" src="https://fastly.jsdelivr.net/gh/YunYouJun/cdn/img/logo/upyun-logo.png" alt="又拍云"></a><span>提供 CDN 加速</span></div></footer></div><a class="hty-icon-button" id="back-to-top" aria-label="back-to-top" href="#"><span class="icon iconify" data-icon="ri:arrow-up-s-line"></span><svg class="progress-circle-container" viewBox="0 0 100 100"><circle class="progress-circle" id="progressCircle" cx="50" cy="50" r="48" fill="none" stroke="#f012bd" stroke-width="2" stroke-linecap="round"></circle></svg></a><a class="popup-trigger hty-icon-button icon-search" id="search" href="javascript:;" title="搜索"><span class="site-state-item-icon"><span class="icon iconify" data-icon="ri:search-line"></span></span></a><script>window.addEventListener("DOMContentLoaded", () => {
+  // Handle and trigger popup window
+  document.querySelector(".popup-trigger").addEventListener("click", () => {
+    document.querySelector(".popup").classList.add("show");
+    setTimeout(() => {
+      document.querySelector(".search-input").focus();
+    }, 100);
+  });
+
+  // Monitor main search box
+  const onPopupClose = () => {
+    document.querySelector(".popup").classList.remove("show");
+  };
+
+  document.querySelector(".popup-btn-close").addEventListener("click", () => {
+    onPopupClose();
+  });
+
+  window.addEventListener("keyup", event => {
+    if (event.key === "Escape") {
+      onPopupClose();
+    }
+  });
+});
+</script><script defer src="https://fastly.jsdelivr.net/npm/algoliasearch@4/dist/algoliasearch-lite.umd.js"></script><script defer src="https://fastly.jsdelivr.net/npm/instantsearch.js@4/dist/instantsearch.production.min.js"></script><script defer src="/js/search/algolia-search.js" type="module"></script><div class="popup search-popup"><div class="search-header"><span class="popup-btn-close close-icon hty-icon-button"><span class="icon iconify" data-icon="ri:close-line"></span></span></div><div class="search-input-container"></div><div class="algolia-results"><div id="algolia-stats"></div><div id="algolia-hits"></div><div class="algolia-pagination" id="algolia-pagination"></div></div></div><script>function initMourn() {
+  const date = new Date();
+  const today = (date.getMonth() + 1) + "-" + date.getDate()
+  const mourn_days = null
+  if (mourn_days.includes(today)) {
+    document.documentElement.style.filter = "grayscale(1)";
+  }
+}
+initMourn();</script><script src="https://fastly.jsdelivr.net/npm/medium-zoom@1.0.6/dist/medium-zoom.min.js"></script><script>const images = [...document.querySelectorAll('.markdown-body img')]
+mediumZoom(images)</script><style>.medium-zoom-image {
+  z-index: 99;
+}</style></body></html>

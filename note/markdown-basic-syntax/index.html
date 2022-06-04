@@ -1,0 +1,446 @@
+<!DOCTYPE html><html lang="zh-CN"><head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width, initial-scale=1.0"><meta name="theme-color" content="#f012bd"><meta name="author" content="Herway"><meta name="copyright" content="Herway"><meta name="generator" content="Hexo 6.2.0"><meta name="theme" content="hexo-theme-yun"><title>Markdown语法的基本使用 | 思米米(SIMIMI)</title><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Noto+Serif+SC:wght@900&amp;display=swap" media="print" onload="this.media='all'"><link rel="stylesheet" href="https://fastly.jsdelivr.net/npm/star-markdown-css@0.3.3/dist/yun/yun-markdown.min.css"><link rel="stylesheet" href="https://fastly.jsdelivr.net/npm/prism-theme-vars/base.css"><script src="https://fastly.jsdelivr.net/npm/@unocss/runtime/mini.global.js"></script><script src="https://fastly.jsdelivr.net/npm/scrollreveal/dist/scrollreveal.min.js" defer></script><script>function initScrollReveal() {
+  [".post-card",".markdown-body img"].forEach((target)=> {
+    ScrollReveal().reveal(target);
+  })
+}
+document.addEventListener("DOMContentLoaded", initScrollReveal);
+document.addEventListener("pjax:success", initScrollReveal);
+</script><link rel="icon" type="image/png" href="/favicon.ico"><link rel="mask-icon" href="/favicon.ico" color="#f012bd"><link rel="preload" href="/css/hexo-theme-yun.css" as="style"><link rel="prefetch" href="/js/sidebar.js" as="script"><link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin><link rel="preconnect" href="https://fastly.jsdelivr.net/npm/" crossorigin><script id="yun-config">
+    window.Yun = {}
+    window.CONFIG = {"hostname":"www.simimi.cn","root":"/","title":"思米米","version":"1.10.3","mode":"auto","copycode":true,"page":{"isPost":true},"i18n":{"placeholder":"搜索...","empty":"找不到您查询的内容: ${query}","hits":"找到 ${hits} 条结果","hits_time":"找到 ${hits} 条结果（用时 ${time} 毫秒）"},"anonymous_image":"https://cdn.yunyoujun.cn/img/avatar/none.jpg","say":{"api":"https://el-bot-api.vercel.app/api/words/young"},"algolia":{"appID":"2XQIT428NI","apiKey":"1ce0c553fc3637fb687b5a8112d9c567","indexName":"simimi","hits":{"per_page":10}},"waline":{"config":{"enable":true,"serverURL":"https://waline.simimi.cn","comment":true,"visitor":true,"emoji":["https://fastly.jsdelivr.net/gh/walinejs/emojis@latest/bilibili/","https://fastly.jsdelivr.net/gh/walinejs/emojis@latest/weibo/","https://fastly.jsdelivr.net/gh/walinejs/emojis@latest/qq/"],"locale":{"placeholder":"填写邮箱，可以收到回复通知哦～"},"requiredMeta":["nick"],"el":"#waline","lang":"zh-CN"},"cdn":"https://fastly.jsdelivr.net/npm/@waline/client@v2/dist/waline.js","dark":"html.dark"},"vendors":{"darken":"https://fastly.jsdelivr.net/npm/darken@1.5.0"}};
+  </script><link rel="stylesheet" href="/css/hexo-theme-yun.css"><script src="/js/hexo-theme-yun.js" type="module"></script><link rel="alternate" href="/atom.xml" title="思米米(SIMIMI)" type="application/atom+xml"><link rel="preconnect" href="https://www.google-analytics.com" crossorigin><script async src="https://www.googletagmanager.com/gtag/js?id=G-4KNE7DCHW1"></script><script>if (CONFIG.hostname === location.hostname) {
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-4KNE7DCHW1');
+}</script><script data-ad-client="ca-pub-8809383571319105" async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script><script>(function(){
+  var bp = document.createElement('script');
+  var curProtocol = window.location.protocol.split(':')[0];
+  if (curProtocol === 'https') {
+    bp.src = 'https://zz.bdstatic.com/linksubmit/push.js';
+  }
+  else {
+    bp.src = 'http://push.zhanzhang.baidu.com/push.js';
+  }
+  var s = document.getElementsByTagName("script")[0];
+  s.parentNode.insertBefore(bp, s);
+})();</script><meta name="description" content=".md 即 markdown 文件的基本常用编写语法,是一种快速标记、快速排版语言，现在很多前段项目中的说明文件 readme 等都是用.md 文件编写的，而且很多企业也在在鼓励使用这种编辑方式，特别作为一个前端从业者更要学会使用这种语言。下面就简单和大家分享一些.md 基本语法">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Markdown语法的基本使用">
+<meta property="og:url" content="https://www.simimi.cn/note/markdown-basic-syntax/index.html">
+<meta property="og:site_name" content="思米米(SIMIMI)">
+<meta property="og:description" content=".md 即 markdown 文件的基本常用编写语法,是一种快速标记、快速排版语言，现在很多前段项目中的说明文件 readme 等都是用.md 文件编写的，而且很多企业也在在鼓励使用这种编辑方式，特别作为一个前端从业者更要学会使用这种语言。下面就简单和大家分享一些.md 基本语法">
+<meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="http://static.runoob.com/images/runoob-logo.png">
+<meta property="og:image" content="http://static.runoob.com/images/runoob-logo.png">
+<meta property="og:image" content="http://static.runoob.com/images/runoob-logo.png">
+<meta property="article:published_time" content="2022-02-14T02:21:10.000Z">
+<meta property="article:modified_time" content="2022-05-09T02:21:10.000Z">
+<meta property="article:author" content="Herway">
+<meta property="article:tag" content="Markdown">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="http://static.runoob.com/images/runoob-logo.png"><script>(function() {
+  const prefersDark = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches
+  const setting = localStorage.getItem('darken-mode') || 'auto'
+  if (setting === 'dark' || (prefersDark && setting !== 'light'))
+    document.documentElement.classList.toggle('dark', true)
+})()</script></head><body><script src="https://code.iconify.design/2/2.1.1/iconify.min.js"></script><script>// Define global variable
+IconifyProviders = {
+  // Empty prefix: overwrite default API provider configuration
+  '': {
+    // Use custom API first, use Iconify public API as backup
+    resources: [
+        'https://api.iconify.design',
+    ],
+    // Wait for 1 second before switching API hosts
+    rotate: 1000,
+  },
+};</script><canvas id="trianglifyContainer"></canvas><script defer src="https://fastly.jsdelivr.net/npm/trianglify@4/dist/trianglify.bundle.js"></script><script>document.addEventListener("DOMContentLoaded", () => {
+  const pattern = trianglify({
+    width: 1000,
+    height: 800,
+    cellSize: 75,
+    palette: ["YlGnBu", "GnBu", "Purples", "Blues"],
+  });
+  const canvasOpts = {
+    applyCssScaling: false
+  }
+  document.body.appendChild(pattern.toCanvas(trianglifyContainer, canvasOpts));
+});</script><div class="container"><a class="sidebar-toggle hty-icon-button" id="menu-btn"><div class="hamburger hamburger--spin" type="button"><span class="hamburger-box"><span class="hamburger-inner"></span></span></div></a><div class="sidebar-toggle sidebar-overlay"></div><aside class="sidebar"><script src="/js/sidebar.js" type="module"></script><ul class="sidebar-nav"><li class="sidebar-nav-item sidebar-nav-toc hty-icon-button sidebar-nav-active" data-target="post-toc-wrap" title="文章目录"><span class="icon iconify" data-icon="ri:list-ordered"></span></li><li class="sidebar-nav-item sidebar-nav-overview hty-icon-button" data-target="site-overview-wrap" title="站点概览"><span class="icon iconify" data-icon="ri:passport-line"></span></li></ul><div class="sidebar-panel" id="site-overview-wrap"><div class="site-info mickey-mouse"><a class="site-author-avatar" href="/about/" title="Herway"><img width="96" loading="lazy" src="https://q1.qlogo.cn/g?b=qq&amp;nk=79099400&amp;s=640" alt="Herway"><span class="site-author-status" title="山有木兮木有枝，心悦君兮君不知。">😊</span></a><div class="site-author-name"><a href="/about/">Herway</a></div><a class="site-name" href="/about/site.html">思米米(SIMIMI)</a><sub class="site-subtitle">simimi.cn</sub><div class="site-description">山有木兮木有枝，心悦君兮君不知。</div></div><nav class="site-state"><a class="site-state-item hty-icon-button icon-home" href="/" title="首页"><span class="site-state-item-icon"><span class="icon iconify" data-icon="ri:home-4-line"></span></span></a><div class="site-state-item"><a href="/archives/" title="归档"><span class="site-state-item-icon"><span class="icon iconify" data-icon="ri:archive-line"></span></span><span class="site-state-item-count">21</span></a></div><div class="site-state-item"><a href="/categories/" title="分类"><span class="site-state-item-icon"><span class="icon iconify" data-icon="ri:folder-2-line"></span></span><span class="site-state-item-count">4</span></a></div><div class="site-state-item"><a href="/tags/" title="标签"><span class="site-state-item-icon"><span class="icon iconify" data-icon="ri:price-tag-3-line"></span></span><span class="site-state-item-count">11</span></a></div><a class="site-state-item hty-icon-button" href="/about/#comment" title="留言板"><span class="site-state-item-icon"><span class="icon iconify" data-icon="ri:clipboard-line"></span></span></a></nav><hr style="margin-bottom:0.5rem"><div class="links-of-author"><a class="links-of-author-item hty-icon-button" rel="noopener" href="/atom.xml" title="RSS" target="_blank" style="color:orange"><span class="icon iconify" data-icon="ri:rss-line"></span></a><a class="links-of-author-item hty-icon-button" rel="noopener" href="https://wpa.qq.com/msgrd?v=3&amp;uin=79099400&amp;site=qq&amp;menu=yes" title="QQ" target="_blank" style="color:#12B7F5"><span class="icon iconify" data-icon="ri:qq-line"></span></a><a class="links-of-author-item hty-icon-button" rel="noopener" href="https://github.com/hqw567" title="GitHub" target="_blank" style="color:#6e5494"><span class="icon iconify" data-icon="ri:github-line"></span></a><a class="links-of-author-item hty-icon-button" rel="noopener" href="https://music.163.com/#/user/home?id=616215227" title="网易云音乐" target="_blank" style="color:#C20C0C"><span class="icon iconify" data-icon="ri:netease-cloud-music-line"></span></a><a class="links-of-author-item hty-icon-button" rel="noopener" href="https://www.zhihu.com/people/hqw567/" title="知乎" target="_blank" style="color:#0084FF"><span class="icon iconify" data-icon="ri:zhihu-line"></span></a><a class="links-of-author-item hty-icon-button" rel="noopener" href="https://space.bilibili.com/477836218" title="哔哩哔哩" target="_blank" style="color:#FF8EB3"><span class="icon iconify" data-icon="ri:bilibili-line"></span></a><a class="links-of-author-item hty-icon-button" rel="noopener" href="mailto:hqw6@qq.com" title="E-Mail" target="_blank" style="color:#4c000a"><span class="icon iconify" data-icon="ri:mail-line"></span></a><a class="links-of-author-item hty-icon-button" rel="noopener" href="https://travellings.link" title="Travelling" target="_blank" style="color:var(--hty-text-color)"><span class="icon iconify" data-icon="ri:train-line"></span></a></div><hr style="margin:0.5rem 1rem"><div class="links"><a class="links-item hty-icon-button" href="/links" title="我的小伙伴们" style="color:dodgerblue"><span class="icon iconify" data-icon="ri:genderless-line"></span></a></div><br><a class="links-item hty-icon-button" id="toggle-mode-btn" href="javascript:;" title="Mode" style="color: #f1cb64"><span class="icon iconify" data-icon="ri:contrast-2-line"></span></a></div><div class="sidebar-panel sidebar-panel-active" id="post-toc-wrap"><div class="post-toc"><div class="post-toc-content"><ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E4%B8%80%E3%80%81%E5%9F%BA%E6%9C%AC%E7%AC%A6%E5%8F%B7%EF%BC%9A-gt"><span class="toc-number">1.</span> <span class="toc-text">一、基本符号：* - + . &gt;</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E4%BA%8C%E3%80%81%E6%A0%87%E9%A2%98"><span class="toc-number">2.</span> <span class="toc-text">二、标题</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E4%B8%89%E3%80%81%E5%88%97%E8%A1%A8"><span class="toc-number">3.</span> <span class="toc-text">三、列表</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%97%A0%E5%BA%8F%E5%88%97%E8%A1%A8"><span class="toc-number">3.1.</span> <span class="toc-text">无序列表</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%9C%89%E5%BA%8F%E5%88%97%E8%A1%A8"><span class="toc-number">3.2.</span> <span class="toc-text">有序列表</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%B5%8C%E5%A5%97%E5%88%97%E8%A1%A8"><span class="toc-number">3.3.</span> <span class="toc-text">嵌套列表</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%9B%9B%E3%80%81%E5%BC%95%E7%94%A8%E8%AF%B4%E6%98%8E%E5%8C%BA%E5%9D%97"><span class="toc-number">4.</span> <span class="toc-text">四、引用说明区块</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%AD%A3%E5%B8%B8%E5%BD%A2%E5%BC%8F"><span class="toc-number">4.1.</span> <span class="toc-text">正常形式</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%B5%8C%E5%A5%97%E5%8C%BA%E5%9D%97"><span class="toc-number">4.2.</span> <span class="toc-text">嵌套区块</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E4%BA%94%E3%80%81%E4%BB%A3%E7%A0%81%E5%9D%97"><span class="toc-number">5.</span> <span class="toc-text">五、代码块</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%85%AD%E3%80%81%E9%93%BE%E6%8E%A5"><span class="toc-number">6.</span> <span class="toc-text">六、链接</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E8%A1%8C%E5%86%85%E5%BC%8F"><span class="toc-number">6.1.</span> <span class="toc-text">行内式</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%8F%82%E6%95%B0%E5%BC%8F"><span class="toc-number">6.2.</span> <span class="toc-text">参数式</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E4%B8%83%E3%80%81%E5%9B%BE%E7%89%87"><span class="toc-number">7.</span> <span class="toc-text">七、图片</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E8%A1%8C%E5%86%85%E5%BC%8F-1"><span class="toc-number">7.1.</span> <span class="toc-text">行内式</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%8F%82%E6%95%B0%E5%BC%8F-1"><span class="toc-number">7.2.</span> <span class="toc-text">参数式</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%85%AB%E3%80%81%E5%88%86%E5%89%B2%E7%BA%BF"><span class="toc-number">8.</span> <span class="toc-text">八、分割线</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E4%B9%9D%E3%80%81Markdown-%E9%AB%98%E7%BA%A7%E6%8A%80%E5%B7%A7"><span class="toc-number">9.</span> <span class="toc-text">九、Markdown 高级技巧</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%BC%BA%E8%B0%83%E5%AD%97%E4%BD%93"><span class="toc-number">9.1.</span> <span class="toc-text">强调字体</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E8%BD%AC%E4%B9%89"><span class="toc-number">9.2.</span> <span class="toc-text">转义</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%88%A0%E9%99%A4%E7%BA%BF"><span class="toc-number">9.3.</span> <span class="toc-text">删除线</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%94%AF%E6%8C%81%E7%9A%84-HTML-%E5%85%83%E7%B4%A0"><span class="toc-number">9.4.</span> <span class="toc-text">支持的 HTML 元素</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%8D%81%E3%80%81%E8%A1%A8%E6%A0%BC"><span class="toc-number">10.</span> <span class="toc-text">十、表格</span></a></li></ol></div></div></div><div class="tag-cloud"><div class="tag-cloud-tags"><a href="/tags/CSS/" style="font-size: 25.5px; color: #2680d4">CSS</a> <a href="/tags/Git/" style="font-size: 21px; color: #4d89c0">Git</a> <a href="/tags/JavaScript/" style="font-size: 30px; color: #0078e7">JavaScript</a> <a href="/tags/Markdown/" style="font-size: 12px; color: #999">Markdown</a> <a href="/tags/Proxy/" style="font-size: 12px; color: #999">Proxy</a> <a href="/tags/%E5%88%86%E4%BA%AB/" style="font-size: 16.5px; color: #7391ad">分享</a> <a href="/tags/%E5%89%8D%E7%AB%AF/" style="font-size: 25.5px; color: #2680d4">前端</a> <a href="/tags/%E5%AD%A6%E4%B9%A0/" style="font-size: 16.5px; color: #7391ad">学习</a> <a href="/tags/%E6%95%99%E7%A8%8B/" style="font-size: 21px; color: #4d89c0">教程</a> <a href="/tags/%E7%AC%94%E8%AE%B0/" style="font-size: 16.5px; color: #7391ad">笔记</a> <a href="/tags/%E7%BE%8A%E6%AF%9B/" style="font-size: 16.5px; color: #7391ad">羊毛</a></div></div></aside><main class="sidebar-translate" id="content"><div id="post"><article class="hty-card post-block" itemscope itemtype="https://schema.org/Article" style="--smc-primary:#f012bd;"><link itemprop="mainEntityOfPage" href="https://www.simimi.cn/note/markdown-basic-syntax/"><span hidden itemprop="author" itemscope itemtype="https://schema.org/Person"><meta itemprop="name" content="Herway"><meta itemprop="description"></span><span hidden itemprop="publisher" itemscope itemtype="https://schema.org/Organization"><meta itemprop="name" content="思米米(SIMIMI)"></span><header class="post-header"><h1 class="post-title" itemprop="name headline">Markdown语法的基本使用<a class="post-edit-link" href="https://github.com/hqw567/hqw567.github.io/tree/hexo/source/_posts/note/markdown-basic-syntax.md" target="_blank" title="编辑" rel="noopener"><span class="icon iconify" data-icon="ri:edit-line"></span></a></h1><div class="post-meta"><div class="post-time" style="display:block"><span class="post-meta-item-icon"><span class="icon iconify" data-icon="ri:calendar-line"></span></span> <time title="创建时间：2022-02-14 10:21:10" itemprop="dateCreated datePublished" datetime="2022-02-14T10:21:10+08:00">2022-02-14</time><span class="post-meta-divider">-</span><span class="post-meta-item-icon"><span class="icon iconify" data-icon="ri:calendar-2-line"></span></span> <time title="修改时间：2022-05-09 10:21:10" itemprop="dateModified" datetime="2022-05-09T10:21:10+08:00">2022-05-09</time></div><span class="post-count"><span class="post-symbolcount"><span class="post-meta-item-icon" title="本文字数"><span class="icon iconify" data-icon="ri:file-word-line"></span></span> <span title="本文字数">1.6k</span><span class="post-meta-divider">-</span><span class="post-meta-item-icon" title="阅读时长"><span class="icon iconify" data-icon="ri:timer-line"></span></span> <span title="阅读时长">6m</span></span></span><span class="leancloud_visitors" id="/note/markdown-basic-syntax/" data-flag-title="Markdown语法的基本使用"><span class="post-meta-divider">-</span><span class="post-meta-item-icon" title="阅读次数"><span class="icon iconify" data-icon="ri:eye-line"></span> <span class="leancloud-visitors-count"></span></span></span><span class="post-meta-divider">-</span><a href="#comment"><span class="post-meta-item-icon" title="评论数"><span class="icon iconify" data-icon="ri:chat-3-line"></span> <span class="waline-comment-count" id="/note/markdown-basic-syntax/"></span></span></a><div class="post-classify"><span class="post-category"> <span class="post-meta-item-icon" style="margin-right:3px;"><span class="icon iconify" data-icon="ri:folder-line"></span></span><span itemprop="about" itemscope itemtype="https://schema.org/Thing"><a class="category-item" href="/categories/%E6%80%9D%E7%B1%B3%E7%B1%B3%E7%9A%84%E5%B0%8F%E5%88%86%E4%BA%AB/" style="--text-color:var(--hty-text-color)" itemprop="url" rel="index"><span itemprop="text">思米米的小分享</span></a></span></span><span class="post-tag"><span class="post-meta-divider">-</span><a class="tag-item" href="/tags/Markdown/" style="--text-color:#0066B8"><span class="post-meta-item-icon"><span class="icon iconify" data-icon="ri:price-tag-3-line"></span></span><span class="tag-name">Markdown</span></a></span></div></div></header><section class="post-body" itemprop="articleBody"><div class="post-content markdown-body"><p>.md 即 markdown 文件的基本常用编写语法,是一种快速标记、快速排版语言，现在很多前段项目中的说明文件 readme 等都是用.md 文件编写的，而且很多企业也在在鼓励使用这种编辑方式，特别作为一个前端从业者更要学会使用这种语言。下面就简单和大家分享一些.md 基本语法</p>
+<span id="more"></span>
+
+<h2 id="一、基本符号：-gt"><a href="#一、基本符号：-gt" class="headerlink" title="一、基本符号：* - + . &gt;"></a>一、基本符号：* - + . &gt;</h2><p>基本上所有的 markdown 标记都是基于这四个符号或组合，需要注意的是，如果以基本符号开头的标记，注意基本符号后有一个用于分割标记符和内容的空格。</p>
+<h2 id="二、标题"><a href="#二、标题" class="headerlink" title="二、标题"></a>二、标题</h2><p>前面带#号，后面带文字，分别表示 h1-h6,只到 h6，而且 h1 下面会有一条横线。</p>
+<pre class="line-numbers language-none"><code class="language-none"># 一级标题
+## 二级标题
+### 三级标题
+#### 四级标题
+##### 五级标题
+###### 六级标题<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+<p>tip：符号后面要带空格，不然 MD 语法不生效。</p>
+<h2 id="三、列表"><a href="#三、列表" class="headerlink" title="三、列表"></a>三、列表</h2><h3 id="无序列表"><a href="#无序列表" class="headerlink" title="无序列表"></a>无序列表</h3><pre class="line-numbers language-none"><code class="language-none">+ a
++ b
++ c
+
+- d
+- e
+- f
+
+* g
+* h
+* i<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+<ul>
+<li>a</li>
+<li>b</li>
+<li>c</li>
+</ul>
+<ul>
+<li>d</li>
+<li>e</li>
+<li>f</li>
+</ul>
+<ul>
+<li>g</li>
+<li>h</li>
+<li>i</li>
+</ul>
+<p>以上三种形式，效果都是一样的，大家选择适合自己的就好了。</p>
+<h3 id="有序列表"><a href="#有序列表" class="headerlink" title="有序列表"></a>有序列表</h3><pre class="line-numbers language-none"><code class="language-none">正常
+1. a
+2. b
+3. c
+
+错序
+2. a
+3. b
+5. c<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+<ol>
+<li><p>a</p>
+</li>
+<li><p>b</p>
+</li>
+<li><p>c</p>
+</li>
+<li><p>a</p>
+</li>
+<li><p>b</p>
+</li>
+<li><p>c</p>
+</li>
+</ol>
+<p>注意，数字后面的点只能是英文的点，有序列表的序号是根据第一行列表的数字顺序来的，错序列表的序号本来是序号是乱的， 但是还是显示 2 3 5</p>
+<h3 id="嵌套列表"><a href="#嵌套列表" class="headerlink" title="嵌套列表"></a>嵌套列表</h3><p>列表可以嵌套，使用时在嵌套列表前按 tab 或 空格 来缩进,去控制列表的层数</p>
+<pre class="line-numbers language-none"><code class="language-none">+ a
++ b
++ c
+
+    - d
+    - e
+    - f
+
+        * g
+        * h
+        * i<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+<ul>
+<li><p>a</p>
+</li>
+<li><p>b</p>
+</li>
+<li><p>c</p>
+<ul>
+<li><p>d</p>
+</li>
+<li><p>e</p>
+</li>
+<li><p>f</p>
+<ul>
+<li>g</li>
+<li>h</li>
+<li>i</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<h2 id="四、引用说明区块"><a href="#四、引用说明区块" class="headerlink" title="四、引用说明区块"></a>四、引用说明区块</h2><p>对某个部分做的内容做一些说明或者引用某某的话等，可以用这个语法。</p>
+<h3 id="正常形式"><a href="#正常形式" class="headerlink" title="正常形式"></a>正常形式</h3><pre class="line-numbers language-none"><code class="language-none">&gt; 引用内容、说明内容。在语句前面加一个 &gt; ，注意是英文的那个右尖括号，注意空格，引用因为是一个区块，理论上是应该什么内容都可以放，比如说：标题，列表，引用等等。<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+
+<blockquote>
+<p>引用内容、说明内容。在语句前面加一个 &gt; ，注意是英文的那个右尖括号，注意空格，引用因为是一个区块，理论上是应该什么内容都可以放，比如说：标题，列表，引用等等。</p>
+</blockquote>
+<h3 id="嵌套区块"><a href="#嵌套区块" class="headerlink" title="嵌套区块"></a>嵌套区块</h3><p>这里我只介绍一下我常用的方法，也是个人认为比较规范的一种方法，就是给区块的下一级区块多加一个右尖括号</p>
+<pre class="line-numbers language-none"><code class="language-none">&gt; 一级引用
+&gt;&gt; 二级引用
+&gt;&gt;&gt; 三级引用
+&gt;&gt;&gt;&gt; 四级引用
+&gt;&gt;&gt;&gt;&gt; 五级引用
+&gt;&gt;&gt;&gt;&gt;&gt; 六级引用<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+<blockquote>
+<p>一级引用</p>
+<blockquote>
+<p>二级引用</p>
+<blockquote>
+<p>三级引用</p>
+<blockquote>
+<p>四级引用</p>
+<blockquote>
+<p>五级引用</p>
+<blockquote>
+<p>六级引用</p>
+</blockquote>
+</blockquote>
+</blockquote>
+</blockquote>
+</blockquote>
+</blockquote>
+<h2 id="五、代码块"><a href="#五、代码块" class="headerlink" title="五、代码块"></a>五、代码块</h2><p>在发布一些技术文章会涉及展示代码的问题，这时候代码块就显得尤为重要。</p>
+<p>少量代码，单行使用，直接用&#96;包裹起来就行了</p>
+<pre class="line-numbers language-none"><code class="language-none">&#96; shaoliangdaima,danhangshiyong &#96;<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+
+<p><code>shaoliangdaima,danhangshiyong</code></p>
+<p>大量代码，需要多行使用，用&#96;&#96;&#96;包裹起来</p>
+<pre class="line-numbers language-none"><code class="language-none">&#96;&#96;&#96;
+        daliangdaima,xuyaoduohangshiyong
+
+        daliangdaima,xuyaoduohangshiyong
+
+        daliangdaima,xuyaoduohangshiyong
+
+        daliangdaima,xuyaoduohangshiyong
+
+        daliangdaima,xuyaoduohangshiyong
+&#96;&#96;&#96;
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+<pre class="line-numbers language-none"><code class="language-none">        daliangdaima,xuyaoduohangshiyong
+
+        daliangdaima,xuyaoduohangshiyong
+
+        daliangdaima,xuyaoduohangshiyong
+
+        daliangdaima,xuyaoduohangshiyong
+
+        daliangdaima,xuyaoduohangshiyong
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+<h2 id="六、链接"><a href="#六、链接" class="headerlink" title="六、链接"></a>六、链接</h2><h3 id="行内式"><a href="#行内式" class="headerlink" title="行内式"></a>行内式</h3><p>链接的文字放在[]中，链接地址放在随后的()中，链接也可以带 title 属性，链接地址后面空一格，然后用引号引起来</p>
+<pre class="line-numbers language-none"><code class="language-none">[链接名称](链接地址)
+
+[思米米](https:&#x2F;&#x2F;www.simimi.cn&quot;欢迎&quot;),是一分享各类技术的博客，欢迎大家访问、收藏。
+
+或
+
+&lt;链接地址&gt;<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+<p><a href="https://www.simimi.cn"欢迎"/">思米米</a>,是一分享各类技术的博客，欢迎大家访问、收藏。<br><br/><br><a href="https://www.simimi.cn/">https://www.simimi.cn</a><br><br/></p>
+<h3 id="参数式"><a href="#参数式" class="headerlink" title="参数式"></a>参数式</h3><pre class="line-numbers language-none"><code class="language-none">[about]: https:&#x2F;&#x2F;www.simimi.cn&#x2F;about &quot;思米米的about&quot;
+[archives]: https:&#x2F;&#x2F;www.simimi.cn&#x2F;archives &quot;归档&quot;
+[categories]: https:&#x2F;&#x2F;www.simimi.cn&#x2F;categories &quot;分类&quot;
+[中文]: https:&#x2F;&#x2F;www.simimi.cn &quot;思米米&quot;
+
+这里是[about],这是[archives],这是[categories],还支持中文[中文]<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+<p>这里是<a href="https://www.simimi.cn/about" title="思米米的about">about</a>,这是<a href="https://www.simimi.cn/archives" title="归档">archives</a>,这是<a href="https://www.simimi.cn/categories" title="分类">categories</a>,还支持中文<a href="https://www.simimi.cn/" title="思米米">中文</a></p>
+<h2 id="七、图片"><a href="#七、图片" class="headerlink" title="七、图片"></a>七、图片</h2><h3 id="行内式-1"><a href="#行内式-1" class="headerlink" title="行内式"></a>行内式</h3><pre><code>+ 开头一个感叹号 !
++ 接着一个方括号，里面放上图片的替代文字
++ 接着一个普通括号，里面放上图片的网址，最后还可以用引号包住并加上选择性的 &#39;title&#39; 属性的文字。
+</code></pre>
+<pre class="line-numbers language-none"><code class="language-none">![alt 属性文本](图片地址)
+
+![alt 属性文本](图片地址 &quot;可选标题&quot;)<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span></span></code></pre>
+
+<p><img src="http://static.runoob.com/images/runoob-logo.png" alt="思米米" loading="lazy"></p>
+<p><img src="http://static.runoob.com/images/runoob-logo.png" alt="思米米" title="alt属性" loading="lazy"></p>
+<h3 id="参数式-1"><a href="#参数式-1" class="headerlink" title="参数式"></a>参数式</h3><pre class="line-numbers language-none"><code class="language-none">[simimi]: http:&#x2F;&#x2F;static.runoob.com&#x2F;images&#x2F;runoob-logo.png
+
+参数式图片，这里是![simimi]<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span></span></code></pre>
+
+<p>参数式图片，这里是<img src="http://static.runoob.com/images/runoob-logo.png" alt="simimi" loading="lazy"></p>
+<p>用法跟链接的基本一样，唯一的不同就是，图片前面要写一个！（这是必须的），没什么好说的</p>
+<h2 id="八、分割线"><a href="#八、分割线" class="headerlink" title="八、分割线"></a>八、分割线</h2><p>分割线可以由* - _（星号，减号，底线）这 3 个符号的至少 3 个符号表示，注意至少要 3 个，且不需要连续，有空格也可以</p>
+<pre class="line-numbers language-none"><code class="language-none">---
+
+- - -
+
+------
+
+***
+
+* * *
+
+******
+
+___
+
+_ _ _
+
+______<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+<hr>
+<hr>
+<hr>
+<hr>
+<hr>
+<hr>
+<hr>
+<hr>
+<hr>
+<h2 id="九、Markdown-高级技巧"><a href="#九、Markdown-高级技巧" class="headerlink" title="九、Markdown 高级技巧"></a>九、Markdown 高级技巧</h2><h3 id="强调字体"><a href="#强调字体" class="headerlink" title="强调字体"></a>强调字体</h3><p>一个星号或者是一个下划线包起来，会转换为倾斜，如果是 2 个，会转换为加粗</p>
+<pre class="line-numbers language-none"><code class="language-none">*md*   
+
+**md**
+
+_md_ 
+
+__md__<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+<p><em>md</em></p>
+<p><strong>md</strong></p>
+<p><em>md</em></p>
+<p><strong>md</strong></p>
+<h3 id="转义"><a href="#转义" class="headerlink" title="转义"></a>转义</h3><p>基本上和 js 转义一样,\加需要转义的字符</p>
+<pre class="line-numbers language-none"><code class="language-none">\\
+
+\*
+
+\+
+
+\-
+
+\&#96;
+
+\_<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+<p>\</p>
+<p>*</p>
+<p>+</p>
+<p>-</p>
+<p>`</p>
+<p>_</p>
+<h3 id="删除线"><a href="#删除线" class="headerlink" title="删除线"></a>删除线</h3><p>用~~把需要显示删除线的字符包裹起来</p>
+<pre class="line-numbers language-none"><code class="language-none">~~删除~~<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+
+<p><del>删除</del></p>
+<h3 id="支持的-HTML-元素"><a href="#支持的-HTML-元素" class="headerlink" title="支持的 HTML 元素"></a>支持的 HTML 元素</h3><p>不在 Markdown 涵盖范围之内的标签，都可以直接在文档里面用 HTML 撰写。</p>
+<p>目前支持的 HTML 元素有：</p>
+<pre class="line-numbers language-none"><code class="language-none">&lt;kbd&gt; &lt;b&gt; &lt;i&gt; &lt;em&gt; &lt;sup&gt; &lt;sub&gt; &lt;br&gt;<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+
+<p>使用<kbd>Ctrl</kbd>+<kbd>D</kbd> 收藏本页面</p>
+<h2 id="十、表格"><a href="#十、表格" class="headerlink" title="十、表格"></a>十、表格</h2><pre class="line-numbers language-none"><code class="language-none">|表头|表头|表头|
+|:-|:-:|-:|
+|abc|bcd|cde|
+|abc|bcd|cde|
+|abc|bcd|cde|
+
+|表头|表头|表头|
+|:---|:---:|---:|
+|abc|bcd|cde|
+|abc|bcd|cde|
+|abc|bcd|cde|
+
+表头|表头|表头
+:-|:-:|-:
+abc|bcd|cde
+abc|bcd|cde
+abc|bcd|cde<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+<table>
+<thead>
+<tr>
+<th align="left">表头</th>
+<th align="center">表头</th>
+<th align="right">表头</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="left">abc</td>
+<td align="center">bcd</td>
+<td align="right">cde</td>
+</tr>
+<tr>
+<td align="left">abc</td>
+<td align="center">bcd</td>
+<td align="right">cde</td>
+</tr>
+<tr>
+<td align="left">abc</td>
+<td align="center">bcd</td>
+<td align="right">cde</td>
+</tr>
+</tbody></table>
+<br/>
+|表头|表头|表头|
+|:---|:---:|---:|
+|abc|bcd|cde|
+|abc|bcd|cde|
+|abc|bcd|cde|
+<br/>
+表头|表头|表头
+:-|:-:|-:
+abc|bcd|cde
+abc|bcd|cde
+abc|bcd|cde
+
+<p>上面三个例子的效果一样，由此可得：</p>
+<ol>
+<li><p>表格的格式不一定要对的非常起，但是为了良好的变成风格，尽量对齐是最好的</p>
+</li>
+<li><p>分割线后面的冒号表示对齐方式，写在左边表示左对齐，右边为右对齐，两边都写表示居中</p>
+</li>
+</ol>
+</div></section><div id="reward-container"><span class="hty-icon-button button-glow" id="reward-button" title="打赏" onclick="var qr = document.getElementById(&quot;qr&quot;); qr.style.display = (qr.style.display === &quot;none&quot;) ? &quot;block&quot; : &quot;none&quot;;"><span class="icon iconify" data-icon="ri:hand-coin-line"></span></span><div id="reward-comment">我很可爱，请给我钱</div><div id="qr" style="display:none;"><div style="display:inline-block"><a href="/images/pay/zfb.jpg"><img loading="lazy" src="/images/pay/zfb.jpg" alt="支付宝" title="支付宝"></a><div><span style="color:#226bf3"><span class="icon iconify" data-icon="ri:alipay-line"></span></span></div></div><div style="display:inline-block"><a href="/images/pay/qq.png"><img loading="lazy" src="/images/pay/qq.png" alt="QQ 支付" title="QQ 支付"></a><div><span style="color:#05b0ff"><span class="icon iconify" data-icon="ri:qq-line"></span></span></div></div><div style="display:inline-block"><a href="/images/pay/wx.png"><img loading="lazy" src="/images/pay/wx.png" alt="微信支付" title="微信支付"></a><div><span style="color:#07c160"><span class="icon iconify" data-icon="ri:wechat-pay-line"></span></span></div></div></div></div><ul class="post-copyright"><li class="post-copyright-author"><strong>本文作者：</strong>Herway</li><li class="post-copyright-link"><strong>本文链接：</strong><a href="https://www.simimi.cn/note/markdown-basic-syntax/" title="Markdown语法的基本使用">https://www.simimi.cn/note/markdown-basic-syntax/</a></li><li class="post-copyright-license"><strong>版权声明：</strong>本博客所有文章除特别声明外，均默认采用 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh" target="_blank" rel="noopener" title="CC BY-NC-SA 4.0 "><span class="icon iconify" data-icon="ri:creative-commons-line"></span><span class="icon iconify" data-icon="ri:creative-commons-by-line"></span><span class="icon iconify" data-icon="ri:creative-commons-nc-line"></span><span class="icon iconify" data-icon="ri:creative-commons-sa-line"></span></a> 许可协议。</li></ul></article><div class="post-nav"><div class="post-nav-item"><a class="post-nav-prev" href="/note/js-nocopy/" rel="prev" title="一行代码禁止页面复制、右键"><span class="icon iconify" data-icon="ri:arrow-left-s-line"></span><span class="post-nav-text">一行代码禁止页面复制、右键</span></a></div><div class="post-nav-item"><a class="post-nav-next" href="/tutorial/jdcookie/" rel="next" title="使用Alook浏览器获取京东Cookie"><span class="post-nav-text">使用Alook浏览器获取京东Cookie</span><span class="icon iconify" data-icon="ri:arrow-right-s-line"></span></a></div></div></div><div class="hty-card" id="comment"><div class="comment-tooltip text-center"><span>如果您有任何关于博客内容的相关讨论，欢迎前往 <a href="https://github.com/hqw567/hqw567.github.io/discussions/" target="_blank">GitHub Discussions</a> 与我交流。</span><br></div><div id="waline"></div><link rel="stylesheet" href="https://fastly.jsdelivr.net/npm/@waline/client@v2/dist/waline.css"><script>window.CONFIG.waline.config.path = "/note/markdown-basic-syntax/"</script><div class="js-Pjax"><script src="/js/comments/waline.js" type="module" defer></script></div></div></main><footer class="sidebar-translate" id="footer"><div class="beian"><a rel="noopener" href="https://beian.miit.gov.cn/" target="_blank">湘ICP备2022002172号</a></div><div class="copyright"><span>&copy; 2022 </span><a class="with-love" id="animate" target="_blank" rel="noopener" href="https://github.com/hqw567" title="思米米的GitHub"><span class="icon iconify" data-icon="ri:github-line"></span></a><span class="author"> Herway</span></div><div class="live-time"><span>本博客部分资源来自互联网，如有侵权，请联系删除<br>本博客已萌萌哒地运行</span><span id="display_live_time"></span><span class="moe-text">(●'◡'●)</span><script>function blog_live_time() {
+  setTimeout(blog_live_time, 1000);
+  const start = new Date('2022-01-01T00:00:00');
+  const now = new Date();
+  const timeDiff = (now.getTime() - start.getTime());
+  const msPerMinute = 60 * 1000;
+  const msPerHour = 60 * msPerMinute;
+  const msPerDay = 24 * msPerHour;
+  const passDay = Math.floor(timeDiff / msPerDay);
+  const passHour = Math.floor((timeDiff % msPerDay) / 60 / 60 / 1000);
+  const passMinute = Math.floor((timeDiff % msPerHour) / 60 / 1000);
+  const passSecond = Math.floor((timeDiff % msPerMinute) / 1000);
+  display_live_time.innerHTML = ` ${passDay} 天 ${passHour} 小时 ${passMinute} 分 ${passSecond} 秒`;
+}
+blog_live_time();
+</script></div><div id="busuanzi"><span id="busuanzi_container_site_uv" title="总访客量"><span><span class="icon iconify" data-icon="ri:user-line"></span></span><span id="busuanzi_value_site_uv"></span></span><span class="footer-separator">|</span><span id="busuanzi_container_site_pv" title="总访问量"><span><span class="icon iconify" data-icon="ri:eye-line"></span></span><span id="busuanzi_value_site_pv"></span></span><script async src="https://busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script></div><div class="footer-support"><span>本网站由</span><a class="footer-support-logo" href="https://www.upyun.com/?utm_source=lianmeng&amp;utm_medium=hqw567" target="blank" title="又拍云"><img height="30" src="https://fastly.jsdelivr.net/gh/YunYouJun/cdn/img/logo/upyun-logo.png" alt="又拍云"></a><span>提供 CDN 加速</span></div></footer></div><a class="hty-icon-button" id="back-to-top" aria-label="back-to-top" href="#"><span class="icon iconify" data-icon="ri:arrow-up-s-line"></span><svg class="progress-circle-container" viewBox="0 0 100 100"><circle class="progress-circle" id="progressCircle" cx="50" cy="50" r="48" fill="none" stroke="#f012bd" stroke-width="2" stroke-linecap="round"></circle></svg></a><a class="popup-trigger hty-icon-button icon-search" id="search" href="javascript:;" title="搜索"><span class="site-state-item-icon"><span class="icon iconify" data-icon="ri:search-line"></span></span></a><script>window.addEventListener("DOMContentLoaded", () => {
+  // Handle and trigger popup window
+  document.querySelector(".popup-trigger").addEventListener("click", () => {
+    document.querySelector(".popup").classList.add("show");
+    setTimeout(() => {
+      document.querySelector(".search-input").focus();
+    }, 100);
+  });
+
+  // Monitor main search box
+  const onPopupClose = () => {
+    document.querySelector(".popup").classList.remove("show");
+  };
+
+  document.querySelector(".popup-btn-close").addEventListener("click", () => {
+    onPopupClose();
+  });
+
+  window.addEventListener("keyup", event => {
+    if (event.key === "Escape") {
+      onPopupClose();
+    }
+  });
+});
+</script><script defer src="https://fastly.jsdelivr.net/npm/algoliasearch@4/dist/algoliasearch-lite.umd.js"></script><script defer src="https://fastly.jsdelivr.net/npm/instantsearch.js@4/dist/instantsearch.production.min.js"></script><script defer src="/js/search/algolia-search.js" type="module"></script><div class="popup search-popup"><div class="search-header"><span class="popup-btn-close close-icon hty-icon-button"><span class="icon iconify" data-icon="ri:close-line"></span></span></div><div class="search-input-container"></div><div class="algolia-results"><div id="algolia-stats"></div><div id="algolia-hits"></div><div class="algolia-pagination" id="algolia-pagination"></div></div></div><script>function initMourn() {
+  const date = new Date();
+  const today = (date.getMonth() + 1) + "-" + date.getDate()
+  const mourn_days = null
+  if (mourn_days.includes(today)) {
+    document.documentElement.style.filter = "grayscale(1)";
+  }
+}
+initMourn();</script><script src="https://fastly.jsdelivr.net/npm/medium-zoom@1.0.6/dist/medium-zoom.min.js"></script><script>const images = [...document.querySelectorAll('.markdown-body img')]
+mediumZoom(images)</script><style>.medium-zoom-image {
+  z-index: 99;
+}</style></body></html>

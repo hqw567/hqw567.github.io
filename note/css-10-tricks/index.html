@@ -1,0 +1,319 @@
+<!DOCTYPE html><html lang="zh-CN"><head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width, initial-scale=1.0"><meta name="theme-color" content="#f012bd"><meta name="author" content="Herway"><meta name="copyright" content="Herway"><meta name="generator" content="Hexo 6.2.0"><meta name="theme" content="hexo-theme-yun"><title>10个CSS小技巧 | 思米米(SIMIMI)</title><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Noto+Serif+SC:wght@900&amp;display=swap" media="print" onload="this.media='all'"><link rel="stylesheet" href="https://fastly.jsdelivr.net/npm/star-markdown-css@0.3.3/dist/yun/yun-markdown.min.css"><link rel="stylesheet" href="https://fastly.jsdelivr.net/npm/prism-theme-vars/base.css"><script src="https://fastly.jsdelivr.net/npm/@unocss/runtime/mini.global.js"></script><script src="https://fastly.jsdelivr.net/npm/scrollreveal/dist/scrollreveal.min.js" defer></script><script>function initScrollReveal() {
+  [".post-card",".markdown-body img"].forEach((target)=> {
+    ScrollReveal().reveal(target);
+  })
+}
+document.addEventListener("DOMContentLoaded", initScrollReveal);
+document.addEventListener("pjax:success", initScrollReveal);
+</script><link rel="icon" type="image/png" href="/favicon.ico"><link rel="mask-icon" href="/favicon.ico" color="#f012bd"><link rel="preload" href="/css/hexo-theme-yun.css" as="style"><link rel="prefetch" href="/js/sidebar.js" as="script"><link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin><link rel="preconnect" href="https://fastly.jsdelivr.net/npm/" crossorigin><script id="yun-config">
+    window.Yun = {}
+    window.CONFIG = {"hostname":"www.simimi.cn","root":"/","title":"思米米","version":"1.10.3","mode":"auto","copycode":true,"page":{"isPost":true},"i18n":{"placeholder":"搜索...","empty":"找不到您查询的内容: ${query}","hits":"找到 ${hits} 条结果","hits_time":"找到 ${hits} 条结果（用时 ${time} 毫秒）"},"anonymous_image":"https://cdn.yunyoujun.cn/img/avatar/none.jpg","say":{"api":"https://el-bot-api.vercel.app/api/words/young"},"algolia":{"appID":"2XQIT428NI","apiKey":"1ce0c553fc3637fb687b5a8112d9c567","indexName":"simimi","hits":{"per_page":10}},"waline":{"config":{"enable":true,"serverURL":"https://waline.simimi.cn","comment":true,"visitor":true,"emoji":["https://fastly.jsdelivr.net/gh/walinejs/emojis@latest/bilibili/","https://fastly.jsdelivr.net/gh/walinejs/emojis@latest/weibo/","https://fastly.jsdelivr.net/gh/walinejs/emojis@latest/qq/"],"locale":{"placeholder":"填写邮箱，可以收到回复通知哦～"},"requiredMeta":["nick"],"el":"#waline","lang":"zh-CN"},"cdn":"https://fastly.jsdelivr.net/npm/@waline/client@v2/dist/waline.js","dark":"html.dark"},"vendors":{"darken":"https://fastly.jsdelivr.net/npm/darken@1.5.0"}};
+  </script><link rel="stylesheet" href="/css/hexo-theme-yun.css"><script src="/js/hexo-theme-yun.js" type="module"></script><link rel="alternate" href="/atom.xml" title="思米米(SIMIMI)" type="application/atom+xml"><link rel="preconnect" href="https://www.google-analytics.com" crossorigin><script async src="https://www.googletagmanager.com/gtag/js?id=G-4KNE7DCHW1"></script><script>if (CONFIG.hostname === location.hostname) {
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-4KNE7DCHW1');
+}</script><script data-ad-client="ca-pub-8809383571319105" async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script><script>(function(){
+  var bp = document.createElement('script');
+  var curProtocol = window.location.protocol.split(':')[0];
+  if (curProtocol === 'https') {
+    bp.src = 'https://zz.bdstatic.com/linksubmit/push.js';
+  }
+  else {
+    bp.src = 'http://push.zhanzhang.baidu.com/push.js';
+  }
+  var s = document.getElementsByTagName("script")[0];
+  s.parentNode.insertBefore(bp, s);
+})();</script><meta name="description" content="一个成功的Web App必须有良好的用户体验。当我们谈及改善用户体验时，你会想到什么？ 其实，有一点是很容易被开发者忽视的，那就是CSS。我们可以使用一些CSS技巧来改善网页的表现形式、交互细节和可访问性。 而且这些技巧不需要花费太多时间，也不需要消耗服务器资源。你只需要花两个小时学习，然后就可以把它应用到你所有的项目中，并永远改善用户体验。">
+<meta property="og:type" content="article">
+<meta property="og:title" content="10个CSS小技巧">
+<meta property="og:url" content="https://www.simimi.cn/note/css-10-tricks/index.html">
+<meta property="og:site_name" content="思米米(SIMIMI)">
+<meta property="og:description" content="一个成功的Web App必须有良好的用户体验。当我们谈及改善用户体验时，你会想到什么？ 其实，有一点是很容易被开发者忽视的，那就是CSS。我们可以使用一些CSS技巧来改善网页的表现形式、交互细节和可访问性。 而且这些技巧不需要花费太多时间，也不需要消耗服务器资源。你只需要花两个小时学习，然后就可以把它应用到你所有的项目中，并永远改善用户体验。">
+<meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="https://image-static.segmentfault.com/288/681/2886819424-61fbdc0573521">
+<meta property="og:image" content="https://image-static.segmentfault.com/195/723/1957235309-61fbdc5eb3871">
+<meta property="og:image" content="https://image-static.segmentfault.com/220/773/22077344-61fbdc8dc63c4">
+<meta property="og:image" content="https://image-static.segmentfault.com/331/165/3311656029-61fbdd15ab86f">
+<meta property="og:image" content="https://image-static.segmentfault.com/428/062/4280629731-61fbe2543890a">
+<meta property="og:image" content="https://image-static.segmentfault.com/106/600/1066002620-61fbe36d40ba7_fix732">
+<meta property="og:image" content="https://image-static.segmentfault.com/199/774/199774605-61fbe3b0dd288_fix732">
+<meta property="og:image" content="https://image-static.segmentfault.com/178/308/1783085763-61fbe60313844_fix732">
+<meta property="og:image" content="https://image-static.segmentfault.com/399/107/3991076816-61fbe68c431c3_fix732">
+<meta property="og:image" content="https://image-static.segmentfault.com/397/338/3973388868-61fbe70e24d23_fix732">
+<meta property="og:image" content="https://image-static.segmentfault.com/404/840/40484028-61fbe73e78a46_fix732">
+<meta property="og:image" content="https://image-static.segmentfault.com/331/293/3312932221-61fbe7d740923_fix732">
+<meta property="og:image" content="https://image-static.segmentfault.com/134/892/1348923011-61fbe961d4fc6_fix732">
+<meta property="og:image" content="https://image-static.segmentfault.com/197/721/1977218622-61fbe994ae109_fix732">
+<meta property="og:image" content="https://image-static.segmentfault.com/216/338/2163385386-61fbea7449318_fix732">
+<meta property="og:image" content="https://image-static.segmentfault.com/112/429/1124293679-61fbebae6c544_fix732">
+<meta property="og:image" content="https://image-static.segmentfault.com/148/694/148694987-61fbebf592bc0_fix732">
+<meta property="og:image" content="https://image-static.segmentfault.com/800/839/800839036-61fbebffaaefa_fix732">
+<meta property="article:published_time" content="2022-02-10T13:22:39.000Z">
+<meta property="article:modified_time" content="2022-02-11T13:22:39.000Z">
+<meta property="article:author" content="Herway">
+<meta property="article:tag" content="CSS">
+<meta property="article:tag" content="前端">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://image-static.segmentfault.com/288/681/2886819424-61fbdc0573521"><script>(function() {
+  const prefersDark = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches
+  const setting = localStorage.getItem('darken-mode') || 'auto'
+  if (setting === 'dark' || (prefersDark && setting !== 'light'))
+    document.documentElement.classList.toggle('dark', true)
+})()</script></head><body><script src="https://code.iconify.design/2/2.1.1/iconify.min.js"></script><script>// Define global variable
+IconifyProviders = {
+  // Empty prefix: overwrite default API provider configuration
+  '': {
+    // Use custom API first, use Iconify public API as backup
+    resources: [
+        'https://api.iconify.design',
+    ],
+    // Wait for 1 second before switching API hosts
+    rotate: 1000,
+  },
+};</script><canvas id="trianglifyContainer"></canvas><script defer src="https://fastly.jsdelivr.net/npm/trianglify@4/dist/trianglify.bundle.js"></script><script>document.addEventListener("DOMContentLoaded", () => {
+  const pattern = trianglify({
+    width: 1000,
+    height: 800,
+    cellSize: 75,
+    palette: ["YlGnBu", "GnBu", "Purples", "Blues"],
+  });
+  const canvasOpts = {
+    applyCssScaling: false
+  }
+  document.body.appendChild(pattern.toCanvas(trianglifyContainer, canvasOpts));
+});</script><div class="container"><a class="sidebar-toggle hty-icon-button" id="menu-btn"><div class="hamburger hamburger--spin" type="button"><span class="hamburger-box"><span class="hamburger-inner"></span></span></div></a><div class="sidebar-toggle sidebar-overlay"></div><aside class="sidebar"><script src="/js/sidebar.js" type="module"></script><ul class="sidebar-nav"><li class="sidebar-nav-item sidebar-nav-toc hty-icon-button sidebar-nav-active" data-target="post-toc-wrap" title="文章目录"><span class="icon iconify" data-icon="ri:list-ordered"></span></li><li class="sidebar-nav-item sidebar-nav-overview hty-icon-button" data-target="site-overview-wrap" title="站点概览"><span class="icon iconify" data-icon="ri:passport-line"></span></li></ul><div class="sidebar-panel" id="site-overview-wrap"><div class="site-info mickey-mouse"><a class="site-author-avatar" href="/about/" title="Herway"><img width="96" loading="lazy" src="https://q1.qlogo.cn/g?b=qq&amp;nk=79099400&amp;s=640" alt="Herway"><span class="site-author-status" title="山有木兮木有枝，心悦君兮君不知。">😊</span></a><div class="site-author-name"><a href="/about/">Herway</a></div><a class="site-name" href="/about/site.html">思米米(SIMIMI)</a><sub class="site-subtitle">simimi.cn</sub><div class="site-description">山有木兮木有枝，心悦君兮君不知。</div></div><nav class="site-state"><a class="site-state-item hty-icon-button icon-home" href="/" title="首页"><span class="site-state-item-icon"><span class="icon iconify" data-icon="ri:home-4-line"></span></span></a><div class="site-state-item"><a href="/archives/" title="归档"><span class="site-state-item-icon"><span class="icon iconify" data-icon="ri:archive-line"></span></span><span class="site-state-item-count">21</span></a></div><div class="site-state-item"><a href="/categories/" title="分类"><span class="site-state-item-icon"><span class="icon iconify" data-icon="ri:folder-2-line"></span></span><span class="site-state-item-count">4</span></a></div><div class="site-state-item"><a href="/tags/" title="标签"><span class="site-state-item-icon"><span class="icon iconify" data-icon="ri:price-tag-3-line"></span></span><span class="site-state-item-count">11</span></a></div><a class="site-state-item hty-icon-button" href="/about/#comment" title="留言板"><span class="site-state-item-icon"><span class="icon iconify" data-icon="ri:clipboard-line"></span></span></a></nav><hr style="margin-bottom:0.5rem"><div class="links-of-author"><a class="links-of-author-item hty-icon-button" rel="noopener" href="/atom.xml" title="RSS" target="_blank" style="color:orange"><span class="icon iconify" data-icon="ri:rss-line"></span></a><a class="links-of-author-item hty-icon-button" rel="noopener" href="https://wpa.qq.com/msgrd?v=3&amp;uin=79099400&amp;site=qq&amp;menu=yes" title="QQ" target="_blank" style="color:#12B7F5"><span class="icon iconify" data-icon="ri:qq-line"></span></a><a class="links-of-author-item hty-icon-button" rel="noopener" href="https://github.com/hqw567" title="GitHub" target="_blank" style="color:#6e5494"><span class="icon iconify" data-icon="ri:github-line"></span></a><a class="links-of-author-item hty-icon-button" rel="noopener" href="https://music.163.com/#/user/home?id=616215227" title="网易云音乐" target="_blank" style="color:#C20C0C"><span class="icon iconify" data-icon="ri:netease-cloud-music-line"></span></a><a class="links-of-author-item hty-icon-button" rel="noopener" href="https://www.zhihu.com/people/hqw567/" title="知乎" target="_blank" style="color:#0084FF"><span class="icon iconify" data-icon="ri:zhihu-line"></span></a><a class="links-of-author-item hty-icon-button" rel="noopener" href="https://space.bilibili.com/477836218" title="哔哩哔哩" target="_blank" style="color:#FF8EB3"><span class="icon iconify" data-icon="ri:bilibili-line"></span></a><a class="links-of-author-item hty-icon-button" rel="noopener" href="mailto:hqw6@qq.com" title="E-Mail" target="_blank" style="color:#4c000a"><span class="icon iconify" data-icon="ri:mail-line"></span></a><a class="links-of-author-item hty-icon-button" rel="noopener" href="https://travellings.link" title="Travelling" target="_blank" style="color:var(--hty-text-color)"><span class="icon iconify" data-icon="ri:train-line"></span></a></div><hr style="margin:0.5rem 1rem"><div class="links"><a class="links-item hty-icon-button" href="/links" title="我的小伙伴们" style="color:dodgerblue"><span class="icon iconify" data-icon="ri:genderless-line"></span></a></div><br><a class="links-item hty-icon-button" id="toggle-mode-btn" href="javascript:;" title="Mode" style="color: #f1cb64"><span class="icon iconify" data-icon="ri:contrast-2-line"></span></a></div><div class="sidebar-panel sidebar-panel-active" id="post-toc-wrap"><div class="post-toc"><div class="post-toc-content"><ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%8F%AF%E7%82%B9%E5%87%BB%E5%8C%BA%E5%9F%9F"><span class="toc-number">1.</span> <span class="toc-text">可点击区域</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%B9%B3%E6%BB%91%E6%BB%9A%E5%8A%A8"><span class="toc-number">2.</span> <span class="toc-text">平滑滚动</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E9%80%89%E6%8B%A9%E6%89%80%E6%9C%89%E6%96%87%E6%9C%AC"><span class="toc-number">3.</span> <span class="toc-text">选择所有文本</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Cursor"><span class="toc-number">4.</span> <span class="toc-text">Cursor</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Text-Overflow"><span class="toc-number">5.</span> <span class="toc-text">Text Overflow</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Image"><span class="toc-number">6.</span> <span class="toc-text">Image</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%97%A0%E5%9B%BE%E7%89%87"><span class="toc-number">7.</span> <span class="toc-text">无图片</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E8%89%B2%E5%BD%A9%E5%AF%B9%E6%AF%94%E5%BA%A6"><span class="toc-number">8.</span> <span class="toc-text">色彩对比度</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%80%BB%E7%BB%93"><span class="toc-number">9.</span> <span class="toc-text">总结</span></a></li></ol></div></div></div><div class="tag-cloud"><div class="tag-cloud-tags"><a href="/tags/CSS/" style="font-size: 25.5px; color: #2680d4">CSS</a> <a href="/tags/Git/" style="font-size: 21px; color: #4d89c0">Git</a> <a href="/tags/JavaScript/" style="font-size: 30px; color: #0078e7">JavaScript</a> <a href="/tags/Markdown/" style="font-size: 12px; color: #999">Markdown</a> <a href="/tags/Proxy/" style="font-size: 12px; color: #999">Proxy</a> <a href="/tags/%E5%88%86%E4%BA%AB/" style="font-size: 16.5px; color: #7391ad">分享</a> <a href="/tags/%E5%89%8D%E7%AB%AF/" style="font-size: 25.5px; color: #2680d4">前端</a> <a href="/tags/%E5%AD%A6%E4%B9%A0/" style="font-size: 16.5px; color: #7391ad">学习</a> <a href="/tags/%E6%95%99%E7%A8%8B/" style="font-size: 21px; color: #4d89c0">教程</a> <a href="/tags/%E7%AC%94%E8%AE%B0/" style="font-size: 16.5px; color: #7391ad">笔记</a> <a href="/tags/%E7%BE%8A%E6%AF%9B/" style="font-size: 16.5px; color: #7391ad">羊毛</a></div></div></aside><main class="sidebar-translate" id="content"><div id="post"><article class="hty-card post-block" itemscope itemtype="https://schema.org/Article" style="--smc-primary:#f012bd;"><link itemprop="mainEntityOfPage" href="https://www.simimi.cn/note/css-10-tricks/"><span hidden itemprop="author" itemscope itemtype="https://schema.org/Person"><meta itemprop="name" content="Herway"><meta itemprop="description"></span><span hidden itemprop="publisher" itemscope itemtype="https://schema.org/Organization"><meta itemprop="name" content="思米米(SIMIMI)"></span><header class="post-header"><h1 class="post-title" itemprop="name headline">10个CSS小技巧<a class="post-edit-link" href="https://github.com/hqw567/hqw567.github.io/tree/hexo/source/_posts/note/css-10-tricks.md" target="_blank" title="编辑" rel="noopener"><span class="icon iconify" data-icon="ri:edit-line"></span></a></h1><div class="post-meta"><div class="post-time" style="display:block"><span class="post-meta-item-icon"><span class="icon iconify" data-icon="ri:calendar-line"></span></span> <time title="创建时间：2022-02-10 21:22:39" itemprop="dateCreated datePublished" datetime="2022-02-10T21:22:39+08:00">2022-02-10</time><span class="post-meta-divider">-</span><span class="post-meta-item-icon"><span class="icon iconify" data-icon="ri:calendar-2-line"></span></span> <time title="修改时间：2022-02-11 21:22:39" itemprop="dateModified" datetime="2022-02-11T21:22:39+08:00">2022-02-11</time></div><span class="post-count"><span class="post-symbolcount"><span class="post-meta-item-icon" title="本文字数"><span class="icon iconify" data-icon="ri:file-word-line"></span></span> <span title="本文字数">2.6k</span><span class="post-meta-divider">-</span><span class="post-meta-item-icon" title="阅读时长"><span class="icon iconify" data-icon="ri:timer-line"></span></span> <span title="阅读时长">10m</span></span></span><span class="leancloud_visitors" id="/note/css-10-tricks/" data-flag-title="10个CSS小技巧"><span class="post-meta-divider">-</span><span class="post-meta-item-icon" title="阅读次数"><span class="icon iconify" data-icon="ri:eye-line"></span> <span class="leancloud-visitors-count"></span></span></span><span class="post-meta-divider">-</span><a href="#comment"><span class="post-meta-item-icon" title="评论数"><span class="icon iconify" data-icon="ri:chat-3-line"></span> <span class="waline-comment-count" id="/note/css-10-tricks/"></span></span></a><div class="post-classify"><span class="post-category"> <span class="post-meta-item-icon" style="margin-right:3px;"><span class="icon iconify" data-icon="ri:folder-line"></span></span><span itemprop="about" itemscope itemtype="https://schema.org/Thing"><a class="category-item" href="/categories/%E6%80%9D%E7%B1%B3%E7%B1%B3%E7%9A%84%E5%B0%8F%E7%AC%94%E8%AE%B0/" style="--text-color:#FB7299" itemprop="url" rel="index"><span itemprop="text">思米米的小笔记</span></a></span></span><span class="post-tag"><span class="post-meta-divider">-</span><a class="tag-item" href="/tags/CSS/" style="--text-color:#5298d1"><span class="post-meta-item-icon"><span class="icon iconify" data-icon="ri:price-tag-3-line"></span></span><span class="tag-name">CSS</span></a><a class="tag-item" href="/tags/%E5%89%8D%E7%AB%AF/" style="--text-color:#e300a8"><span class="post-meta-item-icon"><span class="icon iconify" data-icon="ri:price-tag-3-line"></span></span><span class="tag-name">前端</span></a></span></div></div></header><section class="post-body" itemprop="articleBody"><div class="post-content markdown-body"><p>一个成功的Web App必须有良好的用户体验。当我们谈及改善用户体验时，你会想到什么？</p>
+<p>其实，有一点是很容易被开发者忽视的，那就是CSS。我们可以使用一些CSS技巧来改善网页的表现形式、交互细节和可访问性。</p>
+<p>而且这些技巧不需要花费太多时间，也不需要消耗服务器资源。你只需要花两个小时学习，然后就可以把它应用到你所有的项目中，并永远改善用户体验。</p>
+<span id="more"></span>
+<h2 id="可点击区域"><a href="#可点击区域" class="headerlink" title="可点击区域"></a>可点击区域</h2><p>有时你的按钮很小，这可能导致用户无法准确点击按钮。这种现象经常发生在移动端上。如果用户点击次数太多，没有点击他们想要的按钮，或者点击错误的按钮，会让他们感到非常沮丧。</p>
+<p>那么，如何解决这个问题呢？有些开发者可能会说：把按钮做大点。</p>
+<p>但网页中元素的大小往往是固定的，我们不能轻易调整一个元素的大小。而且如果按钮太大，感觉很奇怪。</p>
+<p>一个更好的解决方案是在不改变按钮原始尺寸的情况下增加其可点击区域。具体来说：我们可以使用伪元素来增加一个元素的可点击区域。</p>
+<p>例如，这里有一个按钮。</p>
+<p><code>&lt;button id=&quot;btn&quot;&gt;btn&lt;/button&gt;</code></p>
+<p>然后我们可以为它添加一个伪类。</p>
+<pre class="line-numbers language-none"><code class="language-none">#btn::before &#123;
+ content: &quot;&quot;;
+ position: absolute;
+ top: -20px;
+ right: -20px;
+ bottom: -20px;
+ left: -20px;
+&#125;<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+<p>这时，如果我们点击按钮周围的区域，我们仍然可以触发按钮的点击事件。</p>
+<p><img src="https://image-static.segmentfault.com/288/681/2886819424-61fbdc0573521" loading="lazy"></p>
+<p>事例地址：</p>
+<p><a target="_blank" rel="noopener" href="https://codepen.io/bytefishmedium/pen/rNYNoRX">https://codepen.io/bytefishme...</a></p>
+<h2 id="平滑滚动"><a href="#平滑滚动" class="headerlink" title="平滑滚动"></a>平滑滚动</h2><p>当页面被<code>#</code>链接滚动时，默认效果是这样的。</p>
+<p><img src="https://image-static.segmentfault.com/195/723/1957235309-61fbdc5eb3871" loading="lazy"></p>
+<p>这种突然的跳跃会让人感到不舒服。为了解决这个问题，我们可以使用这个CSS样式：<code>sroll-behavior: smooth</code>。</p>
+<p><img src="https://image-static.segmentfault.com/220/773/22077344-61fbdc8dc63c4" loading="lazy"></p>
+<p>事例地址：<a target="_blank" rel="noopener" href="https://codepen.io/bytefishmedium/pen/NWwWoKL">https://codepen.io/bytefishme...</a></p>
+<h2 id="选择所有文本"><a href="#选择所有文本" class="headerlink" title="选择所有文本"></a>选择所有文本</h2><p>我们的网页经常需要提供一些内容供用户选择，如电话号码、地址、标题等。而这些文字应该是一个整体，我们希望当用户点击部分文字时，剩余的文字会被自动选择。</p>
+<p><img src="https://image-static.segmentfault.com/331/165/3311656029-61fbdd15ab86f" loading="lazy"></p>
+<p>要实现这种效果非常简单，只需使用这个CSS样式：<code>user-select: all</code> 。用户选择的CSS属性控制用户是否可以选择文本。如果它的值是 <code>all</code>，意味着一个元素的所有内容都将被原子化地选择。</p>
+<p>事例地址：<a target="_blank" rel="noopener" href="https://codepen.io/bytefishmedium/pen/xxPxMZO">https://codepen.io/bytefishme...</a></p>
+<p>如果你想在文本被选中后添加一些额外的样式，你可以使用<code>::selection</code> 。<code>::selection</code> CSS伪元素将样式应用于文档中被用户突出显示的部分（比如在文本上点击和拖动鼠标）。</p>
+<p>但要记住。只有某些CSS属性可以和<code>::selection</code>一起使用。</p>
+<ul>
+<li><code>color</code></li>
+<li><code>background-color</code></li>
+<li><code>text-decoration</code> 及其相关属性</li>
+<li><code>text-shadow</code></li>
+<li><code>stroke-color</code>, <code>fill-color</code> 和 <code>stroke-width</code></li>
+</ul>
+<p>事例地址：<a target="_blank" rel="noopener" href="https://codepen.io/bytefishmedium/pen/gOXOqMz">https://codepen.io/bytefishme...</a></p>
+<h2 id="Cursor"><a href="#Cursor" class="headerlink" title="Cursor"></a>Cursor</h2><p>在不同的场景下使用不同的鼠标样式可以帮助读者感知页面的当前状态，从而改善用户的互动体验。</p>
+<p><code>cursor</code> CSS属性设置鼠标指针在一个元素上时要显示的鼠标指针（如果有的话）。</p>
+<p>光标设置应该告知用户在当前位置可以进行的鼠标操作，包括文本选择、激活帮助或上下文菜单、复制内容、调整表格大小，等等。你可以用一个关键词来指定光标的类型，或者加载一个特定的图标来使用（有可选的回退图像和强制性的关键词作为最后的回退）。</p>
+<p>例如：</p>
+<p><img src="https://image-static.segmentfault.com/428/062/4280629731-61fbe2543890a" loading="lazy"></p>
+<p>事例地址：<a target="_blank" rel="noopener" href="https://codepen.io/bytefishmedium/pen/bGYGzRz">https://codepen.io/bytefishme...</a></p>
+<p>有很多光标样式，你可以在<a target="_blank" rel="noopener" href="https://link.segmentfault.com/?enc=V/otb5rq2HJW21Z3aXTpkA==.ahbw/LeOtPx8hQ7c5L/UBi6+YvNeQ+1QN3zkDsD7xtaCH7QBaaJL9bZr2BvCZRdtQnFGGVinPypVBrA1Q+/4Og==">MDN文档中</a>找到它们。</p>
+<h2 id="Text-Overflow"><a href="#Text-Overflow" class="headerlink" title="Text Overflow"></a>Text Overflow</h2><p>现在我们来看看 text-overflow 的问题。如果一个文本容器的内容是从服务器返回的，或者是由用户输入的，那么就很难预测这个文本会有多长。</p>
+<p>如果没有任何预防措施，你可能会写出这样的代码。</p>
+<pre class="line-numbers language-none"><code class="language-none">&lt;head&gt;
+  &lt;style&gt;
+    .container&#123;
+      border: 2px solid red;
+      width: 200px;
+      height: 60px;
+    &#125;
+  &lt;&#x2F;style&gt;
+&lt;&#x2F;head&gt;
+&lt;body&gt;
+  &lt;div class&#x3D;&quot;container&quot;&gt;
+    &lt;div class&#x3D;&quot;username&quot;&gt;bytefish&lt;&#x2F;div&gt;
+    &lt;p class&#x3D;&quot;profile&quot;&gt;FE, UX Designer&lt;&#x2F;p&gt;
+  &lt;&#x2F;div&gt;
+&lt;&#x2F;body&gt;<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+
+<p><img src="https://image-static.segmentfault.com/106/600/1066002620-61fbe36d40ba7_fix732" alt="imagepng" title="image.png" loading="lazy"></p>
+<p>这个容器有一个固定的宽度和高度，包裹着名字和介绍。</p>
+<p>但如果有些用户的简介太长，就会导致文本溢出容器，使页面看起来很糟糕。</p>
+<p><img src="https://image-static.segmentfault.com/199/774/199774605-61fbe3b0dd288_fix732" alt="imagepng" title="image.png" loading="lazy"></p>
+<p>在这一点上，我们可以将溢出的文本折叠起来。做到这一点就像添加三行CSS样式一样简单。</p>
+<pre class="line-numbers language-none"><code class="language-none">white-space: nowrap;
+overflow: hidden;
+text-overflow: ellipsis;<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span></span></code></pre>
+
+<p><code>white-space: nowrap</code>; 可以使文本不被包起来。然后我们使用<code>overflow: hidden</code>来隐藏溢出的文本。最后，我们使用 <code>text-overflow: ellipsis</code> 在文本的末尾添加一个圆点，向用户表明有一些隐藏的文本。</p>
+<p><img src="https://image-static.segmentfault.com/178/308/1783085763-61fbe60313844_fix732" alt="imagepng" title="image.png" loading="lazy"></p>
+<p>事例地址：<a target="_blank" rel="noopener" href="https://codepen.io/bytefishmedium/pen/VwrwgdQ">https://codepen.io/bytefishme...</a></p>
+<h2 id="Image"><a href="#Image" class="headerlink" title="Image"></a>Image</h2><p>现在我们来讨论一下图片的风格。网络应用中使用的图片一般由后端提供。你可能已经与后端开发者达成协议，将图片保持在一个固定的尺寸。然后你写下这样的代码。</p>
+<pre class="line-numbers language-none"><code class="language-none">&lt;title&gt;Document&lt;&#x2F;title&gt;
+ &lt;style&gt;
+ .img-list &#123;
+ display: flex;
+ flex-direction: row;
+ list-style: none;
+ &#125;
+ &lt;&#x2F;style&gt;
+
+- ![](https:&#x2F;&#x2F;miro.medium.com&#x2F;fit&#x2F;c&#x2F;128&#x2F;128&#x2F;1*TyRLQdZO7NdPATwSeut8gg.png)
+- ![](https:&#x2F;&#x2F;miro.medium.com&#x2F;fit&#x2F;c&#x2F;128&#x2F;128&#x2F;1*pKOfOAOvx-fWzfITATgGRg.jpeg)
+- ![](https:&#x2F;&#x2F;miro.medium.com&#x2F;fit&#x2F;c&#x2F;128&#x2F;128&#x2F;1*mXOVdfMwS0IEcjPXiikJkg.png)<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<p>而网页看起来是这样的。</p>
+<p><img src="https://image-static.segmentfault.com/399/107/3991076816-61fbe68c431c3_fix732" alt="imagepng" title="image.png" loading="lazy"></p>
+<p>图片的排列与我们所期望的一样。</p>
+<p>通常情况下是没有问题的。但是当我们写代码时，我们不能假设一切都会按照我们的预期发展。我们需要做好充分的准备。如果后端返回的图片不正常，不符合预期的尺寸，可能大也可能小，那么布局就会被打乱。</p>
+<p>你可以用这个替换其中一张图片的链接。</p>
+<pre class="line-numbers language-none"><code class="language-none">https:&#x2F;&#x2F;miro.medium.com&#x2F;max&#x2F;1400&#x2F;0*zQaS0awtSTOO-JYa.jpg<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+
+<p>你会发现，页面突然变得杂乱无章。</p>
+<p><img src="https://image-static.segmentfault.com/397/338/3973388868-61fbe70e24d23_fix732" alt="imagepng" title="image.png" loading="lazy"></p>
+<p>为了防止这个问题，使我们的页面更加健壮，我们可以设置图片的宽度和高度。这样，我们就不必担心后端返回的图片的大小。</p>
+<pre class="line-numbers language-none"><code class="language-none">img &#123;
+ width: 128px;
+ height: 128px;
+&#125;<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span></span></code></pre>
+
+<p><img src="https://image-static.segmentfault.com/404/840/40484028-61fbe73e78a46_fix732" alt="imagepng" title="image.png" loading="lazy"></p>
+<p>但上述写法有一个缺点：如果图像本身的长宽比与我们设定的长宽比不一致，图像将被压缩或拉伸。</p>
+<p>为了保持图像的原始长宽比，我们可以使用 <code>object-fit: cover</code> 。</p>
+<pre class="line-numbers language-none"><code class="language-none">img &#123;
+ width: 128px;
+ height: 128px;
+ object-fit: cover;
+&#125;<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+<p><code>object-fit</code> 的CSS属性设置一个被替换的元素的内容，如<code>&lt;img&gt;</code>或<code>&lt;video&gt;</code>，应该如何调整大小以适合其容器。</p>
+<p>如果该值是 <code>cover</code>，那么被替换的内容的大小将保持其长宽比，同时填充元素的整个内容框。如果对象的长宽比与它的盒子的长宽比不一致，那么该对象将被剪掉以适配。</p>
+<p><img src="https://image-static.segmentfault.com/331/293/3312932221-61fbe7d740923_fix732" alt="imagepng" title="image.png" loading="lazy"></p>
+<h2 id="无图片"><a href="#无图片" class="headerlink" title="无图片"></a>无图片</h2><p>我们之前讨论的情况都是建立在我们能够得到图片的前提下。但是，在实际应用中，可能由于后端服务的不稳定，或者用户自身的网络信号不好，我们的网页可能无法正确加载图片。</p>
+<p>当图片缺失时，浏览器的默认样式是不优雅的，这里我们可以优化它。</p>
+<p>我们可以给 <code>img</code>元素添加一个 <code>onerror</code> 事件。如果在加载图片时出现了错误，那么我们可以通过 <code>onerro</code>r事件给该元素添加一个样式，并使用404图片。</p>
+<p><code>img</code> 元素:</p>
+<pre class="line-numbers language-none"><code class="language-none">&lt;img src&#x3D;&quot;https:&#x2F;&#x2F;miro.medium.com&#x2F;xxx.jpg&quot; alt&#x3D;&#39;fireworks picture&#39; onerror&#x3D;&quot;this.classList.add(&#39;error&#39;);&quot;&gt;<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+
+<p>假设这就是我们的404图像:</p>
+<pre class="line-numbers language-none"><code class="language-none">https:&#x2F;&#x2F;cdn-images-1.medium.com&#x2F;max&#x2F;1600&#x2F;1*we8wfyztsdo12e2Cww6oVA.jpeg<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+
+<p><img src="https://image-static.segmentfault.com/134/892/1348923011-61fbe961d4fc6_fix732" alt="imagepng" title="image.png" loading="lazy"></p>
+<p>下面是 css 代码</p>
+<pre class="line-numbers language-none"><code class="language-none">img.error &#123;
+ display: inline-block;
+ transform: scale(1);
+ content: &#39;&#39;;
+ color: transparent;
+ &#125;
+img.error::before &#123;
+ content: &#39;&#39;;
+ position: absolute;
+ left: 0;
+ top: 0;
+ width: 100%;
+ height: 100%;
+ background: #f5f5f5 url(&#39;https:&#x2F;&#x2F;cdn-images-1.medium.com&#x2F;max&#x2F;1600&#x2F;1*we8wfyztsdo12e2Cww6oVA.jpeg&#39;) no-repeat center &#x2F; 100% 100%;
+ &#125;<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+<p>这样，当 <code>img</code> 元素中的图片链接无法加载图片时，我们的404图片将被使用。</p>
+<p><img src="https://image-static.segmentfault.com/197/721/1977218622-61fbe994ae109_fix732" alt="imagepng" title="image.png" loading="lazy"></p>
+<p>这里还有一点需要优化。在这种情况下，如果原始图片没有被正确加载，用户就不知道这个图片应该是什么。为了方便用户理解，我们可以将 <code>img</code> 元素的 <code>alt</code> 属性显示在页面上。</p>
+<pre class="line-numbers language-none"><code class="language-none">img.error::after &#123;
+ content: attr(alt);
+ position: absolute;
+ left: 0;
+ bottom: 0;
+ width: 100%;
+ line-height: 2;
+ background-color: rgba(0, 0, 0, .5);
+ color: white;
+ font-size: 12px;
+ text-align: center;
+ white-space: nowrap;
+ overflow: hidden;
+ text-overflow: ellipsis;
+ &#125;<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+<p>假设img的 <code>alt</code> 属性是这样的。</p>
+<pre class="line-numbers language-none"><code class="language-none">&lt;img src&#x3D;&quot;https:&#x2F;&#x2F;miro.medium.com&#x2F;xxx.jpg&quot; alt&#x3D;&#39;Log of Medium&#39; &gt;<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+
+<p><img src="https://image-static.segmentfault.com/216/338/2163385386-61fbea7449318_fix732" alt="imagepng" title="image.png" loading="lazy"></p>
+<p>事例地址：<a target="_blank" rel="noopener" href="https://codepen.io/bytefishmedium/pen/vYWYMxG">https://codepen.io/bytefishme...</a></p>
+<h2 id="色彩对比度"><a href="#色彩对比度" class="headerlink" title="色彩对比度"></a>色彩对比度</h2><p>当你在设计颜色组合时，你是否考虑过页面的颜色对比？</p>
+<p>你需要知道，世界上有很多色盲和色弱用户。如果你的页面的对比度低，可能会导致他们无法正常使用你的产品。无论是出于人文关怀，还是出于留住客户的考虑，你都应该设计出合适的对比度。</p>
+<p>WCAG AA规范指出，所有重要的内容需要有4.5:1以上的色彩对比度。</p>
+<p>这里有一个对比度检查器的工具。</p>
+<p><a target="_blank" rel="noopener" href="https://link.segmentfault.com/?enc=h1g2nKKKf3rnywA9pg7xww==.n6cxi43OGbDRwZflZ1gzfxaHDS/GMp2jJmL2jiXPWleNlRZ82zhk116r64R6tyeX">https://webaim.org/resources/...</a></p>
+<p>事例：</p>
+<p><img src="https://image-static.segmentfault.com/112/429/1124293679-61fbebae6c544_fix732" alt="imagepng" title="image.png" loading="lazy"></p>
+<p>我们也可以使用Chrome DevTool来检查一个元素的颜色对比。然后我们可以发现，Medium的网页也在实践这一原则。</p>
+<p><img src="https://image-static.segmentfault.com/148/694/148694987-61fbebf592bc0_fix732" alt="imagepng" title="image.png" loading="lazy"></p>
+<p><img src="https://image-static.segmentfault.com/800/839/800839036-61fbebffaaefa_fix732" alt="imagepng" title="image.png" loading="lazy"></p>
+<h2 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h2><p>俗话说得好，细节决定成败。如果你的项目有很多可以改善用户体验的细节，你就可以让用户感到舒服，你就有更高的成功概率。</p>
+<p>~完。</p>
+</div></section><div id="reward-container"><span class="hty-icon-button button-glow" id="reward-button" title="打赏" onclick="var qr = document.getElementById(&quot;qr&quot;); qr.style.display = (qr.style.display === &quot;none&quot;) ? &quot;block&quot; : &quot;none&quot;;"><span class="icon iconify" data-icon="ri:hand-coin-line"></span></span><div id="reward-comment">我很可爱，请给我钱</div><div id="qr" style="display:none;"><div style="display:inline-block"><a href="/images/pay/zfb.jpg"><img loading="lazy" src="/images/pay/zfb.jpg" alt="支付宝" title="支付宝"></a><div><span style="color:#226bf3"><span class="icon iconify" data-icon="ri:alipay-line"></span></span></div></div><div style="display:inline-block"><a href="/images/pay/qq.png"><img loading="lazy" src="/images/pay/qq.png" alt="QQ 支付" title="QQ 支付"></a><div><span style="color:#05b0ff"><span class="icon iconify" data-icon="ri:qq-line"></span></span></div></div><div style="display:inline-block"><a href="/images/pay/wx.png"><img loading="lazy" src="/images/pay/wx.png" alt="微信支付" title="微信支付"></a><div><span style="color:#07c160"><span class="icon iconify" data-icon="ri:wechat-pay-line"></span></span></div></div></div></div><ul class="post-copyright"><li class="post-copyright-author"><strong>本文作者：</strong>Herway</li><li class="post-copyright-link"><strong>本文链接：</strong><a href="https://www.simimi.cn/note/css-10-tricks/" title="10个CSS小技巧">https://www.simimi.cn/note/css-10-tricks/</a></li><li class="post-copyright-license"><strong>版权声明：</strong>本博客所有文章除特别声明外，均默认采用 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh" target="_blank" rel="noopener" title="CC BY-NC-SA 4.0 "><span class="icon iconify" data-icon="ri:creative-commons-line"></span><span class="icon iconify" data-icon="ri:creative-commons-by-line"></span><span class="icon iconify" data-icon="ri:creative-commons-nc-line"></span><span class="icon iconify" data-icon="ri:creative-commons-sa-line"></span></a> 许可协议。</li></ul></article><div class="post-nav"><div class="post-nav-item"><a class="post-nav-prev" href="/tutorial/jdcookie/" rel="prev" title="使用Alook浏览器获取京东Cookie"><span class="icon iconify" data-icon="ri:arrow-left-s-line"></span><span class="post-nav-text">使用Alook浏览器获取京东Cookie</span></a></div><div class="post-nav-item"><a class="post-nav-next" href="/share/git-basic-tutorial/" rel="next" title="【分享】Git基础教程"><span class="post-nav-text">【分享】Git基础教程</span><span class="icon iconify" data-icon="ri:arrow-right-s-line"></span></a></div></div></div><div class="hty-card" id="comment"><div class="comment-tooltip text-center"><span>如果您有任何关于博客内容的相关讨论，欢迎前往 <a href="https://github.com/hqw567/hqw567.github.io/discussions/" target="_blank">GitHub Discussions</a> 与我交流。</span><br></div><div id="waline"></div><link rel="stylesheet" href="https://fastly.jsdelivr.net/npm/@waline/client@v2/dist/waline.css"><script>window.CONFIG.waline.config.path = "/note/css-10-tricks/"</script><div class="js-Pjax"><script src="/js/comments/waline.js" type="module" defer></script></div></div></main><footer class="sidebar-translate" id="footer"><div class="beian"><a rel="noopener" href="https://beian.miit.gov.cn/" target="_blank">湘ICP备2022002172号</a></div><div class="copyright"><span>&copy; 2022 </span><a class="with-love" id="animate" target="_blank" rel="noopener" href="https://github.com/hqw567" title="思米米的GitHub"><span class="icon iconify" data-icon="ri:github-line"></span></a><span class="author"> Herway</span></div><div class="live-time"><span>本博客部分资源来自互联网，如有侵权，请联系删除<br>本博客已萌萌哒地运行</span><span id="display_live_time"></span><span class="moe-text">(●'◡'●)</span><script>function blog_live_time() {
+  setTimeout(blog_live_time, 1000);
+  const start = new Date('2022-01-01T00:00:00');
+  const now = new Date();
+  const timeDiff = (now.getTime() - start.getTime());
+  const msPerMinute = 60 * 1000;
+  const msPerHour = 60 * msPerMinute;
+  const msPerDay = 24 * msPerHour;
+  const passDay = Math.floor(timeDiff / msPerDay);
+  const passHour = Math.floor((timeDiff % msPerDay) / 60 / 60 / 1000);
+  const passMinute = Math.floor((timeDiff % msPerHour) / 60 / 1000);
+  const passSecond = Math.floor((timeDiff % msPerMinute) / 1000);
+  display_live_time.innerHTML = ` ${passDay} 天 ${passHour} 小时 ${passMinute} 分 ${passSecond} 秒`;
+}
+blog_live_time();
+</script></div><div id="busuanzi"><span id="busuanzi_container_site_uv" title="总访客量"><span><span class="icon iconify" data-icon="ri:user-line"></span></span><span id="busuanzi_value_site_uv"></span></span><span class="footer-separator">|</span><span id="busuanzi_container_site_pv" title="总访问量"><span><span class="icon iconify" data-icon="ri:eye-line"></span></span><span id="busuanzi_value_site_pv"></span></span><script async src="https://busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script></div><div class="footer-support"><span>本网站由</span><a class="footer-support-logo" href="https://www.upyun.com/?utm_source=lianmeng&amp;utm_medium=hqw567" target="blank" title="又拍云"><img height="30" src="https://fastly.jsdelivr.net/gh/YunYouJun/cdn/img/logo/upyun-logo.png" alt="又拍云"></a><span>提供 CDN 加速</span></div></footer></div><a class="hty-icon-button" id="back-to-top" aria-label="back-to-top" href="#"><span class="icon iconify" data-icon="ri:arrow-up-s-line"></span><svg class="progress-circle-container" viewBox="0 0 100 100"><circle class="progress-circle" id="progressCircle" cx="50" cy="50" r="48" fill="none" stroke="#f012bd" stroke-width="2" stroke-linecap="round"></circle></svg></a><a class="popup-trigger hty-icon-button icon-search" id="search" href="javascript:;" title="搜索"><span class="site-state-item-icon"><span class="icon iconify" data-icon="ri:search-line"></span></span></a><script>window.addEventListener("DOMContentLoaded", () => {
+  // Handle and trigger popup window
+  document.querySelector(".popup-trigger").addEventListener("click", () => {
+    document.querySelector(".popup").classList.add("show");
+    setTimeout(() => {
+      document.querySelector(".search-input").focus();
+    }, 100);
+  });
+
+  // Monitor main search box
+  const onPopupClose = () => {
+    document.querySelector(".popup").classList.remove("show");
+  };
+
+  document.querySelector(".popup-btn-close").addEventListener("click", () => {
+    onPopupClose();
+  });
+
+  window.addEventListener("keyup", event => {
+    if (event.key === "Escape") {
+      onPopupClose();
+    }
+  });
+});
+</script><script defer src="https://fastly.jsdelivr.net/npm/algoliasearch@4/dist/algoliasearch-lite.umd.js"></script><script defer src="https://fastly.jsdelivr.net/npm/instantsearch.js@4/dist/instantsearch.production.min.js"></script><script defer src="/js/search/algolia-search.js" type="module"></script><div class="popup search-popup"><div class="search-header"><span class="popup-btn-close close-icon hty-icon-button"><span class="icon iconify" data-icon="ri:close-line"></span></span></div><div class="search-input-container"></div><div class="algolia-results"><div id="algolia-stats"></div><div id="algolia-hits"></div><div class="algolia-pagination" id="algolia-pagination"></div></div></div><script>function initMourn() {
+  const date = new Date();
+  const today = (date.getMonth() + 1) + "-" + date.getDate()
+  const mourn_days = null
+  if (mourn_days.includes(today)) {
+    document.documentElement.style.filter = "grayscale(1)";
+  }
+}
+initMourn();</script><script src="https://fastly.jsdelivr.net/npm/medium-zoom@1.0.6/dist/medium-zoom.min.js"></script><script>const images = [...document.querySelectorAll('.markdown-body img')]
+mediumZoom(images)</script><style>.medium-zoom-image {
+  z-index: 99;
+}</style></body></html>

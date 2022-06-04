@@ -1,0 +1,960 @@
+<!DOCTYPE html><html lang="zh-CN"><head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width, initial-scale=1.0"><meta name="theme-color" content="#f012bd"><meta name="author" content="Herway"><meta name="copyright" content="Herway"><meta name="generator" content="Hexo 6.2.0"><meta name="theme" content="hexo-theme-yun"><title>前端开发规范：命名规范、html规范、css规范、js规范 | 思米米(SIMIMI)</title><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Noto+Serif+SC:wght@900&amp;display=swap" media="print" onload="this.media='all'"><link rel="stylesheet" href="https://fastly.jsdelivr.net/npm/star-markdown-css@0.3.3/dist/yun/yun-markdown.min.css"><link rel="stylesheet" href="https://fastly.jsdelivr.net/npm/prism-theme-vars/base.css"><script src="https://fastly.jsdelivr.net/npm/@unocss/runtime/mini.global.js"></script><script src="https://fastly.jsdelivr.net/npm/scrollreveal/dist/scrollreveal.min.js" defer></script><script>function initScrollReveal() {
+  [".post-card",".markdown-body img"].forEach((target)=> {
+    ScrollReveal().reveal(target);
+  })
+}
+document.addEventListener("DOMContentLoaded", initScrollReveal);
+document.addEventListener("pjax:success", initScrollReveal);
+</script><link rel="icon" type="image/png" href="/favicon.ico"><link rel="mask-icon" href="/favicon.ico" color="#f012bd"><link rel="preload" href="/css/hexo-theme-yun.css" as="style"><link rel="prefetch" href="/js/sidebar.js" as="script"><link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin><link rel="preconnect" href="https://fastly.jsdelivr.net/npm/" crossorigin><script id="yun-config">
+    window.Yun = {}
+    window.CONFIG = {"hostname":"www.simimi.cn","root":"/","title":"思米米","version":"1.10.3","mode":"auto","copycode":true,"page":{"isPost":true},"i18n":{"placeholder":"搜索...","empty":"找不到您查询的内容: ${query}","hits":"找到 ${hits} 条结果","hits_time":"找到 ${hits} 条结果（用时 ${time} 毫秒）"},"anonymous_image":"https://cdn.yunyoujun.cn/img/avatar/none.jpg","say":{"api":"https://el-bot-api.vercel.app/api/words/young"},"algolia":{"appID":"2XQIT428NI","apiKey":"1ce0c553fc3637fb687b5a8112d9c567","indexName":"simimi","hits":{"per_page":10}},"waline":{"config":{"enable":true,"serverURL":"https://waline.simimi.cn","comment":true,"visitor":true,"emoji":["https://fastly.jsdelivr.net/gh/walinejs/emojis@latest/bilibili/","https://fastly.jsdelivr.net/gh/walinejs/emojis@latest/weibo/","https://fastly.jsdelivr.net/gh/walinejs/emojis@latest/qq/"],"locale":{"placeholder":"填写邮箱，可以收到回复通知哦～"},"requiredMeta":["nick"],"el":"#waline","lang":"zh-CN"},"cdn":"https://fastly.jsdelivr.net/npm/@waline/client@v2/dist/waline.js","dark":"html.dark"},"vendors":{"darken":"https://fastly.jsdelivr.net/npm/darken@1.5.0"}};
+  </script><link rel="stylesheet" href="/css/hexo-theme-yun.css"><script src="/js/hexo-theme-yun.js" type="module"></script><link rel="alternate" href="/atom.xml" title="思米米(SIMIMI)" type="application/atom+xml"><link rel="preconnect" href="https://www.google-analytics.com" crossorigin><script async src="https://www.googletagmanager.com/gtag/js?id=G-4KNE7DCHW1"></script><script>if (CONFIG.hostname === location.hostname) {
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-4KNE7DCHW1');
+}</script><script data-ad-client="ca-pub-8809383571319105" async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script><script>(function(){
+  var bp = document.createElement('script');
+  var curProtocol = window.location.protocol.split(':')[0];
+  if (curProtocol === 'https') {
+    bp.src = 'https://zz.bdstatic.com/linksubmit/push.js';
+  }
+  else {
+    bp.src = 'http://push.zhanzhang.baidu.com/push.js';
+  }
+  var s = document.getElementsByTagName("script")[0];
+  s.parentNode.insertBefore(bp, s);
+})();</script><meta name="description" content="前端开发规范：命名规范、html规范、css规范、js规范一个好的程序员肯定是要能书写可维护的代码，而不是一次性的代码，怎么能让团队当中其他人甚至一段时间时候你再看你某个时候写的代码也能看懂呢，这就需要规范你的代码了。 命名驼峰式命名法介绍 Pascal Case 大驼峰式命名法：首字母大写。eg：StudentInfo、UserInfo、ProductInfo  Camel Case 小驼峰式命">
+<meta property="og:type" content="article">
+<meta property="og:title" content="前端开发规范：命名规范、html规范、css规范、js规范">
+<meta property="og:url" content="https://www.simimi.cn/note/web-norm/index.html">
+<meta property="og:site_name" content="思米米(SIMIMI)">
+<meta property="og:description" content="前端开发规范：命名规范、html规范、css规范、js规范一个好的程序员肯定是要能书写可维护的代码，而不是一次性的代码，怎么能让团队当中其他人甚至一段时间时候你再看你某个时候写的代码也能看懂呢，这就需要规范你的代码了。 命名驼峰式命名法介绍 Pascal Case 大驼峰式命名法：首字母大写。eg：StudentInfo、UserInfo、ProductInfo  Camel Case 小驼峰式命">
+<meta property="og:locale" content="zh_CN">
+<meta property="article:published_time" content="2022-06-01T06:52:13.000Z">
+<meta property="article:modified_time" content="2022-06-01T06:52:13.000Z">
+<meta property="article:author" content="Herway">
+<meta property="article:tag" content="前端">
+<meta name="twitter:card" content="summary"><script>(function() {
+  const prefersDark = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches
+  const setting = localStorage.getItem('darken-mode') || 'auto'
+  if (setting === 'dark' || (prefersDark && setting !== 'light'))
+    document.documentElement.classList.toggle('dark', true)
+})()</script></head><body><script src="https://code.iconify.design/2/2.1.1/iconify.min.js"></script><script>// Define global variable
+IconifyProviders = {
+  // Empty prefix: overwrite default API provider configuration
+  '': {
+    // Use custom API first, use Iconify public API as backup
+    resources: [
+        'https://api.iconify.design',
+    ],
+    // Wait for 1 second before switching API hosts
+    rotate: 1000,
+  },
+};</script><canvas id="trianglifyContainer"></canvas><script defer src="https://fastly.jsdelivr.net/npm/trianglify@4/dist/trianglify.bundle.js"></script><script>document.addEventListener("DOMContentLoaded", () => {
+  const pattern = trianglify({
+    width: 1000,
+    height: 800,
+    cellSize: 75,
+    palette: ["YlGnBu", "GnBu", "Purples", "Blues"],
+  });
+  const canvasOpts = {
+    applyCssScaling: false
+  }
+  document.body.appendChild(pattern.toCanvas(trianglifyContainer, canvasOpts));
+});</script><div class="container"><a class="sidebar-toggle hty-icon-button" id="menu-btn"><div class="hamburger hamburger--spin" type="button"><span class="hamburger-box"><span class="hamburger-inner"></span></span></div></a><div class="sidebar-toggle sidebar-overlay"></div><aside class="sidebar"><script src="/js/sidebar.js" type="module"></script><ul class="sidebar-nav"><li class="sidebar-nav-item sidebar-nav-toc hty-icon-button sidebar-nav-active" data-target="post-toc-wrap" title="文章目录"><span class="icon iconify" data-icon="ri:list-ordered"></span></li><li class="sidebar-nav-item sidebar-nav-overview hty-icon-button" data-target="site-overview-wrap" title="站点概览"><span class="icon iconify" data-icon="ri:passport-line"></span></li></ul><div class="sidebar-panel" id="site-overview-wrap"><div class="site-info mickey-mouse"><a class="site-author-avatar" href="/about/" title="Herway"><img width="96" loading="lazy" src="https://q1.qlogo.cn/g?b=qq&amp;nk=79099400&amp;s=640" alt="Herway"><span class="site-author-status" title="山有木兮木有枝，心悦君兮君不知。">😊</span></a><div class="site-author-name"><a href="/about/">Herway</a></div><a class="site-name" href="/about/site.html">思米米(SIMIMI)</a><sub class="site-subtitle">simimi.cn</sub><div class="site-description">山有木兮木有枝，心悦君兮君不知。</div></div><nav class="site-state"><a class="site-state-item hty-icon-button icon-home" href="/" title="首页"><span class="site-state-item-icon"><span class="icon iconify" data-icon="ri:home-4-line"></span></span></a><div class="site-state-item"><a href="/archives/" title="归档"><span class="site-state-item-icon"><span class="icon iconify" data-icon="ri:archive-line"></span></span><span class="site-state-item-count">21</span></a></div><div class="site-state-item"><a href="/categories/" title="分类"><span class="site-state-item-icon"><span class="icon iconify" data-icon="ri:folder-2-line"></span></span><span class="site-state-item-count">4</span></a></div><div class="site-state-item"><a href="/tags/" title="标签"><span class="site-state-item-icon"><span class="icon iconify" data-icon="ri:price-tag-3-line"></span></span><span class="site-state-item-count">11</span></a></div><a class="site-state-item hty-icon-button" href="/about/#comment" title="留言板"><span class="site-state-item-icon"><span class="icon iconify" data-icon="ri:clipboard-line"></span></span></a></nav><hr style="margin-bottom:0.5rem"><div class="links-of-author"><a class="links-of-author-item hty-icon-button" rel="noopener" href="/atom.xml" title="RSS" target="_blank" style="color:orange"><span class="icon iconify" data-icon="ri:rss-line"></span></a><a class="links-of-author-item hty-icon-button" rel="noopener" href="https://wpa.qq.com/msgrd?v=3&amp;uin=79099400&amp;site=qq&amp;menu=yes" title="QQ" target="_blank" style="color:#12B7F5"><span class="icon iconify" data-icon="ri:qq-line"></span></a><a class="links-of-author-item hty-icon-button" rel="noopener" href="https://github.com/hqw567" title="GitHub" target="_blank" style="color:#6e5494"><span class="icon iconify" data-icon="ri:github-line"></span></a><a class="links-of-author-item hty-icon-button" rel="noopener" href="https://music.163.com/#/user/home?id=616215227" title="网易云音乐" target="_blank" style="color:#C20C0C"><span class="icon iconify" data-icon="ri:netease-cloud-music-line"></span></a><a class="links-of-author-item hty-icon-button" rel="noopener" href="https://www.zhihu.com/people/hqw567/" title="知乎" target="_blank" style="color:#0084FF"><span class="icon iconify" data-icon="ri:zhihu-line"></span></a><a class="links-of-author-item hty-icon-button" rel="noopener" href="https://space.bilibili.com/477836218" title="哔哩哔哩" target="_blank" style="color:#FF8EB3"><span class="icon iconify" data-icon="ri:bilibili-line"></span></a><a class="links-of-author-item hty-icon-button" rel="noopener" href="mailto:hqw6@qq.com" title="E-Mail" target="_blank" style="color:#4c000a"><span class="icon iconify" data-icon="ri:mail-line"></span></a><a class="links-of-author-item hty-icon-button" rel="noopener" href="https://travellings.link" title="Travelling" target="_blank" style="color:var(--hty-text-color)"><span class="icon iconify" data-icon="ri:train-line"></span></a></div><hr style="margin:0.5rem 1rem"><div class="links"><a class="links-item hty-icon-button" href="/links" title="我的小伙伴们" style="color:dodgerblue"><span class="icon iconify" data-icon="ri:genderless-line"></span></a></div><br><a class="links-item hty-icon-button" id="toggle-mode-btn" href="javascript:;" title="Mode" style="color: #f1cb64"><span class="icon iconify" data-icon="ri:contrast-2-line"></span></a></div><div class="sidebar-panel sidebar-panel-active" id="post-toc-wrap"><div class="post-toc"><div class="post-toc-content"><ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%89%8D%E7%AB%AF%E5%BC%80%E5%8F%91%E8%A7%84%E8%8C%83%EF%BC%9A%E5%91%BD%E5%90%8D%E8%A7%84%E8%8C%83%E3%80%81html%E8%A7%84%E8%8C%83%E3%80%81css%E8%A7%84%E8%8C%83%E3%80%81js%E8%A7%84%E8%8C%83"><span class="toc-number">1.</span> <span class="toc-text">前端开发规范：命名规范、html规范、css规范、js规范</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%91%BD%E5%90%8D"><span class="toc-number">2.</span> <span class="toc-text">命名</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E9%A9%BC%E5%B3%B0%E5%BC%8F%E5%91%BD%E5%90%8D%E6%B3%95%E4%BB%8B%E7%BB%8D"><span class="toc-number">2.1.</span> <span class="toc-text">驼峰式命名法介绍</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%96%87%E4%BB%B6%E8%B5%84%E6%BA%90%E5%91%BD%E5%90%8D"><span class="toc-number">2.2.</span> <span class="toc-text">文件资源命名</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%8F%98%E9%87%8F%E5%91%BD%E5%90%8D"><span class="toc-number">2.3.</span> <span class="toc-text">变量命名</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%87%BD%E6%95%B0"><span class="toc-number">2.4.</span> <span class="toc-text">函数</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%B8%B8%E9%87%8F"><span class="toc-number">2.5.</span> <span class="toc-text">常量</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%B1%BB%E7%9A%84%E6%88%90%E5%91%98"><span class="toc-number">3.</span> <span class="toc-text">类的成员</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%B3%A8%E9%87%8A%E8%A7%84%E8%8C%83"><span class="toc-number">4.</span> <span class="toc-text">注释规范</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%8D%95%E8%A1%8C%E6%B3%A8%E9%87%8A-x2F-x2F"><span class="toc-number">4.1.</span> <span class="toc-text">单行注释 ( &#x2F;&#x2F; )</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%A4%9A%E8%A1%8C%E6%B3%A8%E9%87%8A-x2F-%E6%B3%A8%E9%87%8A%E8%AF%B4%E6%98%8E-x2F"><span class="toc-number">4.2.</span> <span class="toc-text">多行注释 ( &#x2F; 注释说明 &#x2F; )</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%87%BD%E6%95%B0-%E6%96%B9%E6%B3%95-%E6%B3%A8%E9%87%8A"><span class="toc-number">4.3.</span> <span class="toc-text">函数 ( 方法 ) 注释</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#HTML%E8%A7%84%E8%8C%83"><span class="toc-number">5.</span> <span class="toc-text">HTML规范</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%96%87%E6%A1%A3%E8%A7%84%E8%8C%83"><span class="toc-number">5.1.</span> <span class="toc-text">文档规范</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E8%84%9A%E6%9C%AC%E5%8A%A0%E8%BD%BD"><span class="toc-number">5.2.</span> <span class="toc-text">脚本加载</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E8%AF%AD%E4%B9%89%E5%8C%96"><span class="toc-number">5.3.</span> <span class="toc-text">语义化</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#alt%E6%A0%87%E7%AD%BE%E4%B8%8D%E4%B8%BA%E7%A9%BA"><span class="toc-number">5.4.</span> <span class="toc-text">alt标签不为空</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%BB%93%E6%9E%84%E3%80%81%E8%A1%A8%E7%8E%B0%E3%80%81%E8%A1%8C%E4%B8%BA%E4%B8%89%E8%80%85%E5%88%86%E7%A6%BB"><span class="toc-number">6.</span> <span class="toc-text">结构、表现、行为三者分离</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#HTML%E5%8F%AA%E5%85%B3%E6%B3%A8%E5%86%85%E5%AE%B9"><span class="toc-number">6.1.</span> <span class="toc-text">HTML只关注内容</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#js%E8%A7%84%E8%8C%83"><span class="toc-number">7.</span> <span class="toc-text">js规范</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E9%81%BF%E5%85%8D%E5%85%A8%E5%B1%80%E5%91%BD%E5%90%8D%E7%A9%BA%E9%97%B4%E6%B1%A1%E6%9F%93"><span class="toc-number">7.1.</span> <span class="toc-text">避免全局命名空间污染</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E4%B8%A5%E6%A0%BC%E6%A8%A1%E5%BC%8F"><span class="toc-number">7.2.</span> <span class="toc-text">严格模式</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%8F%98%E9%87%8F%E5%A3%B0%E6%98%8E"><span class="toc-number">7.3.</span> <span class="toc-text">变量声明</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#js%E5%A3%B0%E6%98%8E%E6%8F%90%E5%89%8D"><span class="toc-number">7.4.</span> <span class="toc-text">js声明提前</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E4%BD%BF%E7%94%A8%E4%B8%A5%E6%A0%BC%E7%AD%89"><span class="toc-number">7.5.</span> <span class="toc-text">使用严格等</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E7%AD%89%E5%90%8C-x3D-x3D-%E5%92%8C%E4%B8%A5%E6%A0%BC%E7%AD%89-x3D-x3D-x3D-%E7%9A%84%E5%8C%BA%E5%88%AB"><span class="toc-number">7.6.</span> <span class="toc-text">等同&#x3D;&#x3D; 和严格等&#x3D;&#x3D;&#x3D;的区别</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%9C%9F%E5%81%87%E5%88%A4%E6%96%AD"><span class="toc-number">8.</span> <span class="toc-text">真假判断</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E8%AE%BE%E7%BD%AE%E9%BB%98%E8%AE%A4%E5%8F%82%E6%95%B0"><span class="toc-number">9.</span> <span class="toc-text">设置默认参数</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E4%B8%8D%E4%BD%BF%E7%94%A8eval-%E5%87%BD%E6%95%B0"><span class="toc-number">10.</span> <span class="toc-text">不使用eval()函数</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#this%E5%85%B3%E9%94%AE%E5%AD%97"><span class="toc-number">11.</span> <span class="toc-text">this关键字</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E9%A6%96%E9%80%89%E5%87%BD%E6%95%B0%E5%BC%8F%E9%A3%8E%E6%A0%BC"><span class="toc-number">12.</span> <span class="toc-text">首选函数式风格</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E4%BF%AE%E6%94%B9%E5%86%85%E5%BB%BA%E5%AF%B9%E8%B1%A1%E7%9A%84%E5%8E%9F%E5%9E%8B%E9%93%BE"><span class="toc-number">13.</span> <span class="toc-text">修改内建对象的原型链</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E4%B8%89%E5%85%83%E6%9D%A1%E4%BB%B6%E5%88%A4%E6%96%AD%EF%BC%88if-%E7%9A%84%E5%BF%AB%E6%8D%B7%E6%96%B9%E6%B3%95%EF%BC%89"><span class="toc-number">14.</span> <span class="toc-text">三元条件判断（if 的快捷方法）</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#css%E8%A7%84%E8%8C%83"><span class="toc-number">15.</span> <span class="toc-text">css规范</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#id%E5%92%8Cclass%E7%9A%84%E5%91%BD%E5%90%8D"><span class="toc-number">15.1.</span> <span class="toc-text">id和class的命名</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%90%88%E7%90%86%E7%9A%84%E4%BD%BF%E7%94%A8ID"><span class="toc-number">15.2.</span> <span class="toc-text">合理的使用ID</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#css%E9%80%89%E6%8B%A9%E5%99%A8%E4%B8%AD%E9%81%BF%E5%85%8D%E4%BD%BF%E7%94%A8%E6%A0%87%E7%AD%BE%E5%90%8D"><span class="toc-number">15.3.</span> <span class="toc-text">css选择器中避免使用标签名</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E4%BD%BF%E7%94%A8%E5%AD%90%E9%80%89%E6%8B%A9%E5%99%A8"><span class="toc-number">15.4.</span> <span class="toc-text">使用子选择器</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%B0%BD%E9%87%8F%E4%BD%BF%E7%94%A8%E7%BC%A9%E5%86%99%E5%B1%9E%E6%80%A7"><span class="toc-number">15.5.</span> <span class="toc-text">尽量使用缩写属性</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#0%E5%90%8E%E9%9D%A2%E4%B8%8D%E5%B8%A6%E5%8D%95%E4%BD%8D"><span class="toc-number">15.6.</span> <span class="toc-text">0后面不带单位</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%B1%9E%E6%80%A7%E6%A0%BC%E5%BC%8F"><span class="toc-number">15.7.</span> <span class="toc-text">属性格式</span></a></li></ol></li></ol></div></div></div><div class="tag-cloud"><div class="tag-cloud-tags"><a href="/tags/CSS/" style="font-size: 25.5px; color: #2680d4">CSS</a> <a href="/tags/Git/" style="font-size: 21px; color: #4d89c0">Git</a> <a href="/tags/JavaScript/" style="font-size: 30px; color: #0078e7">JavaScript</a> <a href="/tags/Markdown/" style="font-size: 12px; color: #999">Markdown</a> <a href="/tags/Proxy/" style="font-size: 12px; color: #999">Proxy</a> <a href="/tags/%E5%88%86%E4%BA%AB/" style="font-size: 16.5px; color: #7391ad">分享</a> <a href="/tags/%E5%89%8D%E7%AB%AF/" style="font-size: 25.5px; color: #2680d4">前端</a> <a href="/tags/%E5%AD%A6%E4%B9%A0/" style="font-size: 16.5px; color: #7391ad">学习</a> <a href="/tags/%E6%95%99%E7%A8%8B/" style="font-size: 21px; color: #4d89c0">教程</a> <a href="/tags/%E7%AC%94%E8%AE%B0/" style="font-size: 16.5px; color: #7391ad">笔记</a> <a href="/tags/%E7%BE%8A%E6%AF%9B/" style="font-size: 16.5px; color: #7391ad">羊毛</a></div></div></aside><main class="sidebar-translate" id="content"><div id="post"><article class="hty-card post-block" itemscope itemtype="https://schema.org/Article" style="--smc-primary:#f012bd;"><link itemprop="mainEntityOfPage" href="https://www.simimi.cn/note/web-norm/"><span hidden itemprop="author" itemscope itemtype="https://schema.org/Person"><meta itemprop="name" content="Herway"><meta itemprop="description"></span><span hidden itemprop="publisher" itemscope itemtype="https://schema.org/Organization"><meta itemprop="name" content="思米米(SIMIMI)"></span><header class="post-header"><h1 class="post-title" itemprop="name headline">前端开发规范：命名规范、html规范、css规范、js规范<a class="post-edit-link" href="https://github.com/hqw567/hqw567.github.io/tree/hexo/source/_posts/note/web-norm.md" target="_blank" title="编辑" rel="noopener"><span class="icon iconify" data-icon="ri:edit-line"></span></a></h1><div class="post-meta"><div class="post-time" style="display:block"><span class="post-meta-item-icon"><span class="icon iconify" data-icon="ri:calendar-line"></span></span> <time title="创建时间：2022-06-01 14:52:13" itemprop="dateCreated datePublished" datetime="2022-06-01T14:52:13+08:00">2022-06-01</time></div><span class="post-count"><span class="post-symbolcount"><span class="post-meta-item-icon" title="本文字数"><span class="icon iconify" data-icon="ri:file-word-line"></span></span> <span title="本文字数">6.9k</span><span class="post-meta-divider">-</span><span class="post-meta-item-icon" title="阅读时长"><span class="icon iconify" data-icon="ri:timer-line"></span></span> <span title="阅读时长">31m</span></span></span><span class="leancloud_visitors" id="/note/web-norm/" data-flag-title="前端开发规范：命名规范、html规范、css规范、js规范"><span class="post-meta-divider">-</span><span class="post-meta-item-icon" title="阅读次数"><span class="icon iconify" data-icon="ri:eye-line"></span> <span class="leancloud-visitors-count"></span></span></span><span class="post-meta-divider">-</span><a href="#comment"><span class="post-meta-item-icon" title="评论数"><span class="icon iconify" data-icon="ri:chat-3-line"></span> <span class="waline-comment-count" id="/note/web-norm/"></span></span></a><div class="post-classify"><span class="post-category"> <span class="post-meta-item-icon" style="margin-right:3px;"><span class="icon iconify" data-icon="ri:folder-line"></span></span><span itemprop="about" itemscope itemtype="https://schema.org/Thing"><a class="category-item" href="/categories/%E6%80%9D%E7%B1%B3%E7%B1%B3%E7%9A%84%E5%B0%8F%E7%AC%94%E8%AE%B0/" style="--text-color:#FB7299" itemprop="url" rel="index"><span itemprop="text">思米米的小笔记</span></a></span></span><span class="post-tag"><span class="post-meta-divider">-</span><a class="tag-item" href="/tags/%E5%89%8D%E7%AB%AF/" style="--text-color:#e300a8"><span class="post-meta-item-icon"><span class="icon iconify" data-icon="ri:price-tag-3-line"></span></span><span class="tag-name">前端</span></a></span></div></div></header><section class="post-body" itemprop="articleBody"><div class="post-content markdown-body"><h2 id="前端开发规范：命名规范、html规范、css规范、js规范"><a href="#前端开发规范：命名规范、html规范、css规范、js规范" class="headerlink" title="前端开发规范：命名规范、html规范、css规范、js规范"></a>前端开发规范：命名规范、html规范、css规范、js规范</h2><p>一个好的程序员肯定是要能书写可维护的代码，而不是一次性的代码，怎么能让团队当中其他人甚至一段时间时候你再看你某个时候写的代码也能看懂呢，这就需要规范你的代码了。</p>
+<h2 id="命名"><a href="#命名" class="headerlink" title="命名"></a>命名</h2><h3 id="驼峰式命名法介绍"><a href="#驼峰式命名法介绍" class="headerlink" title="驼峰式命名法介绍"></a>驼峰式命名法介绍</h3><ul>
+<li><p>Pascal Case 大驼峰式命名法：首字母大写。eg：StudentInfo、UserInfo、ProductInfo</p>
+</li>
+<li><p>Camel Case 小驼峰式命名法：首字母小写。eg：studentInfo、userInfo、productInfo</p>
+</li>
+</ul>
+<span id="more"></span>
+
+<h3 id="文件资源命名"><a href="#文件资源命名" class="headerlink" title="文件资源命名"></a>文件资源命名</h3><ul>
+<li><p>文件名不得含有空格</p>
+</li>
+<li><p>文件名建议只使用小写字母，不使用大写字母。( 为了醒目，某些说明文件的文件名，可以使用大写字母，比如README、LICENSE。 )</p>
+</li>
+<li><p>文件名包含多个单词时，单词之间建议使用半角的连词线 ( - ) 分隔。</p>
+</li>
+<li><p>引入资源使用相对路径，不要指定资源所带的具体协议 ( <code>http:</code>,<code>https:</code> ) ，除非这两者协议都不可用。</p>
+</li>
+</ul>
+<p>不推荐：</p>
+<pre class="line-numbers language-none"><code class="language-none">&lt;script src&#x3D;&quot;http:&#x2F;&#x2F;cdn.com&#x2F;foundation.min.js&quot;&gt;&lt;&#x2F;script&gt;<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+
+<p>推荐</p>
+<pre class="line-numbers language-none"><code class="language-none">&lt;script src&#x3D;&quot;&#x2F;&#x2F;cdn.com&#x2F;foundation.min.js&quot;&gt;&lt;&#x2F;script&gt;<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+
+<h3 id="变量命名"><a href="#变量命名" class="headerlink" title="变量命名"></a>变量命名</h3><p><strong>命名方式</strong> : 小驼峰式命名方法<br><strong>命名规范</strong> : 类型+对象描述的方式，如果没有明确的类型，就可以使前缀为名词</p>
+<table>
+<thead>
+<tr>
+<th>类型</th>
+<th>小写字母</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>array</td>
+<td>a</td>
+</tr>
+<tr>
+<td>boolean</td>
+<td>b</td>
+</tr>
+<tr>
+<td>function</td>
+<td>fn</td>
+</tr>
+<tr>
+<td>int</td>
+<td>i</td>
+</tr>
+<tr>
+<td>object</td>
+<td>o</td>
+</tr>
+<tr>
+<td>regular</td>
+<td>r</td>
+</tr>
+<tr>
+<td>string</td>
+<td>s</td>
+</tr>
+</tbody></table>
+<p>推荐</p>
+<pre class="line-numbers language-none"><code class="language-none">let tableTitle &#x3D; &quot;LoginTable&quot;<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+
+<p>不推荐</p>
+<pre class="line-numbers language-none"><code class="language-none">let getTitle &#x3D; &quot;LoginTable&quot;<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+
+<h3 id="函数"><a href="#函数" class="headerlink" title="函数"></a>函数</h3><p><strong>命名方式</strong> : 小驼峰方式 ( 构造函数使用大驼峰命名法 )<br><strong>命名规则</strong> : 前缀为动词</p>
+<table>
+<thead>
+<tr>
+<th>动词</th>
+<th>含义</th>
+<th>返回值</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>can</td>
+<td>判断是否可执行某个动作 ( 权限 )</td>
+<td>函数返回一个布尔值。true：可执行；false：不可执行</td>
+</tr>
+<tr>
+<td>has</td>
+<td>判断是否含有某个值</td>
+<td>函数返回一个布尔值。true：含有此值；false：不含有此值</td>
+</tr>
+<tr>
+<td>is</td>
+<td>判断是否为某个值</td>
+<td>函数返回一个布尔值。true：为某个值；false：不为某个值</td>
+</tr>
+<tr>
+<td>get</td>
+<td>获取某个值</td>
+<td>函数返回一个非布尔值</td>
+</tr>
+<tr>
+<td>set</td>
+<td>设置某个值</td>
+<td>无返回值、返回是否设置成功或者返回链式对象</td>
+</tr>
+</tbody></table>
+<p>推荐：</p>
+<pre class="line-numbers language-none"><code class="language-none">&#x2F;&#x2F;是否可阅读
+function canRead()&#123;
+    return true;
+&#125;
+
+&#x2F;&#x2F;获取姓名
+function getName&#123;
+    return this.name
+&#125;<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+<h3 id="常量"><a href="#常量" class="headerlink" title="常量"></a>常量</h3><p><strong>命名方法</strong> : 全部大写<br><strong>命名规范</strong> : 使用大写字母和下划线来组合命名，下划线用以分割单词。<br>推荐：</p>
+<pre class="line-numbers language-none"><code class="language-none">const MAX_COUNT &#x3D; 10;
+const URL &#x3D; &#39;http:&#x2F;&#x2F;www.baidu.com&#39;;<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre>
+
+<h2 id="类的成员"><a href="#类的成员" class="headerlink" title="类的成员"></a>类的成员</h2><ul>
+<li>公共属性和方法 : 同变量命名方式</li>
+<li>私有属性和方法 : 前缀为下划线(_)后面跟公共属性和方法一样的命名方式</li>
+</ul>
+<p>推荐(将<code>name</code>换成<code>this</code>是不是更熟悉了呢)</p>
+<pre class="line-numbers language-none"><code class="language-none">function Student(name) &#123;
+    let _name &#x3D; name; &#x2F;&#x2F; 私有成员
+
+    &#x2F;&#x2F; 公共方法
+    this.getName &#x3D; function () &#123;
+        return _name;
+    &#125;
+
+    &#x2F;&#x2F; 公共方式
+    this.setName &#x3D; function (value) &#123;
+        _name &#x3D; value;
+    &#125;
+&#125;
+let st &#x3D; new Student(&#39;tom&#39;);
+st.setName(&#39;jerry&#39;);
+console.log(st.getName()); &#x2F;&#x2F; &#x3D;&gt; jerry：输出_name私有变量的值<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+<h2 id="注释规范"><a href="#注释规范" class="headerlink" title="注释规范"></a>注释规范</h2><h3 id="单行注释-x2F-x2F"><a href="#单行注释-x2F-x2F" class="headerlink" title="单行注释 ( &#x2F;&#x2F; )"></a>单行注释 ( &#x2F;&#x2F; )</h3><ul>
+<li>单独一行：&#x2F;&#x2F;(双斜线)与注释文字之间保留一个空格</li>
+<li>在代码后面添加注释：&#x2F;&#x2F;(双斜线)与代码之间保留一个空格，并且&#x2F;&#x2F;(双斜线)与注释文字之间保留一个空格。</li>
+<li>注释代码：&#x2F;&#x2F;(双斜线)与代码之间保留一个空格。</li>
+</ul>
+<p>推荐 : </p>
+<pre class="line-numbers language-none"><code class="language-none">&#x2F;&#x2F; 调用了一个函数；1)单独在一行
+setTitle();
+
+let maxCount &#x3D; 10; &#x2F;&#x2F; 设置最大量；2)在代码后面注释
+
+&#x2F;&#x2F; setName(); &#x2F;&#x2F; 3)注释代码<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+<h3 id="多行注释-x2F-注释说明-x2F"><a href="#多行注释-x2F-注释说明-x2F" class="headerlink" title="多行注释 ( &#x2F; 注释说明 &#x2F; )"></a>多行注释 ( &#x2F; <em>注释说明</em> &#x2F; )</h3><ul>
+<li><p>若开始(&#x2F;<code>*</code>和结束(<code>*</code>&#x2F;)都在一行，推荐采用单行注释</p>
+</li>
+<li><p>若至少三行注释时，第一行为&#x2F;<code>*</code>，最后行为<code>*</code>&#x2F;，其他行以<code>*</code>开始，并且注释文字与<code>*</code>保留一个空格。</p>
+<p>推荐 : </p>
+<pre class="line-numbers language-none"><code class="language-none">&#x2F;*
+* 代码执行到这里后会调用setTitle()函数
+* setTitle()：设置title的值
+*&#x2F;
+setTitle();<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span></span></code></pre></li>
+</ul>
+<h3 id="函数-方法-注释"><a href="#函数-方法-注释" class="headerlink" title="函数 ( 方法 ) 注释"></a>函数 ( 方法 ) 注释</h3><p>函数(方法)注释也是多行注释的一种，但是包含了特殊的注释要求，参照 <a target="_blank" rel="noopener" href="https://baike.baidu.com/item/javadoc">javadoc(百度百科)</a><br>语法：</p>
+<pre class="line-numbers language-none"><code class="language-none">&#x2F;** 
+* 函数说明 
+* @关键字 
+*&#x2F;<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span></span></code></pre>
+
+<p>常用注释关键字</p>
+<table>
+<thead>
+<tr>
+<th>注释名</th>
+<th>语法</th>
+<th>含义</th>
+<th>示例</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>@param</td>
+<td>@param 参数名 {参数类型}  描述信息</td>
+<td>描述参数的信息</td>
+<td>@param name {String} 传入名称</td>
+</tr>
+<tr>
+<td>@return</td>
+<td>@return {返回类型} 描述信息</td>
+<td>描述返回值的信息</td>
+<td>@return {Boolean} true:可执行;false:不可执行</td>
+</tr>
+<tr>
+<td>@author</td>
+<td>@author 作者信息 [附属信息：如邮箱、日期]</td>
+<td>描述此函数作者的信息</td>
+<td>@author 张三 2015&#x2F;07&#x2F;21</td>
+</tr>
+<tr>
+<td>@version</td>
+<td>@version XX.XX.XX</td>
+<td>描述此函数的版本号</td>
+<td>@version 1.0.3</td>
+</tr>
+<tr>
+<td>@example</td>
+<td>@example 示例代码</td>
+<td>@example setTitle(‘测试’)</td>
+<td>如下</td>
+</tr>
+</tbody></table>
+<p>推荐 :</p>
+<pre class="line-numbers language-none"><code class="language-none">&#x2F;**
+ - 合并Grid的行
+ - @param grid &#123;Ext.Grid.Panel&#125; 需要合并的Grid
+ - @param cols &#123;Array&#125; 需要合并列的Index(序号)数组；从0开始计数，序号也包含。
+ - @param isAllSome &#123;Boolean&#125; ：是否2个tr的cols必须完成一样才能进行合并。true：完成一样；false(默认)：不完全一样
+ - @return void
+ - @author polk6 2015&#x2F;07&#x2F;21 
+ - @example
+ - _________________                             _________________
+ - |  年龄 |  姓名 |                             |  年龄 |  姓名 |
+ - -----------------      mergeCells(grid,[0])   -----------------
+ - |  18   |  张三 |              &#x3D;&gt;             |       |  张三 |
+ - -----------------                             -  18   ---------
+ - |  18   |  王五 |                             |       |  王五 |
+ - -----------------                             -----------------
+*&#x2F;
+function mergeCells(grid, cols, isAllSome) &#123;
+    &#x2F;&#x2F; Do Something
+&#125;<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+<h2 id="HTML规范"><a href="#HTML规范" class="headerlink" title="HTML规范"></a>HTML规范</h2><h3 id="文档规范"><a href="#文档规范" class="headerlink" title="文档规范"></a>文档规范</h3><p>使用 HTML5 的文档声明类型 : <code>&lt;!DOCTYPE html&gt;</code></p>
+<ul>
+<li>DOCTYPE标签是一种标准通用标记语言的文档类型声明，它的目的是要告诉标准通用标记语言解析器，它应该使用什么样的文档类型定义（DTD）来解析文档。</li>
+<li>使用文档声明类型的作用是为了防止开启浏览器的怪异模式。 </li>
+<li>没有DOCTYPE文档类型声明会开启浏览器的怪异模式，浏览器会按照自己的解析方式渲染页面，在不同的浏览器下面会有不同的样式。</li>
+<li>如果你的页面添加了&lt;!DOCTYP&gt;那么，那么就等同于开启了标准模式。浏览器会按照W3C标准解析渲染页面。</li>
+</ul>
+<h3 id="脚本加载"><a href="#脚本加载" class="headerlink" title="脚本加载"></a>脚本加载</h3><p>说到js和css的位置，大家应该都知道js放在下面，css放在上面。<br>但是，如果你的项目只需要兼容ie10+或者只是在移动端访问，那么可以使用HTML5的新属性<code>async</code>，将脚本文件放在<code>&lt;head&gt;</code>内<br><strong>兼容老旧浏览器(IE9-)时</strong>：<br>脚本引用写在 body 结束标签之前，并带上 async 属性。这虽然在老旧浏览器中不会异步加载脚本，但它只阻塞了 body 结束标签之前的 DOM 解析，这就大大降低了其阻塞影响。<br><strong>而在现代浏览器中</strong>：<br>脚本将在 DOM 解析器发现 body 尾部的 script 标签才进行加载，此时加载属于异步加载，不会阻塞 CSSOM（但其执行仍发生在 CSSOM 之后）。<br>综上所述，<br>所有浏览器中推荐:</p>
+<pre class="line-numbers language-none"><code class="language-none">&lt;html&gt;
+  &lt;head&gt;
+    &lt;link rel&#x3D;&quot;stylesheet&quot; href&#x3D;&quot;main.css&quot;&gt;
+  &lt;&#x2F;head&gt;
+  &lt;body&gt;
+    &lt;!-- body goes here --&gt;
+
+    &lt;script src&#x3D;&quot;main.js&quot; async&gt;&lt;&#x2F;script&gt;
+  &lt;&#x2F;body&gt;
+&lt;&#x2F;html&gt;<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+<p>只兼容现代浏览器推荐:</p>
+<pre class="line-numbers language-none"><code class="language-none">&lt;html&gt;
+  &lt;head&gt;
+    &lt;link rel&#x3D;&quot;stylesheet&quot; href&#x3D;&quot;main.css&quot;&gt;
+    &lt;script src&#x3D;&quot;main.js&quot; async&gt;&lt;&#x2F;script&gt;
+  &lt;&#x2F;head&gt;
+  &lt;body&gt;
+    &lt;!-- body goes here --&gt;
+  &lt;&#x2F;body&gt;
+&lt;&#x2F;html&gt;<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+<h3 id="语义化"><a href="#语义化" class="headerlink" title="语义化"></a>语义化</h3><p>我们一直都在说语义化编程，语义化编程，但是在代码中很少有人完全使用正确的元素。使用语义化标签也是有理由SEO的。</p>
+<blockquote>
+<p>语义化是指：根据元素其被创造出来时的初始意义来使用它。<br>意思就是用正确的标签干正确的事，而不是只有<code>div</code>和<code>span</code>。</p>
+</blockquote>
+<p>不推荐：</p>
+<pre class="line-numbers language-none"><code class="language-none">&lt;b&gt;My page title&lt;&#x2F;b&gt;
+&lt;div class&#x3D;&quot;top-navigation&quot;&gt;
+  &lt;div class&#x3D;&quot;nav-item&quot;&gt;&lt;a href&#x3D;&quot;#home&quot;&gt;Home&lt;&#x2F;a&gt;&lt;&#x2F;div&gt;
+  &lt;div class&#x3D;&quot;nav-item&quot;&gt;&lt;a href&#x3D;&quot;#news&quot;&gt;News&lt;&#x2F;a&gt;&lt;&#x2F;div&gt;
+  &lt;div class&#x3D;&quot;nav-item&quot;&gt;&lt;a href&#x3D;&quot;#about&quot;&gt;About&lt;&#x2F;a&gt;&lt;&#x2F;div&gt;
+&lt;&#x2F;div&gt;
+
+&lt;div class&#x3D;&quot;news-page&quot;&gt;
+  &lt;div class&#x3D;&quot;page-section news&quot;&gt;
+    &lt;div class&#x3D;&quot;title&quot;&gt;All news articles&lt;&#x2F;div&gt;
+    &lt;div class&#x3D;&quot;news-article&quot;&gt;
+      &lt;h2&gt;Bad article&lt;&#x2F;h2&gt;
+      &lt;div class&#x3D;&quot;intro&quot;&gt;Introduction sub-title&lt;&#x2F;div&gt;
+      &lt;div class&#x3D;&quot;content&quot;&gt;This is a very bad example for HTML semantics&lt;&#x2F;div&gt;
+      &lt;div class&#x3D;&quot;article-side-notes&quot;&gt;I think I&#39;m more on the side and should not receive the main credits&lt;&#x2F;div&gt;
+      &lt;div class&#x3D;&quot;article-foot-notes&quot;&gt;
+        This article was created by David &lt;div class&#x3D;&quot;time&quot;&gt;2014-01-01 00:00&lt;&#x2F;div&gt;
+      &lt;&#x2F;div&gt;
+    &lt;&#x2F;div&gt;
+
+    &lt;div class&#x3D;&quot;section-footer&quot;&gt;
+      Related sections: Events, Public holidays
+    &lt;&#x2F;div&gt;
+  &lt;&#x2F;div&gt;
+&lt;&#x2F;div&gt;
+
+&lt;div class&#x3D;&quot;page-footer&quot;&gt;
+  Copyright 2014
+&lt;&#x2F;div&gt;<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+<p>推荐</p>
+<pre class="line-numbers language-none"><code class="language-none">html 代码:
+&lt;!-- The page header should go into a header element --&gt;
+&lt;header&gt;
+  &lt;!-- As this title belongs to the page structure it&#39;s a heading and h1 should be used --&gt;
+  &lt;h1&gt;My page title&lt;&#x2F;h1&gt;
+&lt;&#x2F;header&gt;
+
+&lt;!-- All navigation should go into a nav element --&gt;
+&lt;nav class&#x3D;&quot;top-navigation&quot;&gt;
+  &lt;!-- A listing of elements should always go to UL (OL for ordered listings) --&gt;
+  &lt;ul&gt;
+    &lt;li class&#x3D;&quot;nav-item&quot;&gt;&lt;a href&#x3D;&quot;#home&quot;&gt;Home&lt;&#x2F;a&gt;&lt;&#x2F;li&gt;
+    &lt;li class&#x3D;&quot;nav-item&quot;&gt;&lt;a href&#x3D;&quot;#news&quot;&gt;News&lt;&#x2F;a&gt;&lt;&#x2F;li&gt;
+    &lt;li class&#x3D;&quot;nav-item&quot;&gt;&lt;a href&#x3D;&quot;#about&quot;&gt;About&lt;&#x2F;a&gt;&lt;&#x2F;li&gt;
+  &lt;&#x2F;ul&gt;
+&lt;&#x2F;nav&gt;
+
+&lt;!-- The main part of the page should go into a main element (also use role&#x3D;&quot;main&quot; for accessibility) --&gt;
+&lt;main class&#x3D;&quot;news-page&quot; role&#x3D;&quot;main&quot;&gt;
+  &lt;!-- A section of a page should go into a section element. Divide a page into sections with semantic elements. --&gt;
+  &lt;section class&#x3D;&quot;page-section news&quot;&gt;
+    &lt;!-- A section header should go into a section element --&gt;
+    &lt;header&gt;
+      &lt;!-- As a page section belongs to the page structure heading elements should be used (in this case h2) --&gt;
+      &lt;h2 class&#x3D;&quot;title&quot;&gt;All news articles&lt;&#x2F;h2&gt;
+    &lt;&#x2F;header&gt;
+
+    &lt;!-- If a section &#x2F; module can be seen as an article (news article, blog entry, products teaser, any other
+     re-usable module &#x2F; section that can occur multiple times on a page) a article element should be used --&gt;
+    &lt;article class&#x3D;&quot;news-article&quot;&gt;
+      &lt;!-- An article can contain a header that contains the summary &#x2F; introduction information of the article --&gt;
+      &lt;header&gt;
+        &lt;!-- As a article title does not belong to the overall page structure there should not be any heading tag! --&gt;
+        &lt;div class&#x3D;&quot;article-title&quot;&gt;Good article&lt;&#x2F;div&gt;
+        &lt;!-- Small can optionally be used to reduce importance --&gt;
+        &lt;small class&#x3D;&quot;intro&quot;&gt;Introduction sub-title&lt;&#x2F;small&gt;
+      &lt;&#x2F;header&gt;
+
+      &lt;!-- For the main content in a section or article there is no semantic element --&gt;
+      &lt;div class&#x3D;&quot;content&quot;&gt;
+        &lt;p&gt;This is a good example for HTML semantics&lt;&#x2F;p&gt;
+      &lt;&#x2F;div&gt;
+      &lt;!-- For content that is represented as side note or less important information in a given context use aside --&gt;
+      &lt;aside class&#x3D;&quot;article-side-notes&quot;&gt;
+        &lt;p&gt;I think I&#39;m more on the side and should not receive the main credits&lt;&#x2F;p&gt;
+      &lt;&#x2F;aside&gt;
+      &lt;!-- Articles can also contain footers. If you have footnotes for an article place them into a footer element --&gt;
+      &lt;footer class&#x3D;&quot;article-foot-notes&quot;&gt;
+        &lt;!-- The time element can be used to annotate a timestamp. Use the datetime attribute to specify ISO time
+         while the actual text in the time element can also be more human readable &#x2F; relative --&gt;
+        &lt;p&gt;This article was created by David &lt;time datetime&#x3D;&quot;2014-01-01 00:00&quot; class&#x3D;&quot;time&quot;&gt;1 month ago&lt;&#x2F;time&gt;&lt;&#x2F;p&gt;
+      &lt;&#x2F;footer&gt;
+    &lt;&#x2F;article&gt;
+
+    &lt;!-- In a section, footnotes or similar information can also go into a footer element --&gt;
+    &lt;footer class&#x3D;&quot;section-footer&quot;&gt;
+      &lt;p&gt;Related sections: Events, Public holidays&lt;&#x2F;p&gt;
+    &lt;&#x2F;footer&gt;
+  &lt;&#x2F;section&gt;
+&lt;&#x2F;main&gt;
+
+&lt;!-- Your page footer should go into a global footer element --&gt;
+&lt;footer class&#x3D;&quot;page-footer&quot;&gt;
+  Copyright 2014
+&lt;&#x2F;footer&gt;<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+<h3 id="alt标签不为空"><a href="#alt标签不为空" class="headerlink" title="alt标签不为空"></a>alt标签不为空</h3><p><img>标签的 alt 属性指定了替代文本，用于在图像无法显示或者用户禁用图像显示时，代替图像显示在浏览器中的内容。假设由于下列原因用户无法查看图像，alt 属性可以为图像提供替代的信息：</p loading="lazy">
+<ul>
+<li>网速太慢</li>
+<li>src 属性中的错误</li>
+<li>浏览器禁用图像</li>
+<li>用户使用的是屏幕阅读器</li>
+</ul>
+<p>从SEO角度考虑，浏览器的爬虫爬不到图片的内容，所以我们要有文字告诉爬虫图片的内容</p>
+<h2 id="结构、表现、行为三者分离"><a href="#结构、表现、行为三者分离" class="headerlink" title="结构、表现、行为三者分离"></a>结构、表现、行为三者分离</h2><p>尽量在文档和模板中只包含结构性的 HTML；而将所有表现代码，移入样式表中；将所有动作行为，移入脚本之中。<br>在此之外，为使得它们之间的联系尽可能的小，在文档和模板中也尽量少地引入样式和脚本文件。<br>建议：</p>
+<ul>
+<li>不使用超过一到两张样式表</li>
+<li>不使用超过一到两个脚本（学会用合并脚本）</li>
+<li>不使用行内样式（<code>&lt;style&gt;.no-good &#123;&#125;&lt;/style&gt;</code>）</li>
+<li>不在元素上使用 style 属性（<code>&lt;hr style=&quot;border-top: 5px solid black&quot;&gt;</code>）</li>
+<li>不使用行内脚本（<code>&lt;script&gt;alert(&#39;no good&#39;)&lt;/script&gt;</code>）</li>
+<li>不使用表象元素（<code>i.e. &lt;b&gt;, &lt;u&gt;, &lt;center&gt;, &lt;font&gt;, &lt;b&gt;</code>）</li>
+<li>不使用表象 class 名（<code>i.e. red, left, center</code>）</li>
+</ul>
+<h3 id="HTML只关注内容"><a href="#HTML只关注内容" class="headerlink" title="HTML只关注内容"></a>HTML只关注内容</h3><ul>
+<li>HTML只显示展示内容信息</li>
+<li>不要引入一些特定的 HTML 结构来解决一些视觉设计问题</li>
+<li>不要将<code>img</code>元素当做专门用来做视觉设计的元素</li>
+<li>样式上的问题应该使用css解决</li>
+</ul>
+<p>不推荐：</p>
+<pre class="line-numbers language-none"><code class="language-none">&lt;!-- We should not introduce an additional element just to solve a design problem  --&gt;
+&lt;span class&#x3D;&quot;text-box&quot;&gt;
+  &lt;span class&#x3D;&quot;square&quot;&gt;&lt;&#x2F;span&gt;
+  See the square next to me?
+&lt;&#x2F;span&gt;
+css 代码:
+.text-box &gt; .square &#123;
+  display: inline-block;
+  width: 1rem;
+  height: 1rem;
+  background-color: red;
+&#125;<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+<p>推荐</p>
+<pre class="line-numbers language-none"><code class="language-none">html 代码:
+&lt;!-- That&#39;s clean markup! --&gt;
+&lt;span class&#x3D;&quot;text-box&quot;&gt;
+  See the square next to me?
+&lt;&#x2F;span&gt;
+css 代码:
+&#x2F;* We use a :before pseudo element to solve the design problem of placing a colored square in front of the text content *&#x2F;
+.text-box:before &#123;
+  content: &quot;&quot;;
+  display: inline-block;
+  width: 1rem;
+  height: 1rem;
+  background-color: red;
+&#125;<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+<p><strong>图片和 SVG 图形能被引入到 HTML 中的唯一理由是它们呈现出了与内容相关的一些信息。</strong></p>
+<p>不推荐</p>
+<pre class="line-numbers language-none"><code class="language-none">html 代码:
+&lt;!-- Content images should never be used for design elements!  --&gt;
+&lt;span class&#x3D;&quot;text-box&quot;&gt;
+  &lt;img src&#x3D;&quot;square.svg&quot; alt&#x3D;&quot;Square&quot; &#x2F;&gt;
+  See the square next to me?
+&lt;&#x2F;span&gt;<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+<p>推荐</p>
+<pre class="line-numbers language-none"><code class="language-none">html 代码:
+&lt;!-- That&#39;s clean markup! --&gt;
+&lt;span class&#x3D;&quot;text-box&quot;&gt;
+  See the square next to me?
+&lt;&#x2F;span&gt;
+css 代码:
+&#x2F;* We use a :before pseudo element with a background image to solve the problem *&#x2F;
+.text-box:before &#123;
+  content: &quot;&quot;;
+  display: inline-block;
+  width: 1rem;
+  height: 1rem;
+  background: url(square.svg) no-repeat;
+  background-size: 100%;
+&#125;<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+<h2 id="js规范"><a href="#js规范" class="headerlink" title="js规范"></a>js规范</h2><h3 id="避免全局命名空间污染"><a href="#避免全局命名空间污染" class="headerlink" title="避免全局命名空间污染"></a>避免全局命名空间污染</h3><p>防止全局命名空间被污染，我们通常的做法是将代码包裹成一个 IIFE(Immediately-Invoked Function Expression)，创建独立隔绝的定义域。也使得内存在执行完后立即释放。</p>
+<p>IIFE 还可确保你的代码不会轻易被其它全局命名空间里的代码所修改（i.e. 第三方库，window 引用，被覆盖的未定义的关键字等等）。<br>不推荐:</p>
+<pre class="line-numbers language-none"><code class="language-none">let x &#x3D; 10,
+    y &#x3D; 100;
+
+&#x2F;&#x2F; Declaring letiables in the global scope is resulting in global scope pollution. All letiables declared like this
+&#x2F;&#x2F; will be stored in the window object. This is very unclean and needs to be avoided.
+console.log(window.x + &#39; &#39; + window.y);<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+<p>推荐</p>
+<pre class="line-numbers language-none"><code class="language-none">&#x2F;&#x2F; We declare a IIFE and pass parameters into the function that we will use from the global space
+(function(log, w, undefined)&#123;
+  &#39;use strict&#39;;
+
+  let x &#x3D; 10,
+      y &#x3D; 100;
+
+  &#x2F;&#x2F; Will output &#39;true true&#39;
+  log((w.x &#x3D;&#x3D;&#x3D; undefined) + &#39; &#39; + (w.y &#x3D;&#x3D;&#x3D; undefined));
+
+&#125;(window.console.log, window));<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+<p>推荐的IIFE写法:</p>
+<pre class="line-numbers language-none"><code class="language-none">(function()&#123;
+  &#39;use strict&#39;;
+
+  &#x2F;&#x2F; Code goes here
+
+&#125;());<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+<p>如果你想引用全局变量或者是外层 IIFE 的变量，可以通过下列方式传参：</p>
+<pre class="line-numbers language-none"><code class="language-none">(function($, w, d)&#123;
+  &#39;use strict&#39;;
+
+  $(function() &#123;
+    w.alert(d.querySelectorAll(&#39;div&#39;).length);
+  &#125;);
+&#125;(jQuery, window, document));<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+<h3 id="严格模式"><a href="#严格模式" class="headerlink" title="严格模式"></a>严格模式</h3><p>ECMAScript 5 严格模式可在整个脚本或独个方法内被激活。它对应不同的 javascript 语境会做更加严格的错误检查。严格模式也确保了 javascript 代码更加的健壮，运行的也更加快速。</p>
+<p>严格模式会阻止使用在未来很可能被引入的预留关键字。</p>
+<p>你应该在你的脚本中启用严格模式，最好是在独立的 IIFE 中应用它。避免在你的脚本第一行使用它而导致你的所有脚本都启动了严格模式，这有可能会引发一些第三方类库的问题。</p>
+<h3 id="变量声明"><a href="#变量声明" class="headerlink" title="变量声明"></a>变量声明</h3><p>总是使用 let 来声明变量。如不指定 let，变量将被隐式地声明为全局变量，例如</p>
+<pre class="line-numbers language-none"><code class="language-none">let a &#x3D; b &#x3D; 0; &#x2F;&#x2F;b会被隐式的创建为全局变量<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+
+<p>所以，请总是使用 let 来声明变量，并且使用单let模式（将所有的变量在函数最前面只使用一个let定义）。例如：</p>
+<pre class="line-numbers language-none"><code class="language-none">(function ()&#123;
+  &#39;use strict&#39;
+  let a &#x3D; 0,
+      b &#x3D; 0,
+      c &#x3D; 0,
+      i,
+      j,
+      myObject();
+&#125;())<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+<p>采用严格模式带来的好处是，当你手误输入错误的变量名时，它可以通过报错信息来帮助你定位错误出处。</p>
+<h3 id="js声明提前"><a href="#js声明提前" class="headerlink" title="js声明提前"></a>js声明提前</h3><p>javascript会自动将函数作用域内的变量和方法的定义提前（只是提前声明，赋值还是在原处）<br>例如：</p>
+<pre class="line-numbers language-none"><code class="language-none">(function(log)&#123;
+  &#39;use strict&#39;;
+
+  let a &#x3D; 10;
+
+  for(let i &#x3D; 0; i &lt; a; i++) &#123;
+    let b &#x3D; i * i;
+    log(b);
+  &#125;
+
+  if(a &#x3D;&#x3D;&#x3D; 10) &#123;
+    let f &#x3D; function() &#123;
+      log(a);
+    &#125;;
+    f();
+  &#125;
+
+  function x() &#123;
+    log(&#39;Mr. X!&#39;);
+  &#125;
+  x();
+
+&#125;(window.console.log));<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+<p>提升后的js</p>
+<pre class="line-numbers language-none"><code class="language-none">(function(log)&#123;
+  &#39;use strict&#39;;
+  &#x2F;&#x2F; All letiables used in the closure will be hoisted to the top of the function
+  let a,
+      i,
+      b,
+      f;
+  &#x2F;&#x2F; All functions in the closure will be hoisted to the top
+  function x() &#123;
+    log(&#39;Mr. X!&#39;);
+  &#125;
+
+  a &#x3D; 10;
+
+  for(i &#x3D; 0; i &lt; a; i++) &#123;
+    b &#x3D; i * i;
+    log(b);
+  &#125;
+
+  if(a &#x3D;&#x3D;&#x3D; 10) &#123;
+    &#x2F;&#x2F; Function assignments will only result in hoisted letiables but the function body will not be hoisted
+    &#x2F;&#x2F; Only by using a real function declaration the whole function will be hoisted with its body
+    f &#x3D; function() &#123;
+      log(a);
+    &#125;;
+    f();
+  &#125;
+
+  x();
+
+&#125;(window.console.log));<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+<h3 id="使用严格等"><a href="#使用严格等" class="headerlink" title="使用严格等"></a>使用严格等</h3><p>总是使用 <code>===</code> 精确的比较操作符，避免在判断的过程中，由 JavaScript 的强制类型转换所造成的困扰。例如：</p>
+<pre class="line-numbers language-none"><code class="language-none">(function(log)&#123;
+  &#39;use strict&#39;;
+
+  log(&#39;0&#39; &#x3D;&#x3D; 0); &#x2F;&#x2F; true
+  log(&#39;&#39; &#x3D;&#x3D; false); &#x2F;&#x2F; true
+  log(&#39;1&#39; &#x3D;&#x3D; true); &#x2F;&#x2F; true
+  log(null &#x3D;&#x3D; undefined); &#x2F;&#x2F; true
+
+  let x &#x3D; &#123;
+    valueOf: function() &#123;
+      return &#39;X&#39;;
+    &#125;
+  &#125;;
+
+  log(x &#x3D;&#x3D; &#39;X&#39;);
+
+&#125;(window.console.log));<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+<h3 id="等同-x3D-x3D-和严格等-x3D-x3D-x3D-的区别"><a href="#等同-x3D-x3D-和严格等-x3D-x3D-x3D-的区别" class="headerlink" title="等同&#x3D;&#x3D; 和严格等&#x3D;&#x3D;&#x3D;的区别"></a>等同&#x3D;&#x3D; 和严格等&#x3D;&#x3D;&#x3D;的区别</h3><ul>
+<li>&#x3D;&#x3D;， 两边值类型不同的时候，要先进行类型转换，再比较。</li>
+<li>&#x3D;&#x3D;&#x3D;，不做类型转换，类型不同的一定不等。</li>
+</ul>
+<p>&#x3D;&#x3D;等同操作符</p>
+<ul>
+<li>如果两个值具有相同类型，会进行&#x3D;&#x3D;&#x3D;比较，返回&#x3D;&#x3D;&#x3D;的比较值 </li>
+<li>如果两个值不具有相同类型，也有可能返回true </li>
+<li>如果一个值是null另一个值是undefined，返回true </li>
+<li>如果一个值是string另个是number，会把string转换成number再进行比较 </li>
+<li>如果一个值是true，会把它转成1再比较，false会转成0</li>
+</ul>
+<pre class="line-numbers language-none"><code class="language-none">console.log( false &#x3D;&#x3D; null )      &#x2F;&#x2F; false
+console.log( false &#x3D;&#x3D; undefined ) &#x2F;&#x2F; false
+console.log( false &#x3D;&#x3D; 0 )         &#x2F;&#x2F; true
+console.log( false &#x3D;&#x3D; &#39;&#39; )        &#x2F;&#x2F; true
+console.log( false &#x3D;&#x3D; NaN )       &#x2F;&#x2F; false
+
+console.log( null &#x3D;&#x3D; undefined ) &#x2F;&#x2F; true
+console.log( null &#x3D;&#x3D; 0 )         &#x2F;&#x2F; false
+console.log( null &#x3D;&#x3D; &#39;&#39; )        &#x2F;&#x2F; false
+console.log( null &#x3D;&#x3D; NaN )       &#x2F;&#x2F; false
+
+console.log( undefined &#x3D;&#x3D; 0)   &#x2F;&#x2F; false
+console.log( undefined &#x3D;&#x3D; &#39;&#39;)  &#x2F;&#x2F; false
+console.log( undefined &#x3D;&#x3D; NaN) &#x2F;&#x2F; false
+
+console.log( 0 &#x3D;&#x3D; &#39;&#39; )  &#x2F;&#x2F; true
+console.log( 0 &#x3D;&#x3D; NaN ) &#x2F;&#x2F; false<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+<p>总结一下&#x3D;&#x3D;</p>
+<ul>
+<li>false 除了和自身比较为 true 外，和 0，”” 比较也为 true</li>
+<li>null 只和 undefined 比较时为 true， 反过来 undefined 也仅和 null 比较为 true，没有第二个</li>
+<li>0 除了和 false 比较为 true，还有空字符串 ‘’” 和空数组 []</li>
+<li>空字符串 ‘’ 除了和 false 比较为 true，还有一个数字 0</li>
+</ul>
+<blockquote>
+<p>&#x3D;&#x3D;, &gt;, &lt;, +, -, … 这些操作符所造成的隐式类型转换都是无副作用的，它不会改变变量本身保存的值。，但是，如果你覆写某个对象的 <code>valueOf/toString</code>的话，&#x3D;&#x3D;就会产生副作用.</p>
+</blockquote>
+<p>例如：</p>
+<pre class="line-numbers language-none"><code class="language-none">Array.prototype.valueOf &#x3D; function() &#123;
+  this[0]++;
+  return this;
+&#125;
+let x &#x3D; [1, 2, 3];
+x &#x3D;&#x3D; 0;
+console.log(x);   &#x2F;&#x2F; [2, 2, 3]<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+<p>&#x3D;&#x3D;&#x3D;操作符：</p>
+<ul>
+<li>要是两个值类型不同，返回false </li>
+<li>要是两个值都是number类型，并且数值相同，返回true </li>
+<li>要是两个值都是stirng，并且两个值的String内容相同，返回true </li>
+<li>要是两个值都是true或者都是false，返回true </li>
+<li>要是两个值都是指向相同的Object，Arraya或者function，返回true </li>
+<li>要是两个值都是null或者都是undefined，返回true</li>
+</ul>
+<h2 id="真假判断"><a href="#真假判断" class="headerlink" title="真假判断"></a>真假判断</h2><ul>
+<li>js中以下内容为假：</li>
+<li>false</li>
+<li>null</li>
+<li>undefined</li>
+<li>0</li>
+<li>‘’ (空字符串)</li>
+<li>NaN</li>
+</ul>
+<h2 id="设置默认参数"><a href="#设置默认参数" class="headerlink" title="设置默认参数"></a>设置默认参数</h2><p>辑操作符 || 和 &amp;&amp; 也可被用来返回布尔值。如果操作对象为非布尔对象，那每个表达式将会被自左向右地做真假判断。基于此操作，最终总有一个表达式被返回回来。这在变量赋值时，是可以用来简化你的代码的。例如:如果x不存在且y不存在，x&#x3D;1；如果x存在y存在，x &#x3D; y</p>
+<pre class="line-numbers language-none"><code class="language-none">if(!x) &#123;
+  if(!y) &#123;
+    x &#x3D; 1;
+  &#125; else &#123;
+    x &#x3D; y;
+  &#125;
+&#125;<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+<p> 等同于：</p>
+<pre class="line-numbers language-none"><code class="language-none">x &#x3D; x || y || 1;<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+
+<p>这一小技巧经常用来给方法设定默认的参数。</p>
+<pre class="line-numbers language-none"><code class="language-none">(function(log)&#123;
+  &#39;use strict&#39;;
+
+  function multiply(a, b) &#123;
+    a &#x3D; a || 1;
+    b &#x3D; b || 1;
+
+    log(&#39;Result &#39; + a * b);
+  &#125;
+
+  multiply(); &#x2F;&#x2F; Result 1
+  multiply(10); &#x2F;&#x2F; Result 10
+  multiply(3, NaN); &#x2F;&#x2F; Result 3
+  multiply(9, 5); &#x2F;&#x2F; Result 45
+
+&#125;(window.console.log));<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+<h2 id="不使用eval-函数"><a href="#不使用eval-函数" class="headerlink" title="不使用eval()函数"></a>不使用eval()函数</h2><p>就如eval的字面意思来说，恶魔，使用eval()函数会带来安全隐患。<br>eval()函数的作用是返回任意字符串，当作js代码来处理。</p>
+<h2 id="this关键字"><a href="#this关键字" class="headerlink" title="this关键字"></a>this关键字</h2><p>只在对象构造器、方法和在设定的闭包中使用 this 关键字。this 的语义在此有些误导。它时而指向全局对象（大多数时），时而指向调用者的定义域（在 eval 中），时而指向 DOM 树中的某一节点（当用事件处理绑定到 HTML 属性上时），时而指向一个新创建的对象（在构造器中），还时而指向其它的一些对象（如果函数被 call() 和 apply() 执行和调用时）。</p>
+<p>正因为它是如此容易地被搞错，请限制它的使用场景：</p>
+<ul>
+<li>在构造函数中</li>
+<li>在对象的方法中（包括由此创建出的闭包内）</li>
+</ul>
+<h2 id="首选函数式风格"><a href="#首选函数式风格" class="headerlink" title="首选函数式风格"></a>首选函数式风格</h2><p>函数式编程让你可以简化代码并缩减维护成本，因为它容易复用，又适当地解耦和更少的依赖。</p>
+<p>接下来的例子中，在一组数字求和的同一问题上，比较了两种解决方案。第一个例子是经典的程序处理，而第二个例子则是采用了函数式编程和 ECMA Script 5.1 的数组方法。<br>不推荐</p>
+<pre class="line-numbers language-none"><code class="language-none">(function(log)&#123;
+  &#39;use strict&#39;;
+
+  let arr &#x3D; [10, 3, 7, 9, 100, 20],
+      sum &#x3D; 0,
+      i;
+
+
+  for(i &#x3D; 0; i &lt; arr.length; i++) &#123;
+    sum +&#x3D; arr[i];
+  &#125;
+
+  log(&#39;The sum of array &#39; + arr + &#39; is: &#39; + sum)
+
+&#125;(window.console.log));<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+<p>推荐(函数式编程)：</p>
+<pre class="line-numbers language-none"><code class="language-none">(function(log)&#123;
+  &#39;use strict&#39;;
+
+  let arr &#x3D; [10, 3, 7, 9, 100, 20];
+
+  let sum &#x3D; arr.reduce(function(prevValue, currentValue) &#123;
+    return prevValue + currentValue;
+  &#125;, 0);
+
+  log(&#39;The sum of array &#39; + arr + &#39; is: &#39; + sum);
+
+&#125;(window.console.log));<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+<h2 id="修改内建对象的原型链"><a href="#修改内建对象的原型链" class="headerlink" title="修改内建对象的原型链"></a>修改内建对象的原型链</h2><p>修改内建的诸如 <code>Object.prototype</code> 和 <code>Array.prototype</code> 是被严厉禁止的。修改其它的内建对象比如 <code>Function.prototype</code>，虽危害没那么大，但始终还是会导致在开发过程中难以 debug 的问题，应当也要避免。</p>
+<h2 id="三元条件判断（if-的快捷方法）"><a href="#三元条件判断（if-的快捷方法）" class="headerlink" title="三元条件判断（if 的快捷方法）"></a>三元条件判断（if 的快捷方法）</h2><p>用三元操作符分配或返回语句。在比较简单的情况下使用，避免在复杂的情况下使用。没人愿意用 10 行三元操作符把自己的脑子绕晕。<br>不推荐：</p>
+<pre class="line-numbers language-none"><code class="language-none">if(x &#x3D;&#x3D;&#x3D; 10) &#123;
+  return &#39;valid&#39;;
+&#125; else &#123;
+  return &#39;invalid&#39;;
+&#125;<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+<p>推荐：</p>
+<pre class="line-numbers language-none"><code class="language-none">return x &#x3D;&#x3D;&#x3D; 10 ? &#39;valid&#39; : &#39;invalid&#39;<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+
+
+<h2 id="css规范"><a href="#css规范" class="headerlink" title="css规范"></a>css规范</h2><h3 id="id和class的命名"><a href="#id和class的命名" class="headerlink" title="id和class的命名"></a>id和class的命名</h3><p>ID和class的名称总是使用可以反应元素目的和用途的名称，或其他通用的名称，代替表象和晦涩难懂的名称<br>不推荐 :</p>
+<pre class="line-numbers language-none"><code class="language-none">.fw-800 &#123;
+  font-weight: 800;
+&#125;
+
+.red &#123;
+  color: red;
+&#125;<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+<p>推荐 :</p>
+<pre class="line-numbers language-none"><code class="language-none">.heavy &#123;
+  font-weight: 800;
+&#125;
+
+.important &#123;
+  color: red;
+&#125;<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+<h3 id="合理的使用ID"><a href="#合理的使用ID" class="headerlink" title="合理的使用ID"></a>合理的使用ID</h3><p>一般情况下ID不应该被用于样式，并且ID的权重很高，所以不使用ID解决样式的问题，而是使用class<br>不推荐：</p>
+<pre class="line-numbers language-none"><code class="language-none">#content .title &#123;
+  font-size: 2em;
+&#125;<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span></span></code></pre>
+
+<p>推荐：</p>
+<pre class="line-numbers language-none"><code class="language-none">.content .title &#123;
+  font-size: 2em;
+&#125;<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span></span></code></pre>
+
+<h3 id="css选择器中避免使用标签名"><a href="#css选择器中避免使用标签名" class="headerlink" title="css选择器中避免使用标签名"></a>css选择器中避免使用标签名</h3><p>从结构、表现、行为分离的原则来看，应该尽量避免css中出现HTML标签，并且在css选择器中出现标签名会存在潜在的问题。</p>
+<h3 id="使用子选择器"><a href="#使用子选择器" class="headerlink" title="使用子选择器"></a>使用子选择器</h3><p>很多前端开发人员写选择器链的时候不使用 直接子选择器（注：直接子选择器和后代选择器的区别）。<br>有时，这可能会导致疼痛的设计问题并且有时候可能会很耗性能。<br>然而，在任何情况下，这是一个非常不好的做法。<br>如果你不写很通用的，需要匹配到DOM末端的选择器， 你应该总是考虑直接子选择器。<br>不推荐:</p>
+<pre class="line-numbers language-none"><code class="language-none">.content .title &#123;
+  font-size: 2rem;
+&#125;<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span></span></code></pre>
+
+<p>推荐</p>
+<pre class="line-numbers language-none"><code class="language-none">.content &gt; .title &#123;
+  font-size: 2rem;
+&#125;<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span></span></code></pre>
+
+<h3 id="尽量使用缩写属性"><a href="#尽量使用缩写属性" class="headerlink" title="尽量使用缩写属性"></a>尽量使用缩写属性</h3><p>尽量使用缩写属性对于代码效率和可读性是很有用的，比如font属性。<br>不推荐：</p>
+<pre class="line-numbers language-none"><code class="language-none">border-top-style: none;
+font-family: palatino, georgia, serif;
+font-size: 100%;
+line-height: 1.6;
+padding-bottom: 2em;
+padding-left: 1em;
+padding-right: 1em;
+padding-top: 0;<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+<p>推荐：</p>
+<pre class="line-numbers language-none"><code class="language-none">border-top: 0;
+font: 100%&#x2F;1.6 palatino, georgia, serif;
+padding: 0 1em 2em;<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span></span></code></pre>
+
+<h3 id="0后面不带单位"><a href="#0后面不带单位" class="headerlink" title="0后面不带单位"></a>0后面不带单位</h3><p>省略0后面的单位，<br>不推荐：</p>
+<pre class="line-numbers language-none"><code class="language-none">padding-bottom: 0px;
+margin: 0em;<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre>
+
+<p>推荐：</p>
+<pre class="line-numbers language-none"><code class="language-none">padding-bottom: 0;
+margin: 0;<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre>
+
+<h3 id="属性格式"><a href="#属性格式" class="headerlink" title="属性格式"></a>属性格式</h3><ul>
+<li>为了保证一致性和可扩展性，每个声明应该用分号结束，每个声明换行。</li>
+<li>属性名的冒号后使用一个空格。出于一致性的原因，<br>属性和值（但属性和冒号之间没有空格）的之间始终使用一个空格。</li>
+<li>每个选择器和属性声明总是使用新的一行。</li>
+<li>属性选择器或属性值用双引号（””），而不是单引号（”）括起来。</li>
+<li>URI值（url()）不要使用引号。</li>
+</ul>
+<p>作为最佳实践，我们应该遵循以下顺序（应该按照下表的顺序）：</p>
+<p>结构性属性：</p>
+<ol>
+<li>display</li>
+<li>position, left, top, right etc.</li>
+<li>overflow, float, clear etc.</li>
+<li>margin, padding</li>
+</ol>
+<p>表现性属性：</p>
+<ul>
+<li>background, border etc.</li>
+<li>font, text</li>
+</ul>
+<p>不推荐：</p>
+<pre class="line-numbers language-none"><code class="language-none"> .box &#123;
+  font-family: &#39;Arial&#39;, sans-serif;
+  border: 3px solid #ddd;
+  left: 30%;
+  position: absolute;
+  text-transform: uppercase;
+  background-color: #eee;
+  right: 30%;
+  isplay: block;
+  font-size: 1.5rem;
+  overflow: hidden;
+  padding: 1em;
+  margin: 1em;
+&#125;<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+<p>推荐：</p>
+<pre class="line-numbers language-none"><code class="language-none">.box &#123;
+  display: block;
+  position: absolute;
+  left: 30%;
+  right: 30%;
+  overflow: hidden;
+  margin: 1em;
+  padding: 1em;
+  background-color: #eee;
+  border: 3px solid #ddd;
+  font-family: &#39;Arial&#39;, sans-serif;
+  font-size: 1.5rem;
+  text-transform: uppercase;
+&#125;<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+<p> 相关文章：</p>
+<ul>
+<li><a target="_blank" rel="noopener" href="https://www.cnblogs.com/polk6/p/4660195.html">JavsScript开发规范</a></li>
+<li><a target="_blank" rel="noopener" href="https://segmentfault.com/a/1190000006131512">开发规范（四）JS规范</a></li>
+</ul>
+</div></section><div id="reward-container"><span class="hty-icon-button button-glow" id="reward-button" title="打赏" onclick="var qr = document.getElementById(&quot;qr&quot;); qr.style.display = (qr.style.display === &quot;none&quot;) ? &quot;block&quot; : &quot;none&quot;;"><span class="icon iconify" data-icon="ri:hand-coin-line"></span></span><div id="reward-comment">我很可爱，请给我钱</div><div id="qr" style="display:none;"><div style="display:inline-block"><a href="/images/pay/zfb.jpg"><img loading="lazy" src="/images/pay/zfb.jpg" alt="支付宝" title="支付宝"></a><div><span style="color:#226bf3"><span class="icon iconify" data-icon="ri:alipay-line"></span></span></div></div><div style="display:inline-block"><a href="/images/pay/qq.png"><img loading="lazy" src="/images/pay/qq.png" alt="QQ 支付" title="QQ 支付"></a><div><span style="color:#05b0ff"><span class="icon iconify" data-icon="ri:qq-line"></span></span></div></div><div style="display:inline-block"><a href="/images/pay/wx.png"><img loading="lazy" src="/images/pay/wx.png" alt="微信支付" title="微信支付"></a><div><span style="color:#07c160"><span class="icon iconify" data-icon="ri:wechat-pay-line"></span></span></div></div></div></div><ul class="post-copyright"><li class="post-copyright-author"><strong>本文作者：</strong>Herway</li><li class="post-copyright-link"><strong>本文链接：</strong><a href="https://www.simimi.cn/note/web-norm/" title="前端开发规范：命名规范、html规范、css规范、js规范">https://www.simimi.cn/note/web-norm/</a></li><li class="post-copyright-license"><strong>版权声明：</strong>本博客所有文章除特别声明外，均默认采用 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh" target="_blank" rel="noopener" title="CC BY-NC-SA 4.0 "><span class="icon iconify" data-icon="ri:creative-commons-line"></span><span class="icon iconify" data-icon="ri:creative-commons-by-line"></span><span class="icon iconify" data-icon="ri:creative-commons-nc-line"></span><span class="icon iconify" data-icon="ri:creative-commons-sa-line"></span></a> 许可协议。</li></ul></article><div class="post-nav"><div class="post-nav-item"><a class="post-nav-prev" href="/note/js-skills/" rel="prev" title="面向 Web 开发人员的 58 个 JavaScript 技巧"><span class="icon iconify" data-icon="ri:arrow-left-s-line"></span><span class="post-nav-text">面向 Web 开发人员的 58 个 JavaScript 技巧</span></a></div><div class="post-nav-item"><a class="post-nav-next" href="/note/css-name/" rel="next" title="CSS命名参考"><span class="post-nav-text">CSS命名参考</span><span class="icon iconify" data-icon="ri:arrow-right-s-line"></span></a></div></div></div><div class="hty-card" id="comment"><div class="comment-tooltip text-center"><span>如果您有任何关于博客内容的相关讨论，欢迎前往 <a href="https://github.com/hqw567/hqw567.github.io/discussions/" target="_blank">GitHub Discussions</a> 与我交流。</span><br></div><div id="waline"></div><link rel="stylesheet" href="https://fastly.jsdelivr.net/npm/@waline/client@v2/dist/waline.css"><script>window.CONFIG.waline.config.path = "/note/web-norm/"</script><div class="js-Pjax"><script src="/js/comments/waline.js" type="module" defer></script></div></div></main><footer class="sidebar-translate" id="footer"><div class="beian"><a rel="noopener" href="https://beian.miit.gov.cn/" target="_blank">湘ICP备2022002172号</a></div><div class="copyright"><span>&copy; 2022 </span><a class="with-love" id="animate" target="_blank" rel="noopener" href="https://github.com/hqw567" title="思米米的GitHub"><span class="icon iconify" data-icon="ri:github-line"></span></a><span class="author"> Herway</span></div><div class="live-time"><span>本博客部分资源来自互联网，如有侵权，请联系删除<br>本博客已萌萌哒地运行</span><span id="display_live_time"></span><span class="moe-text">(●'◡'●)</span><script>function blog_live_time() {
+  setTimeout(blog_live_time, 1000);
+  const start = new Date('2022-01-01T00:00:00');
+  const now = new Date();
+  const timeDiff = (now.getTime() - start.getTime());
+  const msPerMinute = 60 * 1000;
+  const msPerHour = 60 * msPerMinute;
+  const msPerDay = 24 * msPerHour;
+  const passDay = Math.floor(timeDiff / msPerDay);
+  const passHour = Math.floor((timeDiff % msPerDay) / 60 / 60 / 1000);
+  const passMinute = Math.floor((timeDiff % msPerHour) / 60 / 1000);
+  const passSecond = Math.floor((timeDiff % msPerMinute) / 1000);
+  display_live_time.innerHTML = ` ${passDay} 天 ${passHour} 小时 ${passMinute} 分 ${passSecond} 秒`;
+}
+blog_live_time();
+</script></div><div id="busuanzi"><span id="busuanzi_container_site_uv" title="总访客量"><span><span class="icon iconify" data-icon="ri:user-line"></span></span><span id="busuanzi_value_site_uv"></span></span><span class="footer-separator">|</span><span id="busuanzi_container_site_pv" title="总访问量"><span><span class="icon iconify" data-icon="ri:eye-line"></span></span><span id="busuanzi_value_site_pv"></span></span><script async src="https://busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script></div><div class="footer-support"><span>本网站由</span><a class="footer-support-logo" href="https://www.upyun.com/?utm_source=lianmeng&amp;utm_medium=hqw567" target="blank" title="又拍云"><img height="30" src="https://fastly.jsdelivr.net/gh/YunYouJun/cdn/img/logo/upyun-logo.png" alt="又拍云"></a><span>提供 CDN 加速</span></div></footer></div><a class="hty-icon-button" id="back-to-top" aria-label="back-to-top" href="#"><span class="icon iconify" data-icon="ri:arrow-up-s-line"></span><svg class="progress-circle-container" viewBox="0 0 100 100"><circle class="progress-circle" id="progressCircle" cx="50" cy="50" r="48" fill="none" stroke="#f012bd" stroke-width="2" stroke-linecap="round"></circle></svg></a><a class="popup-trigger hty-icon-button icon-search" id="search" href="javascript:;" title="搜索"><span class="site-state-item-icon"><span class="icon iconify" data-icon="ri:search-line"></span></span></a><script>window.addEventListener("DOMContentLoaded", () => {
+  // Handle and trigger popup window
+  document.querySelector(".popup-trigger").addEventListener("click", () => {
+    document.querySelector(".popup").classList.add("show");
+    setTimeout(() => {
+      document.querySelector(".search-input").focus();
+    }, 100);
+  });
+
+  // Monitor main search box
+  const onPopupClose = () => {
+    document.querySelector(".popup").classList.remove("show");
+  };
+
+  document.querySelector(".popup-btn-close").addEventListener("click", () => {
+    onPopupClose();
+  });
+
+  window.addEventListener("keyup", event => {
+    if (event.key === "Escape") {
+      onPopupClose();
+    }
+  });
+});
+</script><script defer src="https://fastly.jsdelivr.net/npm/algoliasearch@4/dist/algoliasearch-lite.umd.js"></script><script defer src="https://fastly.jsdelivr.net/npm/instantsearch.js@4/dist/instantsearch.production.min.js"></script><script defer src="/js/search/algolia-search.js" type="module"></script><div class="popup search-popup"><div class="search-header"><span class="popup-btn-close close-icon hty-icon-button"><span class="icon iconify" data-icon="ri:close-line"></span></span></div><div class="search-input-container"></div><div class="algolia-results"><div id="algolia-stats"></div><div id="algolia-hits"></div><div class="algolia-pagination" id="algolia-pagination"></div></div></div><script>function initMourn() {
+  const date = new Date();
+  const today = (date.getMonth() + 1) + "-" + date.getDate()
+  const mourn_days = null
+  if (mourn_days.includes(today)) {
+    document.documentElement.style.filter = "grayscale(1)";
+  }
+}
+initMourn();</script><script src="https://fastly.jsdelivr.net/npm/medium-zoom@1.0.6/dist/medium-zoom.min.js"></script><script>const images = [...document.querySelectorAll('.markdown-body img')]
+mediumZoom(images)</script><style>.medium-zoom-image {
+  z-index: 99;
+}</style></body></html>
