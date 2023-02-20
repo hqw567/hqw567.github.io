@@ -1,65 +1,147 @@
-import { defineSiteConfig } from "valaxy";
+import { defineValaxyConfig } from "valaxy";
+import type { UserThemeConfig } from "valaxy-theme-yun";
+// import { addonAlgolia } from 'valaxy-addon-algolia'
+// import { addonTwikoo } from 'valaxy-addon-twikoo'
+import { addonWaline } from "valaxy-addon-waline";
+// add icons what you will need
+const safelist = ["i-ri-home-line"];
 
-export default defineSiteConfig({
-  search: {
-    enable: false,
-    // 设置类型为 Fuse
-    type: "fuse",
-  },
-  url: "http://simimi.cn/valaxy-test2/",
-  lang: "zh-CN",
-  title: "思米米(SIMIMI)",
-  subtitle: "All at sea.",
-  author: {
-    avatar: "https://q1.qlogo.cn/g?b=qq&nk=79099400&s=640",
-    status: {
-      emoji: "😣",
+/**
+ * User Config
+ */
+export default defineValaxyConfig<UserThemeConfig>({
+  // site config see site.config.ts
+
+  theme: "yun",
+
+  themeConfig: {
+    colors: {
+      primary: "#fd684c",
     },
-    name: "Herway",
-    email: "hqw567@gmail.com",
-  },
-  favicon: "/favicon.svg",
-  description: "山有木兮木有枝，心悦君兮君不知。",
-  mediumZoom: { enable: true },
-  social: [
-    // {
-    //   name: "RSS",
-    //   link: "/atom.xml",
-    //   icon: "i-ri-rss-line",
-    //   color: "orange",
-    // },
-    {
-      name: "GitHub",
-      link: "https://github.com/hqw567",
-      icon: "i-ri-github-line",
-      color: "#6e5494",
+    banner: {
+      enable: true,
+      title: "思米米",
+      cloud: {
+        enable: true,
+      },
     },
-  ],
-  comment: {
-    enable: true,
-  },
-  sponsor: {
-    enable: true,
-    title: "我很可爱，请给我钱！",
-    methods: [
-      {
-        name: "支付宝",
-        url: "/images/pay/zfb.jpg",
-        color: "#00A3EE",
-        icon: "i-ri-alipay-line",
+
+    bg_image: {
+      enable: true,
+      url: "/images/wallhaven-zyyx1o_1920x1080.png",
+      dark: "/images/wallhaven-jxxmrq_1920x1080.png",
+    },
+
+    say: {
+      enable: false,
+      api: "https://el-bot-api.elpsy.cn/api/words/young",
+      hitokoto: {
+        enable: true,
+        api: "https://v1.hitokoto.cn",
       },
-      {
-        name: "QQ 支付",
-        url: "/images/pay/qq.png",
-        color: "#12B7F5",
-        icon: "i-ri-qq-line",
-      },
-      {
-        name: "微信支付",
-        url: "/images/pay/wx.png",
-        color: "#2DC100",
-        icon: "i-ri-wechat-pay-line",
-      },
+    },
+
+    notice: {
+      enable: true,
+      content: "欢迎访问思米米",
+    },
+
+    pages: [
+      // {
+      //   name: '我的小伙伴们',
+      //   url: '/links/',
+      //   icon: 'i-ri-genderless-line',
+      //   color: 'dodgerblue',
+      // },
+      // {
+      //   name: '喜欢的女孩子',
+      //   url: '/girls/',
+      //   icon: 'i-ri-women-line',
+      //   color: 'hotpink',
+      // },
     ],
+
+    footer: {
+      since: 2022,
+      icon: {
+        enable: true,
+        name: "ri:github-line",
+        url: "https://github.com/hqw567",
+        animated: true,
+        color: "var(--va-c-primary)",
+        title: "GitHub",
+      },
+      beian: {
+        enable: true,
+        icp: "湘ICP备2022002172号",
+      },
+      powered: false,
+    },
+
+    types: {
+      link: {
+        color: "var(--va-c-primary)",
+        icon: "i-ri-external-link-line",
+      },
+      bilibili: {
+        color: "#FF8EB3",
+        icon: "i-ri-bilibili-line",
+      },
+      douban: {
+        color: "#007722",
+        icon: "i-ri-douban-line",
+      },
+      github: {
+        color: "var(--va-c-text)",
+        icon: "i-ri-github-line",
+      },
+      "netease-cloud-music": {
+        color: "#C10D0C",
+        icon: "i-ri-netease-cloud-music-line",
+      },
+      notion: {
+        color: "var(--va-c-text)",
+        icon: "i-simple-icons-notion",
+      },
+      twitter: {
+        color: "#1da1f2",
+        icon: "i-ri-twitter-line",
+      },
+      wechat: {
+        color: "#1AAD19",
+        icon: "i-ri-wechat-2-line",
+      },
+      weibo: {
+        color: "#E6162D",
+        icon: "i-ri-weibo-line",
+      },
+      yuque: {
+        color: "#25b864",
+        icon: "i-ant-design-yuque-outlined",
+      },
+      zhihu: {
+        color: "#0084FF",
+        icon: "i-ri-zhihu-line",
+      },
+    },
+
+    menu: {
+      custom: {
+        title: "button.about",
+        icon: "i-ri-clipboard-line",
+        url: "/about",
+      },
+    },
   },
+  unocss: { safelist },
+  addons: [
+    addonWaline({
+      serverURL: "https://waline.simimi.cn",
+      pageview: true,
+      comment: true,
+    }),
+    // addonTwikoo({
+    //   envId: 'https://twikoo.vercel.app',
+    // }),
+  ],
 });
