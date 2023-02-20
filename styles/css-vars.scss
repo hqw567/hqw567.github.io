@@ -1,1 +1,21 @@
 // you can custom css vars here
+:root {
+  --va-c-primary-dark: #f86d3f;
+  --va-c-primary: #fd684c;
+  --va-c-primary-lighter: #f57c66;
+  --va-c-primary-light: #f87e69;
+  --smc-c-primary-lighter: #f8725a;
+  --smc-c-primary-light: #ec816f;
+  --smc-c-primary: #eb3e1f;
+  --va-c-primary-rgb: 255, 69, 0;
+  --va-c-brand: #e95422;
+  --smc-link-color: var(--va-c-primary);
+  --yun-sidebar-bg-img: url(/images/sidebar/sidebar.png);
+}
+html.dark {
+  --va-c-link: #f86d3f;
+  --smc-link-color: #e95422;
+}
+.post-tag {
+  color: #cf5c35;
+}
