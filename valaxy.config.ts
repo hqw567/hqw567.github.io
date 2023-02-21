@@ -3,8 +3,6 @@ import type { UserThemeConfig } from "valaxy-theme-yun";
 // import { addonAlgolia } from 'valaxy-addon-algolia'
 // import { addonTwikoo } from 'valaxy-addon-twikoo'
 import { addonWaline } from "valaxy-addon-waline";
-// add icons what you will need
-const safelist = ["i-ri-home-line"];
 
 /**
  * User Config
@@ -28,12 +26,12 @@ export default defineValaxyConfig<UserThemeConfig>({
 
     bg_image: {
       enable: true,
-      url: "/images/wallhaven-zyyx1o_1920x1080.png",
-      dark: "/images/wallhaven-jxxmrq_1920x1080.png",
+      url: "http://img.simimi.cn/img/background/bg-white.png",
+      dark: "http://img.simimi.cn/img/background/bg-dark.png",
     },
 
     say: {
-      enable: false,
+      enable: true,
       api: "https://el-bot-api.elpsy.cn/api/words/young",
       hitokoto: {
         enable: true,
@@ -75,7 +73,7 @@ export default defineValaxyConfig<UserThemeConfig>({
         enable: true,
         icp: "湘ICP备2022002172号",
       },
-      powered: false,
+      powered: true,
     },
 
     types: {
@@ -133,7 +131,31 @@ export default defineValaxyConfig<UserThemeConfig>({
       },
     },
   },
-  unocss: { safelist },
+  unocss: {
+    safelist: ["i-ri-home-line"],
+  },
+  markdown: {
+    blocks: {
+      tip: {
+        icon: "i-carbon-thumbs-up",
+        text: "ヒント",
+        langs: {
+          "zh-CN": "提示",
+        },
+      },
+      warning: {
+        icon: "i-carbon-warning-alt",
+        text: "注意",
+      },
+      danger: {
+        icon: "i-carbon-warning",
+        text: "警告",
+      },
+      info: {
+        text: "información",
+      },
+    },
+  },
   addons: [
     addonWaline({
       serverURL: "https://waline.simimi.cn",

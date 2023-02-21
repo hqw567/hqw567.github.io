@@ -8,13 +8,15 @@ categories:
 date: 2022-02-10 21:22:39
 updated: 2022-02-11 21:22:39
 ---
-一个成功的Web App必须有良好的用户体验。当我们谈及改善用户体验时，你会想到什么？
 
-其实，有一点是很容易被开发者忽视的，那就是CSS。我们可以使用一些CSS技巧来改善网页的表现形式、交互细节和可访问性。
+一个成功的 Web App 必须有良好的用户体验。当我们谈及改善用户体验时，你会想到什么？
+
+其实，有一点是很容易被开发者忽视的，那就是 CSS。我们可以使用一些 CSS 技巧来改善网页的表现形式、交互细节和可访问性。
 
 而且这些技巧不需要花费太多时间，也不需要消耗服务器资源。你只需要花两个小时学习，然后就可以把它应用到你所有的项目中，并永远改善用户体验。
 
 <!-- more -->
+
 ## 可点击区域
 
 有时你的按钮很小，这可能导致用户无法准确点击按钮。这种现象经常发生在移动端上。如果用户点击次数太多，没有点击他们想要的按钮，或者点击错误的按钮，会让他们感到非常沮丧。
@@ -56,7 +58,7 @@ updated: 2022-02-11 21:22:39
 
 ![](https://image-static.segmentfault.com/195/723/1957235309-61fbdc5eb3871)
 
-这种突然的跳跃会让人感到不舒服。为了解决这个问题，我们可以使用这个CSS样式：`sroll-behavior: smooth`。
+这种突然的跳跃会让人感到不舒服。为了解决这个问题，我们可以使用这个 CSS 样式：`sroll-behavior: smooth`。
 
 ![](https://image-static.segmentfault.com/220/773/22077344-61fbdc8dc63c4)
 
@@ -68,13 +70,13 @@ updated: 2022-02-11 21:22:39
 
 ![](https://image-static.segmentfault.com/331/165/3311656029-61fbdd15ab86f)
 
-要实现这种效果非常简单，只需使用这个CSS样式：`user-select: all` 。用户选择的CSS属性控制用户是否可以选择文本。如果它的值是 `all`，意味着一个元素的所有内容都将被原子化地选择。
+要实现这种效果非常简单，只需使用这个 CSS 样式：`user-select: all` 。用户选择的 CSS 属性控制用户是否可以选择文本。如果它的值是 `all`，意味着一个元素的所有内容都将被原子化地选择。
 
 事例地址：[https://codepen.io/bytefishme...](https://codepen.io/bytefishmedium/pen/xxPxMZO)
 
-如果你想在文本被选中后添加一些额外的样式，你可以使用`::selection` 。`::selection` CSS伪元素将样式应用于文档中被用户突出显示的部分（比如在文本上点击和拖动鼠标）。
+如果你想在文本被选中后添加一些额外的样式，你可以使用`::selection` 。`::selection` CSS 伪元素将样式应用于文档中被用户突出显示的部分（比如在文本上点击和拖动鼠标）。
 
-但要记住。只有某些CSS属性可以和`::selection`一起使用。
+但要记住。只有某些 CSS 属性可以和`::selection`一起使用。
 
 - `color`
 - `background-color`
@@ -88,7 +90,7 @@ updated: 2022-02-11 21:22:39
 
 在不同的场景下使用不同的鼠标样式可以帮助读者感知页面的当前状态，从而改善用户的互动体验。
 
-`cursor` CSS属性设置鼠标指针在一个元素上时要显示的鼠标指针（如果有的话）。
+`cursor` CSS 属性设置鼠标指针在一个元素上时要显示的鼠标指针（如果有的话）。
 
 光标设置应该告知用户在当前位置可以进行的鼠标操作，包括文本选择、激活帮助或上下文菜单、复制内容、调整表格大小，等等。你可以用一个关键词来指定光标的类型，或者加载一个特定的图标来使用（有可选的回退图像和强制性的关键词作为最后的回退）。
 
@@ -98,7 +100,7 @@ updated: 2022-02-11 21:22:39
 
 事例地址：[https://codepen.io/bytefishme...](https://codepen.io/bytefishmedium/pen/bGYGzRz)
 
-有很多光标样式，你可以在[MDN文档中](https://link.segmentfault.com/?enc=V%2Fotb5rq2HJW21Z3aXTpkA%3D%3D.ahbw%2FLeOtPx8hQ7c5L%2FUBi6%2BYvNeQ%2B1QN3zkDsD7xtaCH7QBaaJL9bZr2BvCZRdtQnFGGVinPypVBrA1Q%2B%2F4Og%3D%3D)找到它们。
+有很多光标样式，你可以在[MDN 文档中](https://link.segmentfault.com/?enc=V%2Fotb5rq2HJW21Z3aXTpkA%3D%3D.ahbw%2FLeOtPx8hQ7c5L%2FUBi6%2BYvNeQ%2B1QN3zkDsD7xtaCH7QBaaJL9bZr2BvCZRdtQnFGGVinPypVBrA1Q%2B%2F4Og%3D%3D)找到它们。
 
 ## Text Overflow
 
@@ -124,7 +126,6 @@ updated: 2022-02-11 21:22:39
 </body>
 ```
 
-
 ![imagepng](https://image-static.segmentfault.com/106/600/1066002620-61fbe36d40ba7_fix732 "image.png")
 
 这个容器有一个固定的宽度和高度，包裹着名字和介绍。
@@ -133,7 +134,7 @@ updated: 2022-02-11 21:22:39
 
 ![imagepng](https://image-static.segmentfault.com/199/774/199774605-61fbe3b0dd288_fix732 "image.png")
 
-在这一点上，我们可以将溢出的文本折叠起来。做到这一点就像添加三行CSS样式一样简单。
+在这一点上，我们可以将溢出的文本折叠起来。做到这一点就像添加三行 CSS 样式一样简单。
 
 ```
 white-space: nowrap;
@@ -150,6 +151,7 @@ text-overflow: ellipsis;
 ## Image
 
 现在我们来讨论一下图片的风格。网络应用中使用的图片一般由后端提供。你可能已经与后端开发者达成协议，将图片保持在一个固定的尺寸。然后你写下这样的代码。
+
 ```
 <title>Document</title>
  <style>
@@ -164,6 +166,7 @@ text-overflow: ellipsis;
 - ![](https://miro.medium.com/fit/c/128/128/1*pKOfOAOvx-fWzfITATgGRg.jpeg)
 - ![](https://miro.medium.com/fit/c/128/128/1*mXOVdfMwS0IEcjPXiikJkg.png)
 ```
+
 而网页看起来是这样的。
 
 ![imagepng](https://image-static.segmentfault.com/399/107/3991076816-61fbe68c431c3_fix732 "image.png")
@@ -205,7 +208,7 @@ img {
 }
 ```
 
-`object-fit` 的CSS属性设置一个被替换的元素的内容，如`<img>`或`<video>`，应该如何调整大小以适合其容器。
+`object-fit` 的 CSS 属性设置一个被替换的元素的内容，如`<img>`或`<video>`，应该如何调整大小以适合其容器。
 
 如果该值是 `cover`，那么被替换的内容的大小将保持其长宽比，同时填充元素的整个内容框。如果对象的长宽比与它的盒子的长宽比不一致，那么该对象将被剪掉以适配。
 
@@ -217,7 +220,7 @@ img {
 
 当图片缺失时，浏览器的默认样式是不优雅的，这里我们可以优化它。
 
-我们可以给 `img`元素添加一个 `onerror` 事件。如果在加载图片时出现了错误，那么我们可以通过 `onerro`r事件给该元素添加一个样式，并使用404图片。
+我们可以给 `img`元素添加一个 `onerror` 事件。如果在加载图片时出现了错误，那么我们可以通过 `onerro`r 事件给该元素添加一个样式，并使用 404 图片。
 
 `img` 元素:
 
@@ -225,7 +228,7 @@ img {
 <img src="https://miro.medium.com/xxx.jpg" alt='fireworks picture' onerror="this.classList.add('error');">
 ```
 
-假设这就是我们的404图像:
+假设这就是我们的 404 图像:
 
 ```
 https://cdn-images-1.medium.com/max/1600/1*we8wfyztsdo12e2Cww6oVA.jpeg
@@ -253,7 +256,7 @@ img.error::before {
  }
 ```
 
-这样，当 `img` 元素中的图片链接无法加载图片时，我们的404图片将被使用。
+这样，当 `img` 元素中的图片链接无法加载图片时，我们的 404 图片将被使用。
 
 ![imagepng](https://image-static.segmentfault.com/197/721/1977218622-61fbe994ae109_fix732 "image.png")
 
@@ -277,7 +280,7 @@ img.error::after {
  }
 ```
 
-假设img的 `alt` 属性是这样的。
+假设 img 的 `alt` 属性是这样的。
 
 ```
 <img src="https://miro.medium.com/xxx.jpg" alt='Log of Medium' >
@@ -293,7 +296,7 @@ img.error::after {
 
 你需要知道，世界上有很多色盲和色弱用户。如果你的页面的对比度低，可能会导致他们无法正常使用你的产品。无论是出于人文关怀，还是出于留住客户的考虑，你都应该设计出合适的对比度。
 
-WCAG AA规范指出，所有重要的内容需要有4.5:1以上的色彩对比度。
+WCAG AA 规范指出，所有重要的内容需要有 4.5:1 以上的色彩对比度。
 
 这里有一个对比度检查器的工具。
 
@@ -303,13 +306,14 @@ WCAG AA规范指出，所有重要的内容需要有4.5:1以上的色彩对比�
 
 ![imagepng](https://image-static.segmentfault.com/112/429/1124293679-61fbebae6c544_fix732 "image.png")
 
-我们也可以使用Chrome DevTool来检查一个元素的颜色对比。然后我们可以发现，Medium的网页也在实践这一原则。
+我们也可以使用 Chrome DevTool 来检查一个元素的颜色对比。然后我们可以发现，Medium 的网页也在实践这一原则。
 
 ![imagepng](https://image-static.segmentfault.com/148/694/148694987-61fbebf592bc0_fix732 "image.png")
 
 ![imagepng](https://image-static.segmentfault.com/800/839/800839036-61fbebffaaefa_fix732 "image.png")
 
 ## 总结
+
 俗话说得好，细节决定成败。如果你的项目有很多可以改善用户体验的细节，你就可以让用户感到舒服，你就有更高的成功概率。
 
 ~完。
