@@ -15,6 +15,7 @@ export default defineSiteConfig({
       emoji: "😣",
     },
     name: "Herway",
+    link: "https://v.simimi.cn",
     email: "hqw567@gmail.com",
   },
   favicon: "/favicon.svg",

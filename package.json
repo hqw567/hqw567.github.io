@@ -3,11 +3,12 @@
   "version": "0.14.14",
   "private": true,
   "scripts": {
-    "build": "npm run build:ssg && npm run rss",
+    "build": "npm run build:ssg && npm run rss && npm run fuse",
     "build:spa": "valaxy build",
     "build:ssg": "valaxy build --ssg",
     "dev": "valaxy",
     "rss": "valaxy rss",
+    "fuse": "valaxy fuse",
     "serve": "vite preview"
   },
   "dependencies": {
