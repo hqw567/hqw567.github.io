@@ -1,5 +1,6 @@
 import { defineValaxyConfig } from "valaxy";
 import type { UserThemeConfig } from "valaxy-theme-yun";
+import { VitePWA } from "vite-plugin-pwa";
 // import { addonAlgolia } from 'valaxy-addon-algolia'
 // import { addonTwikoo } from 'valaxy-addon-twikoo'
 import { addonWaline } from "valaxy-addon-waline";
@@ -11,7 +12,13 @@ export default defineValaxyConfig<UserThemeConfig>({
   // site config see site.config.ts
 
   theme: "yun",
-
+  vite: {
+    plugins: [
+      VitePWA({
+        injectRegister: "auto",
+      }),
+    ],
+  },
   themeConfig: {
     colors: {
       primary: "#fd684c",
