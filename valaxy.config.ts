@@ -48,7 +48,7 @@ export default defineValaxyConfig<UserThemeConfig>({
 
     notice: {
       enable: true,
-      content: "欢迎访问思米米",
+      content: "欢迎访问「思米米」",
     },
 
     pages: [
@@ -80,7 +80,7 @@ export default defineValaxyConfig<UserThemeConfig>({
         enable: true,
         icp: "湘ICP备2022002172号",
       },
-      powered: true,
+      powered: false,
     },
 
     types: {
