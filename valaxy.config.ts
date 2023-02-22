@@ -15,7 +15,38 @@ export default defineValaxyConfig<UserThemeConfig>({
   vite: {
     plugins: [
       VitePWA({
-        injectRegister: "auto",
+        includeAssets: [
+          "favicon.svg",
+          "robots.txt",
+          "apple-touch-icon.png",
+          "masked-icon.svg",
+        ],
+        manifest: {
+          name: "思米米(SIMIMI)",
+          short_name: "思米米",
+          description: "山有木兮木有枝，心悦君兮君不知。",
+          start_url: "/index.html",
+          display: "standalone",
+          theme_color: "#fd684c",
+          icons: [
+            {
+              src: "pwa-192x192.png",
+              sizes: "192x192",
+              type: "image/png",
+            },
+            {
+              src: "pwa-512x512.png",
+              sizes: "512x512",
+              type: "image/png",
+            },
+          ],
+        },
+        registerType: "autoUpdate",
+        devOptions: {
+          enabled: true,
+          type: "module",
+        },
+        workbox: { globPatterns: ["**/*.{css,js,html,svg,png,ico,txt,woff2}"] },
       }),
     ],
   },
