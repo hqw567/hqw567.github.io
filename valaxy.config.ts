@@ -80,8 +80,8 @@ export default defineValaxyConfig<UserThemeConfig>({
 
     bg_image: {
       enable: true,
-      url: "http://img.simimi.cn/img/background/bg-white.png",
-      dark: "http://img.simimi.cn/img/background/bg-dark.png",
+      url: "https://img.simimi.cn/img/background/bg-white.png",
+      dark: "https://img.simimi.cn/img/background/bg-dark.png",
     },
 
     say: {
