@@ -25,7 +25,7 @@ export default defineValaxyConfig<UserThemeConfig>({
           name: "思米米(SIMIMI)",
           short_name: "思米米",
           description: "山有木兮木有枝，心悦君兮君不知。",
-          start_url: "/index.html",
+          start_url: "/",
           display: "standalone",
           theme_color: "#fd684c",
           icons: [
