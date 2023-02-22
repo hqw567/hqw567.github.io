@@ -46,7 +46,7 @@ export default defineValaxyConfig<UserThemeConfig>({
           enabled: true,
           type: "module",
         },
-        workbox: { globPatterns: ["**/*.{css,js,html,svg,png,ico,txt,woff2}"] },
+        workbox: { globPatterns: ["**/*.{css,js,html,svg,png,jpg,ico,txt,woff2,json,xml}"] },
       }),
     ],
   },
