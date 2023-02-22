@@ -10,7 +10,13 @@ toc: false
 
 <div class="danger">
 </div>
-
+<meting-js
+server="netease"
+type="playlist"
+order="random"
+autoplay="true"
+id="3072883579"
+theme="#f86d3f"></meting-js>
 十分欢迎无意中点进来的同学，给我留言和建议！
 
 <img class="shadow-none" src="https://q1.qlogo.cn/g?b=qq&nk=79099400&s=640" width="200" alt="思米米 Good" />
