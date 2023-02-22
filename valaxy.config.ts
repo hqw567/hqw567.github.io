@@ -25,7 +25,7 @@ export default defineValaxyConfig<UserThemeConfig>({
           name: "思米米(SIMIMI)",
           short_name: "思米米",
           description: "山有木兮木有枝，心悦君兮君不知。",
-          start_url: "/",
+          start_url: "https://simimi.cn",
           display: "standalone",
           theme_color: "#fd684c",
           icons: [
@@ -46,7 +46,11 @@ export default defineValaxyConfig<UserThemeConfig>({
           enabled: true,
           type: "module",
         },
-        workbox: { globPatterns: ["**/*.{css,js,html,svg,png,jpg,ico,txt,woff2,json,xml}"] },
+        workbox: {
+          globPatterns: [
+            "**/*.{css,js,html,svg,png,jpg,ico,txt,woff2,json,xml}",
+          ],
+        },
       }),
     ],
   },
