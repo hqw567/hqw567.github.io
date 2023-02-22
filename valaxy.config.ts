@@ -41,7 +41,7 @@ export default defineValaxyConfig<UserThemeConfig>({
       enable: true,
       api: "https://el-bot-api.elpsy.cn/api/words/young",
       hitokoto: {
-        enable: true,
+        enable: false,
         api: "https://v1.hitokoto.cn",
       },
     },
