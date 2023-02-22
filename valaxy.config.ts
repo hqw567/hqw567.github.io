@@ -1,9 +1,60 @@
 import { defineValaxyConfig } from "valaxy";
 import type { UserThemeConfig } from "valaxy-theme-yun";
+import type { VitePWAOptions } from "vite-plugin-pwa";
 import { VitePWA } from "vite-plugin-pwa";
 // import { addonAlgolia } from 'valaxy-addon-algolia'
 // import { addonTwikoo } from 'valaxy-addon-twikoo'
 import { addonWaline } from "valaxy-addon-waline";
+
+const pwaOptions: Partial<VitePWAOptions> = {
+  mode: "production",
+  base: "/",
+  includeAssets: [
+    "favicon.svg",
+    "robots.txt",
+    "apple-touch-icon.png",
+    "masked-icon.svg",
+  ],
+  manifest: {
+    name: "思米米(SIMIMI)",
+    short_name: "思米米",
+    description: "山有木兮木有枝，心悦君兮君不知。",
+    display: "standalone",
+    theme_color: "#fd684c",
+    lang: "zh-CN",
+    icons: [
+      {
+        src: "pwa-192x192.png", // <== don't add slash, for testing
+        sizes: "192x192",
+        type: "image/png",
+      },
+      {
+        src: "/pwa-512x512.png", // <== don't remove slash, for testing
+        sizes: "512x512",
+        type: "image/png",
+      },
+      {
+        src: "pwa-512x512.png", // <== don't add slash, for testing
+        sizes: "512x512",
+        type: "image/png",
+        purpose: "any maskable",
+      },
+    ],
+  },
+  devOptions: {
+    enabled: true,
+    /* when using generateSW the PWA plugin will switch to classic */
+    type: "module",
+    navigateFallback: "index.html",
+  },
+  workbox: {
+    navigateFallbackDenylist: [/^\/atom/],
+    globPatterns: [
+      "**/*.{css,js,html,svg,png,jpg,ico,txt,ttf,woff,woff2,json,xml,webmanifest,webm}",
+    ],
+    globIgnores: ["**/auto.xml"],
+  },
+};
 
 /**
  * User Config
@@ -13,26 +64,7 @@ export default defineValaxyConfig<UserThemeConfig>({
 
   theme: "yun",
   vite: {
-    plugins: [
-      VitePWA({
-        includeAssets: [
-          "favicon.svg",
-          "robots.txt",
-          "apple-touch-icon.png",
-          "masked-icon.svg",
-        ],
-        registerType: "autoUpdate",
-        devOptions: {
-          enabled: true,
-          type: "module",
-        },
-        workbox: {
-          globPatterns: [
-            "**/*.{css,js,html,svg,png,jpg,ico,txt,woff2,json,xml}",
-          ],
-        },
-      }),
-    ],
+    plugins: [VitePWA(pwaOptions)],
   },
   themeConfig: {
     colors: {
