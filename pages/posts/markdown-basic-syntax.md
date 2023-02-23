@@ -4,11 +4,14 @@ tags:
   - Markdown
 categories:
   - 思米米的小分享
-date: 2022-02-14 10:21:10
-updated: 2022-05-09 10:21:10
+date: 2023-02-23 12:00:10
+updated: 2023-02-23 12:00:10
+titleTemplate: '%s - 思米米(SIMIMI)'
+# aside: false
+# toc: false
 ---
 
-.md 即 markdown 文件的基本常用编写语法,是一种快速标记、快速排版语言，现在很多前段项目中的说明文件 readme 等都是用.md 文件编写的，而且很多企业也在在鼓励使用这种编辑方式，特别作为一个前端从业者更要学会使用这种语言。下面就简单和大家分享一些.md 基本语法
+.md 即 markdown 文件的基本常用编写语法,是一种快速标记、快速排版语言，现在很多前段项目中的说明文件 `readme` 等都是用`.md `文件编写的，而且很多企业也在在鼓励使用这种编辑方式，特别作为一个前端从业者更要学会使用这种语言。下面就简单和大家分享一些`.md` 基本语法
 
 <!-- more -->
 
@@ -29,6 +32,20 @@ updated: 2022-05-09 10:21:10
    ###### 六级标题
 ```
 
+渲染效果如下：
+
+# 一级标题
+
+## 二级标题
+
+### 三级标题
+
+#### 四级标题
+
+##### 五级标题
+
+###### 六级标题
+
 tip：符号后面要带空格，不然 MD 语法不生效。
 
 ## 三、列表
@@ -48,6 +65,8 @@ tip：符号后面要带空格，不然 MD 语法不生效。
     * h
     * i
 ```
+
+渲染效果如下：
 
 - a
 - b
@@ -77,6 +96,8 @@ tip：符号后面要带空格，不然 MD 语法不生效。
     5. c
 ```
 
+渲染效果如下：
+
 1. a
 2. b
 3. c
@@ -105,6 +126,8 @@ tip：符号后面要带空格，不然 MD 语法不生效。
             * i
 ```
 
+渲染效果如下：
+
 - a
 - b
 - c
@@ -127,6 +150,8 @@ tip：符号后面要带空格，不然 MD 语法不生效。
 > 引用内容、说明内容。在语句前面加一个 > ，注意是英文的那个右尖括号，注意空格，引用因为是一个区块，理论上是应该什么内容都可以放，比如说：标题，列表，引用等等。
 ```
 
+渲染效果如下：
+
 > 引用内容、说明内容。在语句前面加一个 > ，注意是英文的那个右尖括号，注意空格，引用因为是一个区块，理论上是应该什么内容都可以放，比如说：标题，列表，引用等等。
 
 ### 嵌套区块
@@ -141,6 +166,8 @@ tip：符号后面要带空格，不然 MD 语法不生效。
 >>>>> 五级引用
 >>>>>> 六级引用
 ```
+
+渲染效果如下：
 
 > 一级引用
 >
@@ -161,39 +188,30 @@ tip：符号后面要带空格，不然 MD 语法不生效。
 少量代码，单行使用，直接用`包裹起来就行了
 
 ```
-` shaoliangdaima,danhangshiyong `
+` const num1 = +null; `
 ```
 
-`shaoliangdaima,danhangshiyong`
+`const num1 = +null;`
 
 大量代码，需要多行使用，用```包裹起来
 
 ````
     ```
-        daliangdaima,xuyaoduohangshiyong
-
-        daliangdaima,xuyaoduohangshiyong
-
-        daliangdaima,xuyaoduohangshiyong
-
-        daliangdaima,xuyaoduohangshiyong
-
-        daliangdaima,xuyaoduohangshiyong
+        const num1 = +null;
+        const num2 = +"";
+        const num3 = +false;
+        const num4 = +"169";
     ```
 
 ````
 
-```
-        daliangdaima,xuyaoduohangshiyong
+渲染效果如下：
 
-        daliangdaima,xuyaoduohangshiyong
-
-        daliangdaima,xuyaoduohangshiyong
-
-        daliangdaima,xuyaoduohangshiyong
-
-        daliangdaima,xuyaoduohangshiyong
-
+```javascript
+const num1 = +null;
+const num2 = +"";
+const num3 = +false;
+const num4 = +"169";
 ```
 
 ## 六、链接
@@ -212,10 +230,11 @@ tip：符号后面要带空格，不然 MD 语法不生效。
 <链接地址>
 ```
 
+渲染效果如下：
+
 [思米米](https://www.simimi.cn"欢迎"),是一分享各类技术的博客，欢迎大家访问、收藏。
-<br/>
+
 <https://www.simimi.cn>
-<br/>
 
 ### 参数式
 
@@ -228,10 +247,12 @@ tip：符号后面要带空格，不然 MD 语法不生效。
 这里是[about],这是[archives],这是[categories],还支持中文[中文]
 ```
 
-[about]: https://www.simimi.cn/about '思米米的about'
-[archives]: https://www.simimi.cn/archives '归档'
-[categories]: https://www.simimi.cn/categories '分类'
-[中文]: https://www.simimi.cn '思米米'
+[about]: https://www.simimi.cn/about "思米米的about"
+[archives]: https://www.simimi.cn/archives "归档"
+[categories]: https://www.simimi.cn/categories "分类"
+[中文]: https://www.simimi.cn "思米米"
+
+渲染效果如下：
 
 这里是[about],这是[archives],这是[categories],还支持中文[中文]
 
@@ -249,9 +270,11 @@ tip：符号后面要带空格，不然 MD 语法不生效。
 ![alt 属性文本](图片地址 "可选标题")
 ```
 
+渲染效果如下：
+
 ![思米米](http://static.runoob.com/images/runoob-logo.png)
 
-![思米米](http://static.runoob.com/images/runoob-logo.png 'alt属性')
+![思米米](http://static.runoob.com/images/runoob-logo.png "alt属性")
 
 ### 参数式
 
@@ -261,9 +284,11 @@ tip：符号后面要带空格，不然 MD 语法不生效。
 参数式图片，这里是![simimi]
 ```
 
+渲染效果如下：
+
 [simimi]: http://static.runoob.com/images/runoob-logo.png
 
-参数式图片，这里是![simimi]
+![simimi]
 
 用法跟链接的基本一样，唯一的不同就是，图片前面要写一个！（这是必须的），没什么好说的
 
@@ -291,21 +316,7 @@ _ _ _
 ______
 ```
 
----
-
----
-
----
-
----
-
----
-
----
-
----
-
----
+渲染效果如下：
 
 ---
 
@@ -325,9 +336,7 @@ _md_ 
 __md__
 ```
 
-_md_
-
-**md**
+渲染效果如下：
 
 _md_
 
@@ -351,6 +360,8 @@ _md_
 \_
 ```
 
+渲染效果如下：
+
 \\
 
 \*
@@ -371,6 +382,8 @@ _md_
 ~~删除~~
 ```
 
+渲染效果如下：
+
 ~~删除~~
 
 ### 支持的 HTML 元素
@@ -381,7 +394,11 @@ _md_
 
 ```
 <kbd> <b> <i> <em> <sup> <sub> <br>
+
+使用<kbd>Ctrl</kbd>+<kbd>D</kbd> 收藏本页面
 ```
+
+渲染效果如下：
 
 使用<kbd>Ctrl</kbd>+<kbd>D</kbd> 收藏本页面
 
@@ -407,27 +424,20 @@ abc|bcd|cde
 abc|bcd|cde
 ```
 
+渲染效果如下：
+
 | 表头 | 表头 | 表头 |
 | :--- | :--: | ---: |
 | abc  | bcd  |  cde |
 | abc  | bcd  |  cde |
 | abc  | bcd  |  cde |
 
-<br/>
-|表头|表头|表头|
-|:---|:---:|---:|
-|abc|bcd|cde|
-|abc|bcd|cde|
-|abc|bcd|cde|
-<br/>
-表头|表头|表头
-:-|:-:|-:
-abc|bcd|cde
-abc|bcd|cde
-abc|bcd|cde
-
 上面三个例子的效果一样，由此可得：
 
 1. 表格的格式不一定要对的非常起，但是为了良好的变成风格，尽量对齐是最好的
 
 2. 分割线后面的冒号表示对齐方式，写在左边表示左对齐，右边为右对齐，两边都写表示居中
+
+## 十一、更多
+
+更多**基本语法请**参考 [Markdown 基本语法](https://www.markdown.xyz/basic-syntax/)

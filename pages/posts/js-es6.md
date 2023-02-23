@@ -1,27 +1,25 @@
 ---
 title: 【分享】JavaScript ES6 入门教程
-type: 
- - link
+type:
+  - link
 url: http://es6.simimi.cn/
 tags:
   - JavaScript
 categories:
   - 思米米的小安利
-date: 2022-04-23 17:29:15
-updated: 2022-04-23 17:29:15
+date: 2022-04-23
+updated: 2022-06-23
 ---
 
 # ECMAScript 6 简介
 
-1. [ ECMAScript 和 JavaScript 的关系](https://www.simimi.cn/es6/#docs/intro#ECMAScript 和 JavaScript 的关系)
-2. [ES6 与 ECMAScript 2015 的关系](https://www.simimi.cn/es6/#docs/intro#ES6 与 ECMAScript 2015 的关系)
-3. [语法提案的批准流程](https://www.simimi.cn/es6/#docs/intro#语法提案的批准流程)
-4. [ECMAScript 的历史](https://www.simimi.cn/es6/#docs/intro#ECMAScript 的历史)
-5. [Babel 转码器](https://www.simimi.cn/es6/#docs/intro#Babel 转码器)
+1. [ ECMAScript 和 JavaScript 的关系](https://es6.ruanyifeng.com/es6/#docs/)
+2. [ES6 与 ECMAScript 2015 的关系](https://es6.ruanyifeng.com/es6/#docs/intro#ES6)
+3. [语法提案的批准流程](https://es6.ruanyifeng.com/es6/#docs/intro#语法提案的批准流程)
+4. [ECMAScript 的历史](https://es6.ruanyifeng.com/es6/#docs/intro#ECMAScript)
+5. [Babel 转码器](https://es6.ruanyifeng.com/es6/#docs/intro#Babel)
 
 ECMAScript 6.0（以下简称 ES6）是 JavaScript 语言的下一代标准，已经在 2015 年 6 月正式发布了。它的目标，是使得 JavaScript 语言可以用来编写复杂的大型应用程序，成为企业级开发语言。
-
-![img](https://www.simimi.cn/es6/images/cover-3rd.jpg)
 
 ## ECMAScript 和 JavaScript 的关系
 
@@ -34,3 +32,6 @@ ECMAScript 6.0（以下简称 ES6）是 JavaScript 语言的下一代标准，�
 因此，ECMAScript 和 JavaScript 的关系是，前者是后者的规格，后者是前者的一种实现（另外的 ECMAScript 方言还有 JScript 和 ActionScript）。日常场合，这两个词是可以互换的。
 
 <!-- more -->
+
+<img src="https://es6.ruanyifeng.com/images/cover-3rd.jpg" width="300" style="margin: 20px auto;"
+/>

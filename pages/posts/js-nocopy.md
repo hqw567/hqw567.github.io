@@ -18,20 +18,20 @@ updated: 2022-04-03 13:56:38
 ```html
 //禁止用户复制
 <style type="text/css">
-	body {
-		-webkit-touch-callout: none;
-		-webkit-user-select: none;
-		-khtml-user-select: none;
-		-moz-user-select: none;
-		-ms-user-select: none;
-		user-select: none;
-	}
+  body {
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+  }
 </style>
 
 // 禁止用户右键
 <script langauge="javascript">
-	document.oncontextmenu = function (e) {
-		return false
-	}
+  document.oncontextmenu = function (e) {
+    return false;
+  };
 </script>
 ```

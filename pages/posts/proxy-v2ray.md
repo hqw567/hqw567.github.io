@@ -5,6 +5,7 @@ tags:
 categories: 思米米的小笔记
 date: 2022-05-17 16:52:12
 updated: 2022-05-17 16:52:12
+titleTemplate: '%s - 思米米(SIMIMI)'
 ---
 
 
@@ -41,3 +42,5 @@ set HTTPS_PROXY=127.0.0.1:10809
 ## v2rayN下载 https://github.com/2dust/v2rayN/releases
 - [v2rayN(Windows客户端)](https://github.com/2dust/v2rayN/releases)
 - [v2rayNG(Android App)](https://github.com/2dust/v2rayNG/releases)
+  
+> 把github域名`github.com`改为`kgithub.com`可加速github

@@ -10,7 +10,7 @@ updated: 2022-05-20
 
 ## CSS初始化字体
 
-```
+```css
 @font-face {
   font-family: Emoji;
   src: local("Apple Color Emojiji"), local("Segoe UI Emoji"), local("Segoe UI Symbol"), local("Noto Color Emoji");
