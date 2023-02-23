@@ -1,7 +1,9 @@
 #!/bin/bash
 
 # 从命令行参数中获取提交信息，如果没有则使用默认值
-default_info="Update: $(date +%Y-%m-%d\ %H:%M:%S) - author: $(git config user.name)"
+author=$(git config user.username || git config user.name)
+commit_time=$(date "+%Y-%m-%d %H:%M:%S")
+default_info="Update: $commit_time - author: $author"
 info=${1:-"$default_info"}
 
 
