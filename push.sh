@@ -4,6 +4,9 @@
 git config --global user.name "Herway"
 git config --global user.email "hqw6@qq.com"
 
+# 设置全局 换行符格式设置为 LF
+git config --global core.eol lf
+
 # 获取当前 Git 用户名和提交时间
 author=$(git config user.name)
 commit_time=$(date "+%Y-%m-%d %H:%M:%S")
