@@ -5,7 +5,10 @@ git config --global user.name "Herway"
 git config --global user.email "hqw6@qq.com"
 
 # 设置全局 换行符格式设置为 LF
+#   Git 在检出文件时将换行符转换为 LF
 git config --global core.eol lf
+#   Git 在提交文件时不进行自动转换
+git config --global core.autocrlf input
 
 # 获取当前 Git 用户名和提交时间
 author=$(git config user.name)
