@@ -13,6 +13,7 @@ export default defineSiteConfig({
     avatar: "https://q1.qlogo.cn/g?b=qq&nk=79099400&s=640",
     status: {
       emoji: "😣",
+      message: "Hi"
     },
     name: "Herway",
     link: "https://simimi.cn",

@@ -6,53 +6,92 @@ import { VitePWA } from "vite-plugin-pwa";
 // import { addonTwikoo } from 'valaxy-addon-twikoo'
 import { addonWaline } from "valaxy-addon-waline";
 
+// const pwaOptions: Partial<VitePWAOptions> = {
+//   mode: "production",
+//   base: "/",
+//   includeAssets: [
+//     "favicon.svg",
+//     "robots.txt",
+//     "apple-touch-icon.png",
+//     "masked-icon.svg",
+//   ],
+//   manifest: {
+//     name: "思米米(SIMIMI)",
+//     short_name: "思米米",
+//     description: "山有木兮木有枝，心悦君兮君不知。",
+//     display: "standalone",
+//     theme_color: "#fd684c",
+//     lang: "zh-CN",
+//     icons: [
+//       {
+//         src: "pwa-192x192.png", // <== don't add slash, for testing
+//         sizes: "192x192",
+//         type: "image/png",
+//       },
+//       {
+//         src: "/pwa-512x512.png", // <== don't remove slash, for testing
+//         sizes: "512x512",
+//         type: "image/png",
+//       },
+//       {
+//         src: "pwa-512x512.png", // <== don't add slash, for testing
+//         sizes: "512x512",
+//         type: "image/png",
+//         purpose: "any maskable",
+//       },
+//     ],
+//   },
+//   devOptions: {
+//     enabled: true,
+//     /* when using generateSW the PWA plugin will switch to classic */
+//     type: "module",
+//     navigateFallback: "index.html",
+//   },
+//   workbox: {
+//     navigateFallbackDenylist: [/^\/atom\.xml$/],
+//     globPatterns: [
+//       // "**/*.{css,js,html,svg,png,jpg,ico,txt,ttf,woff,woff2,json,xml,webmanifest,webm}",
+//       "**/*.*",
+//     ],
+//     globIgnores: ["**/auto.xml"],
+//     skipWaiting: true,
+//     clientsClaim: true,
+//     navigateFallback: "/index.html",
+//   },
+// };
+
 const pwaOptions: Partial<VitePWAOptions> = {
-  mode: "production",
-  base: "/",
-  includeAssets: [
-    "favicon.svg",
-    "robots.txt",
-    "apple-touch-icon.png",
-    "masked-icon.svg",
-  ],
+  registerType: "autoUpdate",
+  includeAssets: ["**/*.{js,css,html,json,ico,png,jpg,jpeg,svg}"],
   manifest: {
     name: "思米米(SIMIMI)",
     short_name: "思米米",
     description: "山有木兮木有枝，心悦君兮君不知。",
-    display: "standalone",
-    theme_color: "#fd684c",
     lang: "zh-CN",
+    theme_color: "#fd684c",
     icons: [
       {
-        src: "pwa-192x192.png", // <== don't add slash, for testing
+        src: "/pwa-192x192.png",
         sizes: "192x192",
         type: "image/png",
       },
       {
-        src: "/pwa-512x512.png", // <== don't remove slash, for testing
+        src: "/pwa-512x512.png",
         sizes: "512x512",
         type: "image/png",
-      },
-      {
-        src: "pwa-512x512.png", // <== don't add slash, for testing
-        sizes: "512x512",
-        type: "image/png",
-        purpose: "any maskable",
+        purpose: "maskable",
       },
     ],
-  },
-  devOptions: {
-    enabled: true,
-    /* when using generateSW the PWA plugin will switch to classic */
-    type: "module",
-    navigateFallback: "index.html",
   },
   workbox: {
-    navigateFallbackDenylist: [/^\/atom/],
+    navigateFallback: "/index.html",
+    navigateFallbackDenylist: [/^\/atom\.xml$/],
     globPatterns: [
-      "**/*.{css,js,html,svg,png,jpg,ico,txt,ttf,woff,woff2,json,xml,webmanifest,webm}",
+      "**/*.{js,css,html,json,xml,ico,svg,png,jpg,jpeg,webp,woff2,ttf,eot}",
     ],
     globIgnores: ["**/auto.xml"],
+    skipWaiting: true,
+    clientsClaim: true,
   },
 };
 
