@@ -62,7 +62,7 @@ import { addonWaline } from "valaxy-addon-waline";
 
 const pwaOptions: Partial<VitePWAOptions> = {
   registerType: "autoUpdate",
-  includeAssets: ["**/*.{js,css,html,json,ico,png,jpg,jpeg,svg}"],
+  // includeAssets: ["**/*.{js,css,html,json,ico,png,jpg,jpeg,svg}"],
   manifest: {
     name: "思米米(SIMIMI)",
     short_name: "思米米",
@@ -87,7 +87,7 @@ const pwaOptions: Partial<VitePWAOptions> = {
     navigateFallback: "/index.html",
     navigateFallbackDenylist: [/^\/atom\.xml$/],
     globPatterns: [
-      "**/*.{js,css,html,json,xml,ico,svg,png,jpg,jpeg,webp,woff2,ttf,eot}",
+      "**/*.{js,css,html,json,xml,ico,svg,png,jpg,jpeg,webp,woff2,ttf,eot}"
     ],
     globIgnores: ["**/auto.xml"],
     skipWaiting: true,
