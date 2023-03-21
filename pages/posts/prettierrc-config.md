@@ -33,35 +33,33 @@ updated: 2023-03-21
 
 ### 以下是对每个选项的详细说明：
 
-`printWidth`：指定每行代码的最大宽度。默认为 80。
+- `printWidth`：指定每行代码的最大宽度。默认为 80。
+- `tabWidth`：指定一个制表符等于多少个空格。默认为 2。
 
-`tabWidth`：指定一个制表符等于多少个空格。默认为 2。
+- `useTabs`：指定是否使用制表符代替空格缩进。默认为 false。
 
-`useTabs`：指定是否使用制表符代替空格缩进。默认为 false。
+- `semi`：指定是否在语句末尾添加分号。默认为 true。
+- `singleQuote`：指定是否使用单引号而不是双引号。默认为 false。
 
-`semi`：指定是否在语句末尾添加分号。默认为 true。
+- `quoteProps`：指定对象属性名称是否使用引号。可以是 “as-needed”、true 或 false。默认为 “as-needed”。
 
-`singleQuote`：指定是否使用单引号而不是双引号。默认为 false。
+- `jsxSingleQuote`：指定 JSX 属性是否使用单引号而不是双引号。默认为 false。
 
-`quoteProps`：指定对象属性名称是否使用引号。可以是 “as-needed”、true 或 false。默认为 “as-needed”。
+- `trailingComma`：指定是否在数组和对象字面量的末尾添加逗号。可能的值是 “none”、“es5”（在 ES5 中有效）和 “all”。默认为 “es5”。
 
-`jsxSingleQuote`：指定 JSX 属性是否使用单引号而不是双引号。默认为 false。
+- `bracketSpacing`：指定是否在对象字面量中的括号之间添加空格。默认为 true。
 
-`trailingComma`：指定是否在数组和对象字面量的末尾添加逗号。可能的值是 “none”、“es5”（在 ES5 中有效）和 “all”。默认为 “es5”。
+- `jsxBracketSameLine`：指定是否将多行 JSX 元素的末尾括号放在同一行上。默认为 false。
 
-`bracketSpacing`：指定是否在对象字面量中的括号之间添加空格。默认为 true。
+- `arrowParens`：指定箭头函数参数是否永远使用圆括号。可以是 “always”、“avoid”、或 “as-needed”。默认为 “always”。
 
-`jsxBracketSameLine`：指定是否将多行 JSX 元素的末尾括号放在同一行上。默认为 false。
+- `requirePragma`：指定是否需要在文件顶部添加 `// @format` 注释才会格式化。默认为 false。
 
-`arrowParens`：指定箭头函数参数是否永远使用圆括号。可以是 “always”、“avoid”、或 “as-needed”。默认为 “always”。
+- `insertPragma`：指定是否在文件顶部插入 `// @format` 注释。默认为 false。
 
-`requirePragma`：指定是否需要在文件顶部添加 `// @format` 注释才会格式化。默认为 false。
+- `vueIndentScriptAndStyle`：指定是否单独缩进 Vue 组件中的 `<script>` 和 `<style>` 标签。默认为 false。
 
-`insertPragma`：指定是否在文件顶部插入 `// @format` 注释。默认为 false。
-
-`vueIndentScriptAndStyle`：指定是否单独缩进 Vue 组件中的 `<script>` 和 `<style>` 标签。默认为 false。
-
-`proseWrap`：指定如何处理文本节点的换行。可以是 “preserve”、“always” 或 “never”。默认为 “preserve”。
+- `proseWrap`：指定如何处理文本节点的换行。可以是 “preserve”、“always” 或 “never”。默认为 “preserve”。
 
 > 这里列出了常用的 Prettier 配置选项。如果您需要更多选项，请查阅 Prettier 文档。同时，请注意，不同的编辑器和 IDE 可能有不同的方法来指定配置选项。
 >
