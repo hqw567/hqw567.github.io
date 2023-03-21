@@ -11,36 +11,21 @@ updated: 2023-03-21
 
 ```json
 {
-  // 每行代码的最大宽度
-  "printWidth": 80,
-  // 缩进的空格数
-  "tabWidth": 2,
-  // 是否使用制表符进行缩进
-  "useTabs": false,
-  // 是否在语句末尾添加分号
-  "semi": true,
-  // 是否使用单引号而不是双引号
-  "singleQuote": false,
-  // 对象字面量中属性名是否使用引号
-  "quoteProps": "as-needed",
-  // JSX属性值是否使用单引号
-  "jsxSingleQuote": false,
-  // 数组、对象等结尾是否添加逗号
-  "trailingComma": "es5",
-  // 是否在对象属性添加空格
-  "bracketSpacing": true,
-  // JSX标签的末尾标签是否与起始标签在同一行
-  "jsxBracketSameLine": false,
-  // 箭头函数的参数是否使用圆括号
-  "arrowParens": "always",
-  // 是否需要在文件顶部插入 @format 标识
-  "requirePragma": false,
-  // 是否需要在文件顶部插入 @format 标识
-  "insertPragma": false,
-  // 是否缩进Vue文件中的脚本和样式标签
-  "vueIndentScriptAndStyle": false,
-  // 是否保留Markdown文本的换行符
-  "proseWrap": "preserve"
+  "printWidth": 80, // 指定代码行的最大宽度，超过这个宽度会自动换行
+  "tabWidth": 2, // 指定一个 tab 键应该代表几个空格宽度
+  "useTabs": false, // 是否使用 tab 键缩进代码
+  "semi": false, // 是否在语句末尾添加分号
+  "singleQuote": true, // 是否使用单引号
+  "quoteProps": "as-needed", // 对象字面量中是否将 key 值用引号括起来（as-needed 表示只在必要时添加引号）
+  "jsxSingleQuote": false, // 在 JSX 中是否使用单引号
+  "trailingComma": "es5", // 控制对象和数组字面量中是否添加尾随逗号
+  "bracketSpacing": true, // 是否在对象字面量中的括号前后添加空格
+  "jsxBracketSameLine": false, // 在 JSX 中是否将闭合标签放在同一行
+  "arrowParens": "always", // 箭头函数参数是否添加括号
+  "requirePragma": false, // 是否在文件顶部添加 @format 注释，以表明这个文件已经被 Prettier 格式化过了
+  "insertPragma": false, // 是否在文件顶部插入 @format 注释
+  "vueIndentScriptAndStyle": false, // 是否在 Vue 文件中缩进 script 和 style 标签
+  "proseWrap": "preserve" // 控制是否将 markdown 文件的文本换行（preserve 表示保留原格式）
 }
 
 ```
