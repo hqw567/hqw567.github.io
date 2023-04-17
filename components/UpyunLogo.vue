@@ -1,7 +1,7 @@
 <script lang="ts" setup>
 const upyun = {
   name: "又拍云",
-  url: "https://www.upyun.com/?utm_source=lianmeng&utm_medium=hqw567",
+  url: "https://www.upyun.com/?utm_source=lianmeng&utm_medium=referral",
   logo: "http://img.simimi.cn/img/league/upyun-logo.png",
 };
 </script>
