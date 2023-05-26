@@ -4,7 +4,7 @@ tags:
   - Proxy
 categories: 思米米的小笔记
 date: 2023-02-23
-updated: 2023-02-23
+updated: 2023-05-26
 titleTemplate: "%s - 思米米(SIMIMI)"
 ---
 
@@ -86,9 +86,9 @@ Shadowrocket 是一个通用的 iOS VPN 应用，它支持众多协议，如 Sha
 
 下载：[iTunes](https://itunes.apple.com/us/app/shadowrocket/id932747118?mt=8)
 
-> Quantumult (圈 X)
+> Quantumult X (圈 X)
 
-下载：[iTunes](https://itunes.apple.com/us/app/quantumult/id1252015438?mt=8)
+下载：[iTunes](https://apps.apple.com/tw/app/quantumult-x/id1443988620)
 
 ## 订阅转换
 
