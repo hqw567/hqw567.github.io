@@ -1,6 +1,6 @@
 {
   "name": "思米米(SIMIMI)",
-  "version": "0.14.26",
+  "version": "0.14.28",
   "private": true,
   "scripts": {
     "build": "npm run build:ssg && npm run rss && npm run fuse",
@@ -12,11 +12,11 @@
     "serve": "vite preview"
   },
   "dependencies": {
-    "valaxy": "0.14.26",
-    "valaxy-theme-yun": "0.14.26"
+    "valaxy": "0.14.28",
+    "valaxy-theme-yun": "0.14.28"
   },
   "devDependencies": {
-    "typescript": "^4.8.4",
-    "vite-plugin-pwa": "^0.14.4"
+    "typescript": "^5.0.4",
+    "vite-plugin-pwa": "^0.15.1"
   }
 }
