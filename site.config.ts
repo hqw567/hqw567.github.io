@@ -42,10 +42,11 @@ export default defineSiteConfig({
   sponsor: {
     enable: true,
     title: "我很可爱，请给我钱！",
+    description: "如果你觉得我的文章对你有帮助，欢迎赞助我！",
     methods: [
       {
         name: "支付宝",
-        url: "https://img.simimi.cn/img/donate/alipay-qrcode.png",
+        url: "https://img.simimi.cn/img/donate/alipay-qrcode.jpg",
         color: "#00A3EE",
         icon: "i-ri-alipay-line",
       },
