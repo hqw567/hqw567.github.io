@@ -1,18 +1,23 @@
 {
   "name": "simimi",
-  "version": "0.14.28",
+  "valaxy": {
+    "theme": "yun"
+  },
   "private": true,
   "scripts": {
-    "build": "npm run build:ssg && npm run rss",
+    "build": "npm run build:ssg && npm run rss && npm run fuse",
     "build:spa": "valaxy build",
-    "build:ssg": "valaxy build --ssg",
+    "build:ssg": "valaxy build --ssg --log=info",
     "dev": "valaxy",
+    "fuse": "valaxy fuse",
+    "new": "valaxy new",
     "rss": "valaxy rss",
     "serve": "vite preview"
   },
   "dependencies": {
-    "valaxy": "0.14.28",
-    "valaxy-theme-yun": "0.14.28"
+    "valaxy": "latest",
+    "valaxy-theme-yun": "latest",
+    "valaxy-addon-waline": "latest"
   },
   "devDependencies": {
     "typescript": "^4.9.5"
