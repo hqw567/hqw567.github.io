@@ -1,4 +1,5 @@
 ---
+layout: album
 nav: false
 toc: false
 comment: false
