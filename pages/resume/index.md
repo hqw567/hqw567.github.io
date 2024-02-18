@@ -2,6 +2,7 @@
 title: 简历
 nav: true
 toc: false
+comment: false
 ---
 
 ### 基本信息
