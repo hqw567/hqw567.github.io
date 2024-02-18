@@ -1,6 +1,6 @@
 ---
-nav: true
-toc: false
+nav: false
+toc: true
 comment: false
 title: 简历
 ---
