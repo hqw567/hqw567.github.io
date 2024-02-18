@@ -1,6 +1,5 @@
 ---
-layout: album
-nav: false
+nav: true
 toc: false
 comment: false
 title: 简历
