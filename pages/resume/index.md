@@ -1,8 +1,8 @@
 ---
-title: 简历
-nav: true
+nav: false
 toc: false
 comment: false
+title: 简历
 ---
 
 ### 基本信息
