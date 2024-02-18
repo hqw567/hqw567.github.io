@@ -1,5 +1,7 @@
 ---
 title: 简历
+nav: true
+toc: false
 ---
 
 ### 基本信息
