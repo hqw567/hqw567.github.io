@@ -15,7 +15,6 @@ title: 简历
 - 邮箱：[hqw567@gmail.com](mailto:hqw567@gmail.com)
 - 岗位：前端开发工程师
 - 年限：3 年
-- 博客：[simimi.cn](https://simimi.cn)
 
 ### 掌握技能
 
