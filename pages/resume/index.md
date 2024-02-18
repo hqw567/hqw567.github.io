@@ -11,7 +11,7 @@ title: 简历
 - 性别：男
 - 年龄：23
 - 学历：本科
-- 电话：[15555506445](tel:+8615555506445)
+- 电话：<a href='tel:15555506445'>15555506445</a>
 - 邮箱：[hqw567@gmail.com](mailto:hqw567@gmail.com)
 - 岗位：前端开发工程师
 - 年限：3 年
@@ -29,7 +29,7 @@ title: 简历
 
 ### 项目经历
 
-0. 项目名称：iceCoffee
+- 项目名称：iceCoffee
 
    - 技术栈：Next.js、TypeSctipt、next-intl、shadcn/ui、TailwindCSS 等
    - 项目描述：
@@ -48,7 +48,7 @@ title: 简历
      - 进一步熟练 Next.js 的使用，掌握 App Router 中所有高级路由，能够合理使用 server、client 组件进行数据水合来提高 SEO 及页面首屏加载
      - 对 AIGC 应用、前端架构设计、性能优化有了更加深层次了解
 
-1. 项目名称：READKIDZ
+- 项目名称：READKIDZ
 
    - 技术栈：Next.js、TypeScript、TanStack Query、shadcn/ui、TailwindCSS 等
    - 项目描述：
