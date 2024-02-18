@@ -1,7 +1,5 @@
 ---
-title: 关于站点
-nav: false
-toc: false
+title: 简历
 ---
 
 ### 基本信息
@@ -10,11 +8,11 @@ toc: false
 - 性别：男
 - 年龄：23
 - 学历：本科
-- 电话：[15555506445](tel:+8615555506445)
-- 邮箱：[hqw567@gmail.com](mailto:hqw567@gmail.com)
+- 电话：15555506445
+- 邮箱：hqw567@gmail.com
 - 岗位：前端开发工程师
 - 年限：3 年
-- 博客：[simimi.cn](simimi.cn)
+- 博客：[simimi.cn](https://simimi.cn)
 
 ### 掌握技能
 

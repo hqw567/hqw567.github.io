@@ -15,11 +15,11 @@
     "serve": "vite preview"
   },
   "dependencies": {
-    "valaxy": "latest",
-    "valaxy-theme-yun": "latest",
-    "valaxy-addon-waline": "latest"
+    "valaxy": "^0.18.1",
+    "valaxy-addon-waline": "^0.1.2",
+    "valaxy-theme-yun": "^0.18.1"
   },
   "devDependencies": {
-    "typescript": "^4.9.5"
+    "typescript": "^5.3.3"
   }
 }
