@@ -1,4 +1,4 @@
-#!/bin/bash
+# !/bin/bash
 
 # 设置全局 Git 用户名和邮箱
 git config --global user.name "Herway"

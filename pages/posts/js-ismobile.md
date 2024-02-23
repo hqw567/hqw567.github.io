@@ -13,7 +13,7 @@ updated: 2022-04-23 16:04:48
 
 本文根据 [StackOverflow](https://stackoverflow.com/questions/11381673/detecting-a-mobile-browser)，整理了 JavaScript 侦测手机浏览器的五种方法。
 
-![img](http://img.simimi.cn/imgbg2021092717.jpg)
+![img](//img.simimi.cn/imgbg2021092717.jpg)
 
 <!-- more -->
 

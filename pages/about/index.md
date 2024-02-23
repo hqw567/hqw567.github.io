@@ -30,7 +30,7 @@ theme="#f86d3f"></meting-js>
   </div>
 </div> -->
 
-> ![Herway](http://img.simimi.cn/imgQQ%E5%9B%BE%E7%89%8720220423180007.jpg)
+> ![Herway](//img.simimi.cn/imgQQ%E5%9B%BE%E7%89%8720220423180007.jpg)
 >
 > **人的一生能有几天** > <br>
 > 问一问，人的一生能有几天

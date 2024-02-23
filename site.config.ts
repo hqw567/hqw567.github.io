@@ -46,19 +46,19 @@ export default defineSiteConfig({
     methods: [
       {
         name: "支付宝",
-        url: "https://img.simimi.cn/img/donate/alipay-qrcode.jpg",
+        url: "//img.simimi.cn/img/donate/alipay-qrcode.jpg",
         color: "#00A3EE",
         icon: "i-ri-alipay-line",
       },
       {
         name: "QQ 支付",
-        url: "https://img.simimi.cn/img/donate/qqpay-qrcode.png",
+        url: "//img.simimi.cn/img/donate/qqpay-qrcode.png",
         color: "#12B7F5",
         icon: "i-ri-qq-line",
       },
       {
         name: "微信支付",
-        url: "https://img.simimi.cn/img/donate/wechatpay-qrcode.png",
+        url: "//img.simimi.cn/img/donate/wechatpay-qrcode.png",
         color: "#2DC100",
         icon: "i-ri-wechat-pay-line",
       },

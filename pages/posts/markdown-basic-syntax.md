@@ -272,9 +272,9 @@ const num4 = +"169";
 
 渲染效果如下：
 
-![思米米](http://static.runoob.com/images/runoob-logo.png)
+![思米米](//static.runoob.com/images/runoob-logo.png)
 
-![思米米](http://static.runoob.com/images/runoob-logo.png "alt属性")
+![思米米](//static.runoob.com/images/runoob-logo.png "alt属性")
 
 ### 参数式
 
@@ -286,7 +286,7 @@ const num4 = +"169";
 
 渲染效果如下：
 
-[simimi]: http://static.runoob.com/images/runoob-logo.png
+[simimi]: //static.runoob.com/images/runoob-logo.png
 
 ![simimi]
 
