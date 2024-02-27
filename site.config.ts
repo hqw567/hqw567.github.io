@@ -1,6 +1,9 @@
 import { defineSiteConfig } from "valaxy";
 
 export default defineSiteConfig({
+  encrypt: {
+    enable: true
+  },
   search: {
     enable: true,
     type: "fuse",
