@@ -33,6 +33,7 @@ declare module 'vue-router/auto-routes' {
     '/posts/css-font': RouteRecordInfo<'/posts/css-font', '/posts/css-font', Record<never, never>, Record<never, never>>,
     '/posts/css-name': RouteRecordInfo<'/posts/css-name', '/posts/css-name', Record<never, never>, Record<never, never>>,
     '/posts/css-norm': RouteRecordInfo<'/posts/css-norm', '/posts/css-norm', Record<never, never>, Record<never, never>>,
+    '/posts/docker-registry': RouteRecordInfo<'/posts/docker-registry', '/posts/docker-registry', Record<never, never>, Record<never, never>>,
     '/posts/git-basic-tutorial': RouteRecordInfo<'/posts/git-basic-tutorial', '/posts/git-basic-tutorial', Record<never, never>, Record<never, never>>,
     '/posts/git-learn-note': RouteRecordInfo<'/posts/git-learn-note', '/posts/git-learn-note', Record<never, never>, Record<never, never>>,
     '/posts/git-listing': RouteRecordInfo<'/posts/git-listing', '/posts/git-listing', Record<never, never>, Record<never, never>>,
