@@ -7,7 +7,7 @@
   "scripts": {
     "build": "npm run build:ssg && npm run rss && npm run fuse",
     "build:spa": "valaxy build",
-    "build:ssg": "valaxy build --ssg --log=info",
+    "build:ssg": "valaxy build --ssg",
     "dev": "valaxy",
     "fuse": "valaxy fuse",
     "new": "valaxy new",
@@ -15,11 +15,12 @@
     "serve": "vite preview"
   },
   "dependencies": {
-    "valaxy": "^0.18.5",
-    "valaxy-addon-waline": "^0.1.2",
-    "valaxy-theme-yun": "^0.18.5"
+    "valaxy": "^0.19.7",
+    "valaxy-addon-waline": "^0.2.0",
+    "valaxy-theme-yun": "^0.19.7"
   },
   "devDependencies": {
-    "typescript": "^5.4.3"
-  }
+    "typescript": "^5.5.4"
+  },
+  "packageManager": "pnpm@9.6.0+sha256.dae0f7e822c56b20979bb5965e3b73b8bdabb6b8b8ef121da6d857508599ca35"
 }
