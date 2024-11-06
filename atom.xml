@@ -1,0 +1,530 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+    <id>https://simimi.cn/</id>
+    <title>思米米(SIMIMI)</title>
+    <updated>2024-11-06T05:14:44.267Z</updated>
+    <generator>https://github.com/jpmonette/feed</generator>
+    <author>
+        <name>Herway</name>
+        <email>hqw567@gmail.com</email>
+        <uri>https://simimi.cn</uri>
+    </author>
+    <link rel="alternate" href="https://simimi.cn/"/>
+    <link rel="self" href="https://simimi.cn/atom.xml"/>
+    <subtitle>山有木兮木有枝，心悦君兮君不知。</subtitle>
+    <logo>https://q1.qlogo.cn/g?b=qq&amp;nk=79099400&amp;s=640</logo>
+    <icon>https://simimi.cn/favicon.svg</icon>
+    <rights>CC BY-NC-SA 4.0 2024 © Herway</rights>
+    <entry>
+        <title type="html"><![CDATA[使用 Docker Registry 搭建私有镜像仓库]]></title>
+        <id>https://simimi.cn/posts/docker-registry</id>
+        <link href="https://simimi.cn/posts/docker-registry"/>
+        <updated>2024-03-22T10:40:10.000Z</updated>
+        <content type="html"><![CDATA[<p>在 Ubuntu 服务器上使用 Docker Registry 搭建私有镜像仓库</p>
+<ol>
+<li><strong>安装 Docker</strong></li>
+</ol>
+<p>如果您的 Ubuntu 服务器上还未安装 Docker,请先使用以下命令安装:</p>
+<br/><p>访问 <a href="https://simimi.cn/posts/docker-registry" target="_blank">https://simimi.cn/posts/docker-registry</a> 阅读全文。</p>]]></content>
+        <author>
+            <name>Herway</name>
+            <email>hqw567@gmail.com</email>
+            <uri>https://simimi.cn</uri>
+        </author>
+        <published>2024-11-06T05:13:18.863Z</published>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[给Git和NPM代理加速]]></title>
+        <id>https://simimi.cn/posts/git-npm-proxy</id>
+        <link href="https://simimi.cn/posts/git-npm-proxy"/>
+        <updated>2023-05-26T13:51:23.000Z</updated>
+        <content type="html"><![CDATA[<p>开发中不开 Git 和 Node.js，由于某些东西经常抽风，在国内有时候 Git 连接 Github 和 Node.js 使用 NPM 包管理器变得不那么容易，但是如果我们自备小飞机的话就可以让 Git 和 NPM 走本地代理，速度直接起飞😎</p>
+<br/><p>访问 <a href="https://simimi.cn/posts/git-npm-proxy" target="_blank">https://simimi.cn/posts/git-npm-proxy</a> 阅读全文。</p>]]></content>
+        <author>
+            <name>Herway</name>
+            <email>hqw567@gmail.com</email>
+            <uri>https://simimi.cn</uri>
+        </author>
+        <published>2024-11-06T05:13:18.863Z</published>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[.prettierrc.json 文件配置]]></title>
+        <id>https://simimi.cn/posts/prettierrc-config</id>
+        <link href="https://simimi.cn/posts/prettierrc-config"/>
+        <updated>2023-03-21T00:00:00.000Z</updated>
+        <content type="html"><![CDATA[<h2>.prettierrc.json 文件配置</h2>
+<pre><code class="language-json">{
+  &quot;printWidth&quot;: 80, // 指定代码行的最大宽度，超过这个宽度会自动换行
+  &quot;tabWidth&quot;: 2, // 指定一个 tab 键应该代表几个空格宽度
+  &quot;useTabs&quot;: false, // 是否使用 tab 键缩进代码
+  &quot;semi&quot;: false, // 是否在语句末尾添加分号
+  &quot;singleQuote&quot;: true, // 是否使用单引号
+  &quot;quoteProps&quot;: &quot;as-needed&quot;, // 对象字面量中是否将 key 值用引号括起来（as-needed 表示只在必要时添加引号）
+  &quot;jsxSingleQuote&quot;: false, // 在 JSX 中是否使用单引号
+  &quot;trailingComma&quot;: &quot;es5&quot;, // 控制对象和数组字面量中是否添加尾随逗号
+  &quot;bracketSpacing&quot;: true, // 是否在对象字面量中的括号前后添加空格
+  &quot;jsxBracketSameLine&quot;: false, // 在 JSX 中是否将闭合标签放在同一行
+  &quot;arrowParens&quot;: &quot;always&quot;, // 箭头函数参数是否添加括号
+  &quot;requirePragma&quot;: false, // 是否在文件顶部添加 @format 注释，以表明这个文件已经被 Prettier 格式化过了
+  &quot;insertPragma&quot;: false, // 是否在文件顶部插入 @format 注释
+  &quot;vueIndentScriptAndStyle&quot;: false, // 是否在 Vue 文件中缩进 script 和 style 标签
+  &quot;proseWrap&quot;: &quot;preserve&quot; // 控制是否将 markdown 文件的文本换行（preserve 表示保留原格式）
+}
+</code></pre>
+<br/><p>访问 <a href="https://simimi.cn/posts/prettierrc-config" target="_blank">https://simimi.cn/posts/prettierrc-config</a> 阅读全文。</p>]]></content>
+        <author>
+            <name>Herway</name>
+            <email>hqw567@gmail.com</email>
+            <uri>https://simimi.cn</uri>
+        </author>
+        <published>2023-03-21T00:00:00.000Z</published>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[2023最新青龙面板薅羊毛教程【全过程】]]></title>
+        <id>https://simimi.cn/posts/ql-jd</id>
+        <link href="https://simimi.cn/posts/ql-jd"/>
+        <updated>2023-02-23T00:00:00.000Z</updated>
+        <content type="html"><![CDATA[<h3>首先安装<a href="https://www.bt.cn/new/index.html">宝塔面板</a></h3>
+<p>使用 centos 7.X 的系统 用 Shell 复制以下命令安装宝塔面板</p>
+<pre><code class="language-shell">yum install -y wget &amp;&amp; wget -O install.sh https://download.bt.cn/install/install_6.0.sh &amp;&amp; sh install.sh ed8484bec
+</code></pre>
+<ul>
+<li>安装好后会提示<strong>账号和密码</strong>记得保存</li>
+<li>访问 <strong>ip:端口号</strong> 输了刚刚的账号密码登录即可（<strong>端口号</strong>安装完成后终端有提示）
+<ul>
+<li>如访问不了可能是服务器安全策略（系统防火墙）没有开放 <strong>安装时终端显示的</strong> 端口号，去服务器开放即可</li>
+<li>初次进入宝塔面板要安装运行环境，可先不安装</li>
+</ul>
+</li>
+</ul>
+<br/><p>访问 <a href="https://simimi.cn/posts/ql-jd" target="_blank">https://simimi.cn/posts/ql-jd</a> 阅读全文。</p>]]></content>
+        <author>
+            <name>Herway</name>
+            <email>hqw567@gmail.com</email>
+            <uri>https://simimi.cn</uri>
+        </author>
+        <published>2023-02-23T00:00:00.000Z</published>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[在VScode中使用Babel ES6转ES5]]></title>
+        <id>https://simimi.cn/posts/babel-es6-es5</id>
+        <link href="https://simimi.cn/posts/babel-es6-es5"/>
+        <updated>2023-01-21T00:00:00.000Z</updated>
+        <content type="html"><![CDATA[<p>要在当前项目下保存文件自动运行 Babel，请按照以下步骤进行操作：</p>
+<h2>1.安装 Babel</h2>
+<ul>
+<li>首先，您需要在项目中安装 Babel 依赖项。打开终端并运行以下命令：<br>
+<code>npm install --save-dev @babel/core @babel/cli @babel/preset-env</code></li>
+</ul>
+<br/><p>访问 <a href="https://simimi.cn/posts/babel-es6-es5" target="_blank">https://simimi.cn/posts/babel-es6-es5</a> 阅读全文。</p>]]></content>
+        <author>
+            <name>Herway</name>
+            <email>hqw567@gmail.com</email>
+            <uri>https://simimi.cn</uri>
+        </author>
+        <published>2023-02-20T00:00:00.000Z</published>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[Markdown语法的基本使用]]></title>
+        <id>https://simimi.cn/posts/markdown-basic-syntax</id>
+        <link href="https://simimi.cn/posts/markdown-basic-syntax"/>
+        <updated>2023-02-18T00:00:00.000Z</updated>
+        <content type="html"><![CDATA[<p>.md 即 markdown 文件的基本常用编写语法,是一种快速标记、快速排版语言，现在很多前段项目中的说明文件 <code>readme</code> 等都是用<code>.md </code>文件编写的，而且很多企业也在在鼓励使用这种编辑方式，特别作为一个前端从业者更要学会使用这种语言。下面就简单和大家分享一些<code>.md</code> 基本语法</p>
+<br/><p>访问 <a href="https://simimi.cn/posts/markdown-basic-syntax" target="_blank">https://simimi.cn/posts/markdown-basic-syntax</a> 阅读全文。</p>]]></content>
+        <author>
+            <name>Herway</name>
+            <email>hqw567@gmail.com</email>
+            <uri>https://simimi.cn</uri>
+        </author>
+        <published>2023-02-18T00:00:00.000Z</published>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[面向 Web 开发人员的 58 个 JavaScript 技巧]]></title>
+        <id>https://simimi.cn/posts/js-skills</id>
+        <link href="https://simimi.cn/posts/js-skills"/>
+        <updated>2022-06-04T15:27:24.000Z</updated>
+        <content type="html"><![CDATA[<p>作为程序员，编写代码也需要大量的写作技巧。好的代码可以让人耳目一新、通俗易懂、舒适自然，同时又充满成就感。因此，整理了一些近三年使用过的JS开发技巧，希望能让大家写出耳目一新、通俗易懂、舒适自然的代码。</p>
+<h2>字符串技巧</h2>
+<h3>1: Compare time</h3>
+<pre><code class="language-js">const time1 = &quot;2022-03-02 09:00:00&quot;;
+const time2 = &quot;2022-03-02 09:00:01&quot;;
+const overtime = time1 &lt; time2;
+// overtime =&gt; true
+</code></pre>
+<h3>2: Format money</h3>
+<pre><code class="language-js">const ThousandNum = num =&gt; num.toString().replace(/\B(?=(\d{3})+(?!\d))/g, &quot;,&quot;);
+const money = ThousandNum(1000000);
+// money =&gt; '1,000,000'
+</code></pre>
+<h3>3: Generate random ID</h3>
+<pre><code class="language-js">const RandomId = len =&gt; Math.random().toString(36).substr(3, len);
+const id = RandomId(10);
+// id =&gt; &quot;xdeguewg1f&quot;
+</code></pre>
+<br/><p>访问 <a href="https://simimi.cn/posts/js-skills" target="_blank">https://simimi.cn/posts/js-skills</a> 阅读全文。</p>]]></content>
+        <author>
+            <name>Herway</name>
+            <email>hqw567@gmail.com</email>
+            <uri>https://simimi.cn</uri>
+        </author>
+        <published>2022-06-04T15:27:24.000Z</published>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[前端开发规范：命名规范、html规范、css规范、js规范]]></title>
+        <id>https://simimi.cn/posts/web-norm</id>
+        <link href="https://simimi.cn/posts/web-norm"/>
+        <updated>2022-06-01T14:52:13.000Z</updated>
+        <content type="html"><![CDATA[<h2>前端开发规范：命名规范、html规范、css规范、js规范</h2>
+<p>一个好的程序员肯定是要能书写可维护的代码，而不是一次性的代码，怎么能让团队当中其他人甚至一段时间时候你再看你某个时候写的代码也能看懂呢，这就需要规范你的代码了。</p>
+<h2>命名</h2>
+<h3>驼峰式命名法介绍</h3>
+<ul>
+<li>
+<p>Pascal Case 大驼峰式命名法：首字母大写。eg：StudentInfo、UserInfo、ProductInfo</p>
+</li>
+<li>
+<p>Camel Case 小驼峰式命名法：首字母小写。eg：studentInfo、userInfo、productInfo</p>
+</li>
+</ul>
+<br/><p>访问 <a href="https://simimi.cn/posts/web-norm" target="_blank">https://simimi.cn/posts/web-norm</a> 阅读全文。</p>]]></content>
+        <author>
+            <name>Herway</name>
+            <email>hqw567@gmail.com</email>
+            <uri>https://simimi.cn</uri>
+        </author>
+        <published>2022-06-01T14:52:13.000Z</published>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[CSS命名参考]]></title>
+        <id>https://simimi.cn/posts/css-name</id>
+        <link href="https://simimi.cn/posts/css-name"/>
+        <updated>2022-06-01T14:52:09.000Z</updated>
+        <content type="html"><![CDATA[<h2>CSS命名参考</h2>
+<h3>页面结构命名</h3>
+<pre><code>page  // 代表整个页面，用于最外层。
+wrap  // 外套，将所有元素包在一起的一个外围包，用于最外层
+wrapper  // 页面外围控制整体布局宽度，用于最外层
+container  // 一个整体容器，用于最外层
+head|header  // 页头区域，用于头部
+nav  // 导航条
+content  // 内容，网站中最重要的内容区域，用于网页中部主体
+main  // 网站中的主要区域（表示最重要的一块位置），用于中部主体内容
+column  // 栏目
+sidebar  // 侧栏
+foot|footer  // 页尾、页脚。网站一些附加信息放置区域，（或命名为 copyright）用于底部
+</code></pre>
+<br/><p>访问 <a href="https://simimi.cn/posts/css-name" target="_blank">https://simimi.cn/posts/css-name</a> 阅读全文。</p>]]></content>
+        <author>
+            <name>Herway</name>
+            <email>hqw567@gmail.com</email>
+            <uri>https://simimi.cn</uri>
+        </author>
+        <published>2022-06-01T14:52:09.000Z</published>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[CSS规范]]></title>
+        <id>https://simimi.cn/posts/css-norm</id>
+        <link href="https://simimi.cn/posts/css-norm"/>
+        <updated>2022-06-01T14:51:55.000Z</updated>
+        <content type="html"><![CDATA[<h2>CSS规范</h2>
+<h3>CSS书写顺序</h3>
+<blockquote>
+<ol>
+<li>位置属性(position, top, right, z-index, display, float等)</li>
+<li>大小(width, height, padding, margin)</li>
+<li>文字系列(font, line-height, letter-spacing, color- text-align等)</li>
+<li>背景(background, border等)</li>
+<li>其他(animation, transition等)</li>
+</ol>
+</blockquote>
+<pre><code class="language-css">*** Bad ***
+.example {
+    color: red;
+    z-index: -1;
+    background-color: #9e0;
+    display: inline-block;
+    font-size: 1.5em;
+}
+
+*** Good ***
+.example {
+    z-index: -1;
+    display: inline-block;
+    font-size: 1.5em;
+    background-color: #9e0;
+}
+</code></pre>
+<br/><p>访问 <a href="https://simimi.cn/posts/css-norm" target="_blank">https://simimi.cn/posts/css-norm</a> 阅读全文。</p>]]></content>
+        <author>
+            <name>Herway</name>
+            <email>hqw567@gmail.com</email>
+            <uri>https://simimi.cn</uri>
+        </author>
+        <published>2022-06-01T14:51:55.000Z</published>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[CSS设置字体]]></title>
+        <id>https://simimi.cn/posts/css-font</id>
+        <link href="https://simimi.cn/posts/css-font"/>
+        <updated>2022-05-20T00:00:00.000Z</updated>
+        <content type="html"><![CDATA[<h2>CSS初始化字体</h2>
+<pre><code class="language-css">@font-face {
+  font-family: Emoji;
+  src: local(&quot;Apple Color Emojiji&quot;), local(&quot;Segoe UI Emoji&quot;), local(&quot;Segoe UI Symbol&quot;), local(&quot;Noto Color Emoji&quot;);
+  unicode-range: U+1F000-1F644, U+203C-3299;
+}
+body {
+  font-family: system-ui, —apple-system, Segoe UI, Rototo, Emoji, Helvetica, Arial, sans-serif;
+}​
+</code></pre>
+<br/><p>访问 <a href="https://simimi.cn/posts/css-font" target="_blank">https://simimi.cn/posts/css-font</a> 阅读全文。</p>]]></content>
+        <author>
+            <name>Herway</name>
+            <email>hqw567@gmail.com</email>
+            <uri>https://simimi.cn</uri>
+        </author>
+        <published>2022-05-20T00:00:00.000Z</published>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[使用Alook浏览器获取京东Cookie]]></title>
+        <id>https://simimi.cn/posts/jdcookie</id>
+        <link href="https://simimi.cn/posts/jdcookie"/>
+        <updated>2022-02-14T10:21:10.000Z</updated>
+        <content type="html"><![CDATA[<p>获取京东 Cookie，不需要抓包软件</p>
+<p>上传 Cookie 到服务器</p>
+<h3>获取到 Cookie 请到网页自行上传 <a href="https://jd.simimi.cn">https://jd.simimi.cn</a></h3>
+<ul>
+<li>可注册登陆或游客上传，推荐注册登陆后上传 Cookie，方便自行管理，查看京东收入情况,更新添加 Cookie 等</li>
+</ul>
+<h3>QQ 群：769194788 <a href="https://jq.qq.com/?_wv=1027&amp;k=mpP6nr1U">点此入群</a></h3>
+<ul>
+<li>请务必进群</li>
+</ul>
+<br/><p>访问 <a href="https://simimi.cn/posts/jdcookie" target="_blank">https://simimi.cn/posts/jdcookie</a> 阅读全文。</p>]]></content>
+        <author>
+            <name>Herway</name>
+            <email>hqw567@gmail.com</email>
+            <uri>https://simimi.cn</uri>
+        </author>
+        <published>2022-05-09T10:21:10.000Z</published>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[【分享】可视化图表库echarts]]></title>
+        <id>https://simimi.cn/posts/js-echarts</id>
+        <link href="https://simimi.cn/posts/js-echarts"/>
+        <updated>2022-04-23T17:50:23.000Z</updated>
+        <content type="html"><![CDATA[<p>ECharts，一个使用 JavaScript 实现的开源可视化库，可以流畅的运行在 PC 和移动设备上，兼容当前绝大部分浏览器（IE9/10/11，Chrome，Firefox，Safari 等），底层依赖矢量图形库 <a href="https://github.com/ecomfe/zrender">ZRender</a>，提供直观，交互丰富，可高度个性化定制的数据可视化图表。</p>
+<h2>丰富的可视化类型</h2>
+<p>ECharts 提供了常规的<a href="https://echarts.apache.org/zh/option.html#series-line">折线图</a>、<a href="https://echarts.apache.org/zh/option.html#series-bar">柱状图</a>、<a href="https://echarts.apache.org/zh/option.html#series-scatter">散点图</a>、<a href="https://echarts.apache.org/zh/option.html#series-pie">饼图</a>、<a href="https://echarts.apache.org/zh/option.html#series-candlestick">K 线图</a>，用于统计的<a href="https://echarts.apache.org/zh/option.html#series-boxplot">盒形图</a>，用于地理数据可视化的<a href="https://echarts.apache.org/zh/option.html#series-map">地图</a>、<a href="https://echarts.apache.org/zh/option.html#series-heatmap">热力图</a>、<a href="https://echarts.apache.org/zh/option.html#series-lines">线图</a>，用于关系数据可视化的<a href="https://echarts.apache.org/zh/option.html#series-graph">关系图</a>、<a href="https://echarts.apache.org/zh/option.html#series-treemap">treemap</a>、<a href="https://echarts.apache.org/zh/option.html#series-sunburst">旭日图</a>，多维数据可视化的<a href="https://echarts.apache.org/zh/option.html#series-parallel">平行坐标</a>，还有用于 BI 的<a href="https://echarts.apache.org/zh/option.html#series-funnel">漏斗图</a>，<a href="https://echarts.apache.org/zh/option.html#series-gauge">仪表盘</a>，并且支持图与图之间的混搭。</p>
+<p>除了已经内置的包含了丰富功能的图表，ECharts 还提供了<a href="https://echarts.apache.org/zh/option.html#series-custom">自定义系列</a>，只需要传入一个<em>renderItem</em>函数，就可以从数据映射到任何你想要的图形，更棒的是这些都还能和已有的交互组件结合使用而不需要操心其它事情。</p>
+<p>你可以在下载界面下载包含所有图表的构建文件，如果只是需要其中一两个图表，又嫌包含所有图表的构建文件太大，也可以在在线构建中选择需要的图表类型后自定义构建。</p>
+<br/><p>访问 <a href="https://simimi.cn/posts/js-echarts" target="_blank">https://simimi.cn/posts/js-echarts</a> 阅读全文。</p>]]></content>
+        <author>
+            <name>Herway</name>
+            <email>hqw567@gmail.com</email>
+            <uri>https://simimi.cn</uri>
+        </author>
+        <published>2022-04-23T17:50:23.000Z</published>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[常用 Git 命令清单]]></title>
+        <id>https://simimi.cn/posts/git-listing</id>
+        <link href="https://simimi.cn/posts/git-listing"/>
+        <updated>2022-04-23T17:43:43.000Z</updated>
+        <content type="html"><![CDATA[<p>我每天使用 Git ，但是很多命令记不住。</p>
+<p>一般来说，日常使用只要记住下图 6 个命令，就可以了。但是熟练使用，恐怕要记住 60 ～ 100 个命令。</p>
+<p><img src="https://simimi.cn//img.simimi.cn/imgbg2015120901.png" alt="img"></p>
+<p>下面是我整理的常用 Git 命令清单。几个专用名词的译名如下。</p>
+<blockquote>
+<ul>
+<li>Workspace：工作区</li>
+<li>Index / Stage：暂存区</li>
+<li>Repository：仓库区（或本地仓库）</li>
+<li>Remote：远程仓库</li>
+</ul>
+</blockquote>
+<br/><p>访问 <a href="https://simimi.cn/posts/git-listing" target="_blank">https://simimi.cn/posts/git-listing</a> 阅读全文。</p>]]></content>
+        <author>
+            <name>Herway</name>
+            <email>hqw567@gmail.com</email>
+            <uri>https://simimi.cn</uri>
+        </author>
+        <published>2022-04-23T17:43:43.000Z</published>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[JavaScript 的 this 原理]]></title>
+        <id>https://simimi.cn/posts/js-this-principle</id>
+        <link href="https://simimi.cn/posts/js-this-principle"/>
+        <updated>2022-04-23T17:10:58.000Z</updated>
+        <content type="html"><![CDATA[<h2>一、问题的由来</h2>
+<p>学懂 JavaScript 语言，一个标志就是理解下面两种写法，可能有不一样的结果。</p>
+<blockquote>
+<pre><code class="language-javascript">var obj = {
+	foo: function () {},
+}
+
+var foo = obj.foo
+
+// 写法一
+obj.foo()
+
+// 写法二
+foo()
+</code></pre>
+</blockquote>
+<br/><p>访问 <a href="https://simimi.cn/posts/js-this-principle" target="_blank">https://simimi.cn/posts/js-this-principle</a> 阅读全文。</p>]]></content>
+        <author>
+            <name>Herway</name>
+            <email>hqw567@gmail.com</email>
+            <uri>https://simimi.cn</uri>
+        </author>
+        <published>2022-04-23T17:10:58.000Z</published>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[JavaScript剪贴板的操作]]></title>
+        <id>https://simimi.cn/posts/js-copy-clipboard-api</id>
+        <link href="https://simimi.cn/posts/js-copy-clipboard-api"/>
+        <updated>2022-04-23T17:01:18.000Z</updated>
+        <content type="html"><![CDATA[<h2>一、简介</h2>
+<p>浏览器允许 JavaScript 脚本读写剪贴板，自动复制或粘贴内容。</p>
+<p>一般来说，脚本不应该改动用户的剪贴板，以免不符合用户的预期。但是，有些时候这样做确实能够带来方便，比如&quot;一键复制&quot;功能，用户点击一下按钮，指定的内容就自动进入剪贴板。</p>
+<p>目前，一共有三种方法可以实现剪贴板操作。</p>
+<blockquote>
+<ul>
+<li><code>Document.execCommand()</code>方法</li>
+<li>异步的 Clipboard API</li>
+<li><code>copy</code>事件和<code>paste</code>事件</li>
+</ul>
+</blockquote>
+<p>本文逐一介绍这三种方法。</p>
+<br/><p>访问 <a href="https://simimi.cn/posts/js-copy-clipboard-api" target="_blank">https://simimi.cn/posts/js-copy-clipboard-api</a> 阅读全文。</p>]]></content>
+        <author>
+            <name>Herway</name>
+            <email>hqw567@gmail.com</email>
+            <uri>https://simimi.cn</uri>
+        </author>
+        <published>2022-04-23T17:01:18.000Z</published>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[JavaScript 侦测手机浏览器的五种方法]]></title>
+        <id>https://simimi.cn/posts/js-ismobile</id>
+        <link href="https://simimi.cn/posts/js-ismobile"/>
+        <updated>2022-04-23T16:04:48.000Z</updated>
+        <content type="html"><![CDATA[<p>有时候，前端网页需要知道，用户使用的是手机浏览器还是桌面浏览器。</p>
+<p>本文根据 <a href="https://stackoverflow.com/questions/11381673/detecting-a-mobile-browser">StackOverflow</a>，整理了 JavaScript 侦测手机浏览器的五种方法。</p>
+<p><img src="https://simimi.cn//img.simimi.cn/imgbg2021092717.jpg" alt="img"></p>
+<br/><p>访问 <a href="https://simimi.cn/posts/js-ismobile" target="_blank">https://simimi.cn/posts/js-ismobile</a> 阅读全文。</p>]]></content>
+        <author>
+            <name>Herway</name>
+            <email>hqw567@gmail.com</email>
+            <uri>https://simimi.cn</uri>
+        </author>
+        <published>2022-04-23T16:04:48.000Z</published>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[一行代码禁止页面复制、右键]]></title>
+        <id>https://simimi.cn/posts/js-nocopy</id>
+        <link href="https://simimi.cn/posts/js-nocopy"/>
+        <updated>2022-04-03T13:56:38.000Z</updated>
+        <content type="html"><![CDATA[<p>找到 html 文件的<code>&lt;/head&gt;</code>标签,在<code>&lt;/head&gt;</code>前面加如下代码就行了！</p>
+<br/><p>访问 <a href="https://simimi.cn/posts/js-nocopy" target="_blank">https://simimi.cn/posts/js-nocopy</a> 阅读全文。</p>]]></content>
+        <author>
+            <name>Herway</name>
+            <email>hqw567@gmail.com</email>
+            <uri>https://simimi.cn</uri>
+        </author>
+        <published>2022-04-03T13:56:38.000Z</published>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[10个CSS小技巧]]></title>
+        <id>https://simimi.cn/posts/css-10-tricks</id>
+        <link href="https://simimi.cn/posts/css-10-tricks"/>
+        <updated>2022-02-15T00:00:00.000Z</updated>
+        <content type="html"><![CDATA[<p>一个成功的 Web App 必须有良好的用户体验。当我们谈及改善用户体验时，你会想到什么？</p>
+<p>其实，有一点是很容易被开发者忽视的，那就是 CSS。我们可以使用一些 CSS 技巧来改善网页的表现形式、交互细节和可访问性。</p>
+<p>而且这些技巧不需要花费太多时间，也不需要消耗服务器资源。你只需要花两个小时学习，然后就可以把它应用到你所有的项目中，并永远改善用户体验。</p>
+<br/><p>访问 <a href="https://simimi.cn/posts/css-10-tricks" target="_blank">https://simimi.cn/posts/css-10-tricks</a> 阅读全文。</p>]]></content>
+        <author>
+            <name>Herway</name>
+            <email>hqw567@gmail.com</email>
+            <uri>https://simimi.cn</uri>
+        </author>
+        <published>2022-02-20T00:00:00.000Z</published>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[【分享】Git基础教程]]></title>
+        <id>https://simimi.cn/posts/git-basic-tutorial</id>
+        <link href="https://simimi.cn/posts/git-basic-tutorial"/>
+        <updated>2022-02-10T20:23:18.000Z</updated>
+        <content type="html"><![CDATA[<p>本章关于开始学习 Git。这篇文章将从介绍有关版本控制工具的一些背景知识开始，然后讲解如何在系统运行 Git，最后是关于如何设置 Git 开始工作。 通过本章的学习，了解为什么 Git 这么流行，为什么要使用 Git 以及应该如何设置以便使用 Git。</p>
+<br/><p>访问 <a href="https://simimi.cn/posts/git-basic-tutorial" target="_blank">https://simimi.cn/posts/git-basic-tutorial</a> 阅读全文。</p>]]></content>
+        <author>
+            <name>Herway</name>
+            <email>hqw567@gmail.com</email>
+            <uri>https://simimi.cn</uri>
+        </author>
+        <published>2022-02-11T20:23:18.000Z</published>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[Git 学习笔记]]></title>
+        <id>https://simimi.cn/posts/git-learn-note</id>
+        <link href="https://simimi.cn/posts/git-learn-note"/>
+        <updated>2022-01-11T16:46:13.000Z</updated>
+        <content type="html"><![CDATA[<p>记录 Git 的一些常用指令与问题解决方案。</p>
+<h2>ref</h2>
+<ul>
+<li><a href="https://github.com/git-tips/tips">git-tips</a></li>
+<li><a href="https://github.com/521xueweihan/git-tips">Git 的奇技淫巧</a></li>
+</ul>
+<br/><p>访问 <a href="https://simimi.cn/posts/git-learn-note" target="_blank">https://simimi.cn/posts/git-learn-note</a> 阅读全文。</p>]]></content>
+        <author>
+            <name>Herway</name>
+            <email>hqw567@gmail.com</email>
+            <uri>https://simimi.cn</uri>
+        </author>
+        <published>2022-02-10T16:46:13.000Z</published>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[前端常用单词]]></title>
+        <id>https://simimi.cn/posts/web-commom-words</id>
+        <link href="https://simimi.cn/posts/web-commom-words"/>
+        <updated>2022-02-10T11:56:23.000Z</updated>
+        <content type="html"><![CDATA[<h2>A</h2>
+<ul>
+<li>
+<p>align 对齐</p>
+</li>
+<li>
+<p>active 激活</p>
+</li>
+<li>
+<p>absolute 绝对</p>
+</li>
+<li>
+<p>alpha 图像通道</p>
+</li>
+<li>
+<p>animate 动画</p>
+</li>
+<li>
+<p>alert 提醒</p>
+</li>
+<li>
+<p>add 加</p>
+</li>
+<li>
+<p>append 添加</p>
+</li>
+<li>
+<p>after 之后</p>
+</li>
+</ul>
+<br/><p>访问 <a href="https://simimi.cn/posts/web-commom-words" target="_blank">https://simimi.cn/posts/web-commom-words</a> 阅读全文。</p>]]></content>
+        <author>
+            <name>Herway</name>
+            <email>hqw567@gmail.com</email>
+            <uri>https://simimi.cn</uri>
+        </author>
+        <published>2022-02-10T12:56:23.000Z</published>
+    </entry>
+</feed>
