@@ -6,6 +6,7 @@ categories:
   - 思米米的小笔记
 date: 2023-02-21
 updated: 2023-02-21
+password: simimi
 ---
 
 ## Clash for Windows TUN 模式
