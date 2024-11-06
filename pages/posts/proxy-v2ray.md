@@ -6,7 +6,8 @@ categories: 思米米的小笔记
 date: 2022-05-17 16:52:12
 updated: 2022-05-17 16:52:12
 titleTemplate: '%s - 思米米(SIMIMI)'
-password: simimi
+password: 123456
+hide: true
 ---
 
 

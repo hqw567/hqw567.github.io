@@ -6,7 +6,8 @@ categories: 思米米的小笔记
 date: 2023-02-23
 updated: 2024-11-06
 titleTemplate: "%s - 思米米(SIMIMI)"
-password: simimi
+password: 123456
+hide: true
 ---
 
 Proxy 代理工具集合(Clash V2RayN V2RayG CFW CFA Netch 小火箭 圈 X) 图形客户端
