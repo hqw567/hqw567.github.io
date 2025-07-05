@@ -37,11 +37,6 @@ jobs:
           registry-url: https://registry.npmjs.org/
           cache: pnpm
 
-      # - name: 🔍 Genereate Algolia
-      #   env:
-      #     HEXO_ALGOLIA_INDEXING_KEY: ${{ secrets.HEXO_ALGOLIA_INDEXING_KEY }}
-      #   run: npm run algolia
-
       - name: 🌌 Build Valaxy Blog
         run: pnpm run build
         env:
