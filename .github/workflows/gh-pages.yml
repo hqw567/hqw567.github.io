@@ -62,11 +62,16 @@ jobs:
         with:
           path: ./dist
 
-  deploy:
+    deploy:
     name: 🚀 Deploy to GitHub Pages
     needs: build
     runs-on: ubuntu-latest
     if: github.ref == 'refs/heads/main'
+
+    # 设置 GitHub Pages 权限
+    permissions:
+      pages: write
+      id-token: write
 
     environment:
       name: github-pages
