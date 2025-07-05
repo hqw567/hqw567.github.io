@@ -62,7 +62,7 @@ jobs:
         with:
           path: ./dist
 
-    deploy:
+  deploy:
     name: 🚀 Deploy to GitHub Pages
     needs: build
     runs-on: ubuntu-latest
