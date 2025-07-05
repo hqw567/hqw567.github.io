@@ -25,8 +25,8 @@ export default defineValaxyConfig<UserThemeConfig>({
     },
     bg_image: {
       enable: true,
-      url: "//img.simimi.cn/img/background/bg-white.png",
-      dark: "//img.simimi.cn/img/background/bg-dark.png",
+      url: "/images/background/bg-white.png",
+      dark: "/images/background/bg-dark.png",
     },
     say: {
       enable: true,

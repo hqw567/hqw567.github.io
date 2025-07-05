@@ -2,7 +2,7 @@ import { defineSiteConfig } from "valaxy";
 
 export default defineSiteConfig({
   encrypt: {
-    enable: true
+    enable: true,
   },
   search: {
     enable: true,
@@ -16,7 +16,7 @@ export default defineSiteConfig({
     avatar: "https://q1.qlogo.cn/g?b=qq&nk=79099400&s=640",
     status: {
       emoji: "😣",
-      message: "Hi"
+      message: "Hi",
     },
     name: "Herway",
     link: "https://simimi.cn",
@@ -43,26 +43,26 @@ export default defineSiteConfig({
     enable: true,
   },
   sponsor: {
-    enable: true,
+    enable: false,
     title: "我很可爱，请给我钱！",
     description: "如果你觉得我的文章对你有帮助，欢迎赞助我！",
     methods: [
       {
         name: "支付宝",
-        url: "//img.simimi.cn/img/donate/alipay-qrcode.jpg",
-        color: "#00A3EE",
+        url: "/images/donate/alipay-qrcode.webp",
+        color: "#1677FF",
         icon: "i-ri-alipay-line",
       },
       {
         name: "QQ 支付",
-        url: "//img.simimi.cn/img/donate/qqpay-qrcode.png",
-        color: "#12B7F5",
+        url: "/images/donate/qqpay-qrcode.webp",
+        color: "#0099FF",
         icon: "i-ri-qq-line",
       },
       {
         name: "微信支付",
-        url: "//img.simimi.cn/img/donate/wechatpay-qrcode.png",
-        color: "#2DC100",
+        url: "/images/donate/wechatpay-qrcode.webp",
+        color: "#2AAE67",
         icon: "i-ri-wechat-pay-line",
       },
     ],
