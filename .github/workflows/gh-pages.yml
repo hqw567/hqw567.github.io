@@ -1,83 +1,67 @@
-name: 🚀 Build & Deploy Valaxy Blog
+name: Deploy Valaxy site to GitHub Pages
 
 on:
+  # Runs on pushes targeting the default branch
   push:
     branches: [main]
-  pull_request:
-    branches: [main]
 
-# 设置权限
+  # Allows you to run this workflow manually from the Actions tab
+  # workflow_dispatch:
+
+# Sets permissions of the GITHUB_TOKEN to allow deployment to GitHub Pages
 permissions:
   contents: read
   pages: write
   id-token: write
 
-# 确保同时只有一个部署运行
+# Allow one concurrent deployment
 concurrency:
   group: pages
-  cancel-in-progress: false
+  cancel-in-progress: true
 
 jobs:
   build:
-    name: 🏗️ Build Site
     runs-on: ubuntu-latest
-
     steps:
-      - name: 📦 Checkout Repository
-        uses: actions/checkout@v4
-        with:
-          fetch-depth: 0 # 获取完整历史，用于Git信息
+      - uses: actions/checkout@v4
 
-      - name: 🟢 Setup Node.js
-        uses: actions/setup-node@v4
-        with:
-          node-version: 'lts/*'
-          registry-url: 'https://registry.npmjs.org'
-
-      - name: 📦 Setup pnpm
+      - name: Install pnpm
         uses: pnpm/action-setup@v4
         with:
-          run_install: false
+          run_install: true
 
-      - name: 🎯 Get pnpm store directory
-        shell: bash
-        run: echo "STORE_PATH=$(pnpm store path --silent)" >> $GITHUB_ENV
-
-      - name: 🗂️ Setup pnpm cache
-        uses: actions/cache@v4
+      - name: Use Node.js LTS
+        uses: actions/setup-node@v4
         with:
-          path: ${{ env.STORE_PATH }}
-          key: ${{ runner.os }}-pnpm-store-${{ hashFiles('**/pnpm-lock.yaml') }}
-          restore-keys: |
-            ${{ runner.os }}-pnpm-store-
+          node-version: lts/*
+          registry-url: https://registry.npmjs.org/
+          cache: pnpm
 
-      - name: 🔧 Install Dependencies
-        run: pnpm install --frozen-lockfile
+      # - name: 🔍 Genereate Algolia
+      #   env:
+      #     HEXO_ALGOLIA_INDEXING_KEY: ${{ secrets.HEXO_ALGOLIA_INDEXING_KEY }}
+      #   run: npm run algolia
 
-      - name: 🏗️ Build Valaxy Blog
+      - name: 🌌 Build Valaxy Blog
         run: pnpm run build
+        env:
+          NODE_OPTIONS: --max-old-space-size=6144
 
-      - name: 📋 Upload Build Artifacts
+      - name: ⏫ Upload artifact
         uses: actions/upload-pages-artifact@v3
         with:
           path: ./dist
 
   deploy:
-    name: 🚀 Deploy to GitHub Pages
     needs: build
     runs-on: ubuntu-latest
-    if: github.ref == 'refs/heads/main'
 
-    # 设置 GitHub Pages 权限
-    permissions:
-      pages: write
-      id-token: write
-
+    # Deploy to the github-pages environment
     environment:
       name: github-pages
       url: ${{ steps.deployment.outputs.page_url }}
 
     steps:
-      - name: 🌐 Deploy to GitHub Pages
+      - name: 🪤 Deploy to GitHub Pages
         id: deployment
         uses: actions/deploy-pages@v4
