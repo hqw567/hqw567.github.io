@@ -1,7 +1,7 @@
 <script lang="ts" setup>
-import { useScriptTag } from '@vueuse/core'
+import { useScriptTag } from "@vueuse/core";
 
-useScriptTag('//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js')
+useScriptTag("//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js");
 </script>
 
 <template>

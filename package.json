@@ -1,28 +1,28 @@
 {
-  "name": "simimi",
-  "valaxy": {
-    "theme": "yun"
-  },
-  "private": true,
-  "scripts": {
-    "build": "npm run build:ssg && npm run rss && npm run fuse",
-    "build:spa": "valaxy build",
-    "build:ssg": "valaxy build --ssg --log=info",
-    "dev": "valaxy",
-    "fuse": "valaxy fuse",
-    "new": "valaxy new",
-    "rss": "valaxy rss",
-    "serve": "vite preview"
-  },
-  "dependencies": {
-    "@microsoft/clarity": "^1.0.0",
-    "valaxy": "^0.23.6",
-    "valaxy-addon-waline": "^0.2.1",
-    "valaxy-theme-yun": "^0.23.6",
-    "vue-gtag-next": "^1.14.0"
-  },
-  "devDependencies": {
-    "typescript": "^5.8.3"
-  },
-  "packageManager": "pnpm@10.12.4+sha512.5ea8b0deed94ed68691c9bad4c955492705c5eeb8a87ef86bc62c74a26b037b08ff9570f108b2e4dbd1dd1a9186fea925e527f141c648e85af45631074680184"
+	"name": "simimi",
+	"valaxy": {
+		"theme": "yun"
+	},
+	"private": true,
+	"scripts": {
+		"build": "npm run rss && npm run fuse && npm run build:ssg",
+		"build:spa": "valaxy build",
+		"build:ssg": "valaxy build --ssg --log=info",
+		"dev": "valaxy",
+		"fuse": "valaxy fuse",
+		"new": "valaxy new",
+		"rss": "valaxy rss",
+		"serve": "vite preview"
+	},
+	"dependencies": {
+		"@microsoft/clarity": "^1.0.0",
+		"valaxy": "^0.23.6",
+		"valaxy-addon-waline": "^0.2.1",
+		"valaxy-theme-yun": "^0.23.6",
+		"vue-gtag-next": "^1.14.0"
+	},
+	"devDependencies": {
+		"typescript": "^5.8.3"
+	},
+	"packageManager": "pnpm@10.12.4+sha512.5ea8b0deed94ed68691c9bad4c955492705c5eeb8a87ef86bc62c74a26b037b08ff9570f108b2e4dbd1dd1a9186fea925e527f141c648e85af45631074680184"
 }
