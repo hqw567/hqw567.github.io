@@ -10,8 +10,5 @@ export const install: UserModule = () => {
 			.catch((error) => {
 				console.warn("Failed to load Microsoft Clarity:", error);
 			})
-			.then(() => {
-				console.log("Microsoft Clarity loaded");
-			});
 	}
 };
