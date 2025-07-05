@@ -1,6 +1,7 @@
 import { defineValaxyConfig } from "valaxy";
 import type { UserThemeConfig } from "valaxy-theme-yun";
 import { addonWaline } from "valaxy-addon-waline";
+
 // add icons what you will need
 const safelist = ["i-ri-home-line"];
 
@@ -127,7 +128,13 @@ export default defineValaxyConfig<UserThemeConfig>({
         url: "/about",
       },
     },
+  },
 
+  modules: {
+    rss: {
+      enable: true,
+      fullText: false,
+    },
   },
 
   unocss: { safelist },
@@ -158,7 +165,7 @@ export default defineValaxyConfig<UserThemeConfig>({
   addons: [
     addonWaline({
       serverURL: "https://waline.simimi.cn",
-      pageview: true,
+      // pageview: true,
       comment: true,
     }),
     // addonTwikoo({

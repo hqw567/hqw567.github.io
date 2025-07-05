@@ -1,6 +1,7 @@
 import { defineSiteConfig } from "valaxy";
 
 export default defineSiteConfig({
+  timezone: "Asia/Shanghai",
   encrypt: {
     enable: true,
   },
@@ -10,8 +11,10 @@ export default defineSiteConfig({
   },
   url: "https://simimi.cn",
   lang: "zh-CN",
+  languages: ["zh-CN"],
   title: "思米米(SIMIMI)",
   subtitle: "All at sea.",
+  frontmatter: {},
   author: {
     avatar: "https://q1.qlogo.cn/g?b=qq&nk=79099400&s=640",
     status: {
@@ -19,12 +22,20 @@ export default defineSiteConfig({
       message: "Hi",
     },
     name: "Herway",
+    intro: "All at sea.",
     link: "https://simimi.cn",
     email: "hqw567@gmail.com",
   },
+  lastUpdated: true,
   favicon: "/favicon.svg",
   description: "山有木兮木有枝，心悦君兮君不知。",
   mediumZoom: { enable: true },
+  /**
+   * 开启阅读统计
+   */
+  statistics: {
+    enable: true
+  },
   social: [
     {
       name: "RSS",

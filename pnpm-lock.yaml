@@ -8,6 +8,9 @@ importers:
 
   .:
     dependencies:
+      '@microsoft/clarity':
+        specifier: ^1.0.0
+        version: 1.0.0
       valaxy:
         specifier: ^0.23.6
         version: 0.23.6(@babel/parser@7.28.0)(@nuxt/kit@3.17.6)(@types/markdown-it@14.1.2)(@types/node@24.0.10)(@vue/compiler-dom@3.5.17)(@vue/compiler-sfc@3.5.17)(axios@1.10.0)(eslint@9.30.1(jiti@2.4.2))(postcss@8.5.6)(prettier@3.3.3)(rollup@4.44.2)(terser@5.43.1)(tsx@4.19.2)(typescript@5.8.3)(yaml@2.8.0)
@@ -17,6 +20,9 @@ importers:
       valaxy-theme-yun:
         specifier: ^0.23.6
         version: 0.23.6(vue@3.5.17(typescript@5.8.3))
+      vue-gtag-next:
+        specifier: ^1.14.0
+        version: 1.14.0(vue@3.5.17(typescript@5.8.3))
     devDependencies:
       typescript:
         specifier: ^5.8.3
@@ -710,6 +716,9 @@ packages:
 
   '@mermaid-js/parser@0.6.0':
     resolution: {integrity: sha512-7DNESgpyZ5WG1SIkrYafVBhWmImtmQuoxOO1lawI3gQYWxBX3v1FW3IyuuRfKJAO06XrZR71W0Kif5VEGGd4VA==}
+
+  '@microsoft/clarity@1.0.0':
+    resolution: {integrity: sha512-2QY6SmXnqRj6dWhNY8NYCN3e53j4zCFebH4wGnNhdGV1mqAsQwql2fT0w8TISxCvwwfVp8idsWLIdrRHOms1PQ==}
 
   '@nodelib/fs.scandir@2.1.5':
     resolution: {integrity: sha512-vq24Bq3ym5HEQm2NKCr3yXDwjc7vTsEThRDnkp2DK9p1uqLR+DHurm/NOTo0KG7HYHU7eppKZj3MyqYuMBf62g==}
@@ -3675,6 +3684,11 @@ packages:
     peerDependencies:
       vue: ^3.4.37
 
+  vue-gtag-next@1.14.0:
+    resolution: {integrity: sha512-iJl+cOG2GU5NuxqzSSIpt03WVOvZqyKB9TOy7d55KiuvRklcnb2nlqxW5B/a3/sbIt7fla+XEkRyMCcoz0zAHw==}
+    peerDependencies:
+      vue: ^3.0.0-rc.11
+
   vue-i18n@11.1.9:
     resolution: {integrity: sha512-N9ZTsXdRmX38AwS9F6Rh93RtPkvZTkSy/zNv63FTIwZCUbLwwrpqlKz9YQuzFLdlvRdZTnWAUE5jMxr8exdl7g==}
     engines: {node: '>= 16'}
@@ -4435,6 +4449,8 @@ snapshots:
   '@mermaid-js/parser@0.6.0':
     dependencies:
       langium: 3.3.1
+
+  '@microsoft/clarity@1.0.0': {}
 
   '@nodelib/fs.scandir@2.1.5':
     dependencies:
@@ -7890,6 +7906,10 @@ snapshots:
   vscode-uri@3.0.8: {}
 
   vue-flow-layout@0.1.1(vue@3.5.17(typescript@5.8.3)):
+    dependencies:
+      vue: 3.5.17(typescript@5.8.3)
+
+  vue-gtag-next@1.14.0(vue@3.5.17(typescript@5.8.3)):
     dependencies:
       vue: 3.5.17(typescript@5.8.3)
 

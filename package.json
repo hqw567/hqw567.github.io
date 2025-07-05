@@ -7,7 +7,7 @@
   "scripts": {
     "build": "npm run build:ssg && npm run rss && npm run fuse",
     "build:spa": "valaxy build",
-    "build:ssg": "valaxy build --ssg",
+    "build:ssg": "valaxy build --ssg --log=info",
     "dev": "valaxy",
     "fuse": "valaxy fuse",
     "new": "valaxy new",
@@ -15,9 +15,11 @@
     "serve": "vite preview"
   },
   "dependencies": {
+    "@microsoft/clarity": "^1.0.0",
     "valaxy": "^0.23.6",
     "valaxy-addon-waline": "^0.2.1",
-    "valaxy-theme-yun": "^0.23.6"
+    "valaxy-theme-yun": "^0.23.6",
+    "vue-gtag-next": "^1.14.0"
   },
   "devDependencies": {
     "typescript": "^5.8.3"

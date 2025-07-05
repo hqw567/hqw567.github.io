@@ -4,6 +4,6 @@ import YunFooter from "valaxy-theme-yun/components/YunFooter.vue";
 
 <template>
   <YunFooter>
-    <UpyunLogo />
+    <CdnLogo />
   </YunFooter>
 </template>
