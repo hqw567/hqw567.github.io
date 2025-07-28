@@ -40,6 +40,7 @@ declare module 'vue-router/auto-routes' {
     '/posts/git-listing': RouteRecordInfo<'/posts/git-listing', '/posts/git-listing', Record<never, never>, Record<never, never>>,
     '/posts/git-npm-proxy': RouteRecordInfo<'/posts/git-npm-proxy', '/posts/git-npm-proxy', Record<never, never>, Record<never, never>>,
     '/posts/jdcookie': RouteRecordInfo<'/posts/jdcookie', '/posts/jdcookie', Record<never, never>, Record<never, never>>,
+    '/posts/jenkins-pipeline-template': RouteRecordInfo<'/posts/jenkins-pipeline-template', '/posts/jenkins-pipeline-template', Record<never, never>, Record<never, never>>,
     '/posts/js-copy-clipboard-api': RouteRecordInfo<'/posts/js-copy-clipboard-api', '/posts/js-copy-clipboard-api', Record<never, never>, Record<never, never>>,
     '/posts/js-echarts': RouteRecordInfo<'/posts/js-echarts', '/posts/js-echarts', Record<never, never>, Record<never, never>>,
     '/posts/js-ismobile': RouteRecordInfo<'/posts/js-ismobile', '/posts/js-ismobile', Record<never, never>, Record<never, never>>,
